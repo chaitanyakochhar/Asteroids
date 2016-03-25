@@ -8,6 +8,7 @@ public class StartMarker : Marker
     new public void Start()
     {
         //base.Start();
+        if(player!=null)
         Instantiate(player);
     }
 

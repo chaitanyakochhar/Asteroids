@@ -20,11 +20,9 @@ public class Command
         bool hasHit = Physics.Raycast(r, out hit);
         if(hasHit)
         {
-            if(hit.transform.tag == "Navmesh")
-            {
+
                 //Debug.Log("I have hit the navmesh, can move to this point");
                 return new Command(destination, hit.point);
-            }
         }
         return null;
     }

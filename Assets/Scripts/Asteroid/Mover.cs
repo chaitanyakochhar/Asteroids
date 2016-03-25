@@ -24,7 +24,7 @@ public class Mover : MonoBehaviour {
                     NavMeshHit hit;
                     NavMesh.SamplePosition(waypoints[currentLocation].transform.position, out hit, 10, 1);
                     GetComponent<NavMeshAgent>().SetDestination(hit.position);
-                    if(Vector3.Distance(hit.position, transform.position)<3)
+                    if(Vector3.Distance(hit.position, transform.position)<0.7)
                     {
                         moverState = State.REST;
                     }
