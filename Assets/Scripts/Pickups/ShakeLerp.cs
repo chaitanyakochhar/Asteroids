@@ -5,13 +5,19 @@ public class ShakeLerp : MonoBehaviour {
 
     public float OscillationCount = 3f;
     public float intervalBetweenOscillations = 1f;
+    public AudioClip helpSound;
+    public float audioInterval = 4f;
+
+    private AudioSource audioSource;
 
 
 	// Use this for initialization
 	void Start ()
     {
+        audioSource = GetComponent<AudioSource>();
         StartCoroutine(Oscillate());
-	}
+        StartCoroutine(PlaySound());
+    }
 	
     private IEnumerator Oscillate()
     {
@@ -26,6 +32,15 @@ public class ShakeLerp : MonoBehaviour {
                 yield return null;
             }
             yield return null;
+        }
+    }
+
+    private IEnumerator PlaySound()
+    {
+        while (true)
+        {
+            audioSource.PlayOneShot(helpSound);
+            yield return new WaitForSeconds(audioInterval);
         }
     }
 }
