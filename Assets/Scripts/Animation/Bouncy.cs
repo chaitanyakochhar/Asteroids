@@ -9,14 +9,6 @@ public class Bouncy : MonoBehaviour
 
     private float startTime;
 
-    
-
-    // Use this for initialization
-    void Start()
-    {
-        StartCoroutine(GrowShrinkAnimation());
-    }
-
     private IEnumerator GrowShrinkAnimation()
     {
         while(true)
@@ -35,6 +27,11 @@ public class Bouncy : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    public void StartBouncy()
+    {
+        StartCoroutine(GrowShrinkAnimation());
     }
 
 }

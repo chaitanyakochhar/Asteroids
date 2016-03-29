@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class UIUpdater : MonoBehaviour
 {
@@ -24,15 +26,14 @@ public class UIUpdater : MonoBehaviour
         lifeHolder = GameObject.Find("Lives");
         alienHolder = GameObject.Find("Aliens Collected");
 
-        lives = lifeHolder.GetComponentsInChildren<Image>();
-        aliens = alienHolder.GetComponentsInChildren<Image>();
+        lives = getImageComponentsOfObject(lifeHolder);
+        aliens = getImageComponentsOfObject(alienHolder);
 
         lifeCount = lives.Length;
         alienCount = aliens.Length;
 
         Arrow.GetComponent<SpriteRenderer>().enabled = false;
         Goal.GetComponent<BoxCollider>().enabled = false;
-        Goal.GetComponent<Bouncy>().enabled = false;
     }
 
     private void Toggle(Image i, bool toggle)
@@ -40,21 +41,26 @@ public class UIUpdater : MonoBehaviour
         Color c = i.color;
         if (toggle)
         {
-            c.a = 255f;
+            c.a = 1f;
         }
         else
         {
-            c.a = 30f;
+            c.a = 0f;
         }
         i.color = c;
     }
 
     public void LostLife()
     {
-        if (lifeStart <= lifeCount)
+        if (lifeStart < lifeCount)
         {
             Toggle(lives[lifeStart], false);
-            lifeStart++;
+            
+        }
+        lifeStart++;
+        if (lifeStart > lifeCount)
+        {
+            SceneManager.LoadScene("DodgingAsteroids_Dummy");
         }
     }
 
@@ -69,12 +75,24 @@ public class UIUpdater : MonoBehaviour
         if (alienStart == 1)
         {
             Arrow.GetComponent<SpriteRenderer>().enabled = true;
+            Arrow.GetComponent<Bouncy>().StartBouncy();
         }
         if (alienStart == alienCount)
         {
             Goal.GetComponent<BoxCollider>().enabled = true;
-            Goal.GetComponent<Bouncy>().enabled = true;
+            Goal.GetComponent<Bouncy>().StartBouncy();
         }
 
     }
+
+    private Image[] getImageComponentsOfObject(GameObject GO)
+    {
+        List<Image> images = new List<Image>();
+        foreach(Transform child in GO.transform)
+        {
+            images.Add(child.GetComponent<Image>());
+        }
+        return images.ToArray();
+    }
+
 }

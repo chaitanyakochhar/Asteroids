@@ -10,10 +10,12 @@ public class Player : MonoBehaviour
     private AudioSource audioSource;
     private GameObject checkpoint;
     private GameObject spawnedMarker;
+    private UIUpdater uiUpdater;
 
     public void Start()
     {
         checkpoint = GameObject.Find("Start");
+        uiUpdater = GameObject.Find("UI").GetComponent<UIUpdater>();
         spawnedMarker = Instantiate(positionMarker);
         spawnedMarker.GetComponent<PositionMarker>().ToggleMarker(false);
         audioSource = GetComponent<AudioSource>();
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
                     NavMesh.SamplePosition(checkpoint.transform.position, out startPos, 10f, 1);
                     transform.position = startPos.position;
                     agent.enabled = true;
+                    uiUpdater.LostLife();
                     break;
                 }
             case "Safe":
@@ -56,6 +59,7 @@ public class Player : MonoBehaviour
             case "Collectible":
                 {
                     audioSource.PlayOneShot(pickupSound);
+                    uiUpdater.FoundAlien();
                     break;
                 }
         }
