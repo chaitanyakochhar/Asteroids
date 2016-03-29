@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a99f73a1d38044088c6eaf88f914ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 20
   center: {fileID: 23579884}
 --- !u!1 &79469642 stripped
 GameObject:
@@ -865,15 +865,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 422206, guid: f4df1bcf80be5d74b81deeaf9b7796f2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 55.846977
+      value: 55.4
       objectReference: {fileID: 0}
     - target: {fileID: 422206, guid: f4df1bcf80be5d74b81deeaf9b7796f2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.000001
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 422206, guid: f4df1bcf80be5d74b81deeaf9b7796f2, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.391549
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 422206, guid: f4df1bcf80be5d74b81deeaf9b7796f2, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1387,7 +1387,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a99f73a1d38044088c6eaf88f914ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -55
+  speed: -40
   center: {fileID: 1805097665}
 --- !u!1001 &2029596312
 Prefab:
