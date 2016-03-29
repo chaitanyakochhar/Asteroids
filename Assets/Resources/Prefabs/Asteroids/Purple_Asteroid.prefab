@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21260422}
   - 65: {fileID: 6538384}
   - 114: {fileID: 11471680}
+  - 96: {fileID: 9647276}
   m_Layer: 0
   m_Name: Purple_Asteroid
   m_TagString: Obstacle
@@ -42,6 +43,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.25, y: 3, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!96 &9647276
+TrailRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185182}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Time: 4
+  m_StartWidth: 0.5
+  m_EndWidth: 0.2
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 1441455588
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 1275068415
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 1107296255
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 687865855
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 16777215
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 1
 --- !u!114 &11471680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,7 +127,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1652246555
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 987b8dccb53fa6646a3ad5d57011b971, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
