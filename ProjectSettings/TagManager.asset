@@ -57,6 +57,9 @@ TagManager:
   - name: Collectibles
     uniqueID: 350666765
     locked: 0
+  - name: Shield
+    uniqueID: 1191418781
+    locked: 0
   - name: Player
     uniqueID: 2901434417
     locked: 0
