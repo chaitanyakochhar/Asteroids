@@ -4,9 +4,11 @@ using System.Collections;
 [RequireComponent(typeof(NavMeshAgent))]
 public class Player : MonoBehaviour
 {
-
-    private GameObject checkpoint;
     public GameObject positionMarker;
+    public AudioClip pickupSound;
+
+    private AudioSource audioSource;
+    private GameObject checkpoint;
     private GameObject spawnedMarker;
 
     public void Start()
@@ -14,6 +16,7 @@ public class Player : MonoBehaviour
         checkpoint = GameObject.Find("Start");
         spawnedMarker = Instantiate(positionMarker);
         spawnedMarker.GetComponent<PositionMarker>().ToggleMarker(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void executeCommand(Command c)
@@ -48,6 +51,11 @@ public class Player : MonoBehaviour
             case "Safe":
                 {
                     checkpoint = other.gameObject;
+                    break;
+                }
+            case "Collectible":
+                {
+                    audioSource.PlayOneShot(pickupSound);
                     break;
                 }
         }
