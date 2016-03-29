@@ -40,7 +40,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.45, y: 3.1799996, z: 0.19999997}
+  m_Size: {x: 3.45, y: 3.1799996, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!96 &9686046
 TrailRenderer:
@@ -68,7 +68,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 4
+  m_Time: 3
   m_StartWidth: 0.5
   m_EndWidth: 0.2
   m_Colors:
