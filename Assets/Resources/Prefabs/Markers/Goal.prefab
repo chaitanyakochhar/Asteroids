@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21272458}
   - 114: {fileID: 11449114}
   - 65: {fileID: 6587126}
+  - 114: {fileID: 11473450}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Safe
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 109458}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 55.4, y: -1, z: 4.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,6 +55,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextLevel: DodgingAsteroids_Dummy
+--- !u!114 &11473450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffa8c86f057af841ab63c41d20e00ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationDuration: 2
+  normal: {x: 1, y: 1, z: 1}
+  large: {x: 1.5, y: 1.5, z: 1}
 --- !u!212 &21272458
 SpriteRenderer:
   m_ObjectHideFlags: 1
