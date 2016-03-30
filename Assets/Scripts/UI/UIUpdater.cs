@@ -33,6 +33,7 @@ public class UIUpdater : MonoBehaviour
         alienCount = aliens.Length;
 
         Arrow.GetComponent<SpriteRenderer>().enabled = false;
+        Arrow.GetComponent<BoxCollider>().enabled = false;
         Goal.GetComponent<BoxCollider>().enabled = false;
     }
 
@@ -75,6 +76,7 @@ public class UIUpdater : MonoBehaviour
         if (alienStart == 1)
         {
             Arrow.GetComponent<SpriteRenderer>().enabled = true;
+            Arrow.GetComponent<BoxCollider>().enabled = true;
             Arrow.GetComponent<Bouncy>().StartBouncy();
         }
         if (alienStart == alienCount)
