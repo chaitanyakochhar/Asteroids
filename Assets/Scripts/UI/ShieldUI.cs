@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class ShieldUI : MonoBehaviour
 {
-    private Image shieldBar;
+    private Image shieldBar1;
+    private Image shieldBar2;
     private SpriteRenderer shieldGraphic;
     private Player player;
     public float shieldDuration = 2f;
@@ -12,7 +13,8 @@ public class ShieldUI : MonoBehaviour
 
     public void Start()
     {
-        shieldBar = GameObject.Find("Shield Timer Bar").GetComponent<Image>();
+        shieldBar1 = GameObject.Find("Shield Bar 1").GetComponent<Image>();
+        shieldBar2 = GameObject.Find("Shield Bar 2").GetComponent<Image>();
         shieldGraphic = GameObject.Find("Shield").GetComponent<SpriteRenderer>();
         player = GameObject.Find("Player").GetComponent<Player>();
     }
@@ -26,7 +28,8 @@ public class ShieldUI : MonoBehaviour
         shieldGraphic.enabled = true;
         while((Time.time - startTime) <= shieldDuration)
         {
-            shieldBar.fillAmount = Mathf.Lerp(1f, -0.1f, (Time.time - startTime) / shieldDuration);
+            shieldBar1.fillAmount = Mathf.Lerp(1f, -0.1f, (Time.time - startTime) / shieldDuration);
+            shieldBar2.fillAmount = Mathf.Lerp(1f, -0.1f, (Time.time - startTime) / shieldDuration);
             yield return null;
         }
 
