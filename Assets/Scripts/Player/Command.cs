@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class Command
@@ -18,11 +19,9 @@ public class Command
         Ray r = Camera.main.ScreenPointToRay(destination);
         RaycastHit hit;
         bool hasHit = Physics.Raycast(r, out hit);
-        if(hasHit)
+        if(hasHit && !EventSystem.current.IsPointerOverGameObject())
         {
-
-                //Debug.Log("I have hit the navmesh, can move to this point");
-                return new Command(destination, hit.point);
+            return new Command(destination, hit.point);
         }
         return null;
     }

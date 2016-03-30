@@ -26,7 +26,7 @@ public class ShieldUI : MonoBehaviour
         shieldGraphic.enabled = true;
         while((Time.time - startTime) <= shieldDuration)
         {
-            shieldBar.fillAmount = Mathf.Lerp(1f, 0f, (Time.time - startTime) / shieldDuration);
+            shieldBar.fillAmount = Mathf.Lerp(1f, -0.1f, (Time.time - startTime) / shieldDuration);
             yield return null;
         }
 
@@ -36,7 +36,7 @@ public class ShieldUI : MonoBehaviour
         startTime = Time.time;
         while ((Time.time - startTime) <= shieldCooldown)
         {
-            GetComponent<Image>().fillAmount = Mathf.Lerp(0f, 1f, (Time.time - startTime) / shieldCooldown);
+            GetComponent<Image>().fillAmount = Mathf.Lerp(0f, 1.2f, (Time.time - startTime) / shieldCooldown);
             yield return null;
         }
 
