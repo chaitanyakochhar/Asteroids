@@ -11,9 +11,11 @@ public class Player : MonoBehaviour
     private GameObject checkpoint;
     private GameObject spawnedMarker;
     private UIUpdater uiUpdater;
+    public bool isShielded { get; private set; }
 
     public void Start()
     {
+        isShielded = false;
         checkpoint = GameObject.Find("Start");
         uiUpdater = GameObject.Find("UI").GetComponent<UIUpdater>();
         spawnedMarker = Instantiate(positionMarker);
@@ -41,14 +43,17 @@ public class Player : MonoBehaviour
         {
             case "Obstacle":
                 {
-                    NavMeshAgent agent = GetComponent<NavMeshAgent>();
-                    agent.Stop();
-                    agent.enabled = false;
-                    NavMeshHit startPos;
-                    NavMesh.SamplePosition(checkpoint.transform.position, out startPos, 10f, 1);
-                    transform.position = startPos.position;
-                    agent.enabled = true;
-                    uiUpdater.LostLife();
+                    if (!isShielded)
+                    {
+                        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+                        agent.Stop();
+                        agent.enabled = false;
+                        NavMeshHit startPos;
+                        NavMesh.SamplePosition(checkpoint.transform.position, out startPos, 10f, 1);
+                        transform.position = startPos.position;
+                        agent.enabled = true;
+                        uiUpdater.LostLife();
+                    }
                     break;
                 }
             case "Safe":
@@ -63,5 +68,10 @@ public class Player : MonoBehaviour
                     break;
                 }
         }
+    }
+
+    public void ToggleShield()
+    {
+        isShielded = !isShielded;
     }
 }
