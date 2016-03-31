@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/DodgeAsteroids/Scenes/Level2.unity
   - enabled: 0
-    path: Assets/Scenes/LandingPage.unity
+    path: Assets/DodgeAsteroids/Scenes/LandingPage.unity
   - enabled: 0
-    path: Assets/Scenes/DodgingAsteroids/DodgingAsteroid_Level1.unity
+    path: Assets/DodgeAsteroids/Scenes/DodgingAsteroids/DodgingAsteroid_Level1.unity
   - enabled: 0
-    path: Assets/Scenes/FixingISS.unity
+    path: Assets/DodgeAsteroids/Scenes/FixingISS.unity
   - enabled: 1
-    path: Assets/Scenes/DodgingAsteroids/DodgingAsteroids_Dummy.unity
+    path: Assets/DodgeAsteroids/Scenes/DodgingAsteroids/DodgingAsteroids_Dummy.unity
