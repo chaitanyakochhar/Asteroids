@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace SpaceshipGame
+namespace SpaceShooterGame
 {
     public class BlueLaser : MonoBehaviour
     {
