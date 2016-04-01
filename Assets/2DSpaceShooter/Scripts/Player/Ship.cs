@@ -45,8 +45,9 @@ namespace SpaceshipGame
         private bool isPlayerOutOfBounds()
         {
             Vector3 testVector = Camera.main.WorldToViewportPoint(transform.position);
-            if(testVector.x<0.1f || testVector.x>0.8f || testVector.y>0.8f || testVector.y<0.1f)
-            return true;
+            if (testVector.x < 0.1f || testVector.x > 0.8f || testVector.y > 0.8f || testVector.y < 0.1f)
+                return true;
+            else return false;
         }
 
         private Vector3 offset(Vector3 v, float x = 0, float y = 0, float z = 0)
