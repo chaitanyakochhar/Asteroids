@@ -3,6 +3,7 @@ using System.Collections;
 
 namespace SpaceShooterGame
 {
+
     public class Ship : MonoBehaviour
     {
         public GameObject projectile;
@@ -31,26 +32,26 @@ namespace SpaceShooterGame
         private Vector3 ClampedTranslation(Vector3 translation)
         {
             Vector3 testVector = Camera.main.WorldToViewportPoint(transform.position);
-            print(testVector);
+            print("Viewport: " + testVector);
             print("Translation:" + translation);
-            if (testVector.x <= 0f && translation.x < 0f)
+            if (testVector.x <= 0.2f && translation.x < 0f)
             {
                 translation.x = 0f;
             }
-            if (testVector.x >= 1f && translation.x > 0f)
+            if (testVector.x >= 0.8f && translation.x > 0f)
             {
                 translation.x = 0f;
             }
-            if (testVector.y <= 0f && translation.y < 0f)
+            if (testVector.y <= 0.2f && translation.y < 0f)
             {
                 translation.y = 0f;
             }
-            if (testVector.y >= 1f && translation.y > 0f)
+            if (testVector.y >= 0.8f && translation.y > 0f)
             {
                 translation.y = 0f;
             }
             return translation;
-             
+
         }
 
         private Vector3 offset(Vector3 v, float x = 0, float y = 0, float z = 0)
@@ -59,6 +60,11 @@ namespace SpaceShooterGame
             v.y += y;
             v.z += z;
             return v;
+        }
+
+        public void OnTriggerEnter2D(Collider2D collision)
+        {
+            
         }
     }
 }

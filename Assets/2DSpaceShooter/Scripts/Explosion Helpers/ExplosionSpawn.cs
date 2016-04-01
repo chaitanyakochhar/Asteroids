@@ -3,7 +3,6 @@ using System.Collections;
 
 namespace SpaceShooterGame
 {
-    [RequireComponent(typeof(BoxCollider2D))]
     public class ExplosionSpawn : MonoBehaviour
     {
         public GameObject ExplosionToSpawn;
@@ -12,6 +11,8 @@ namespace SpaceShooterGame
         {
             GameObject GO = Instantiate(ExplosionToSpawn, transform.position, Quaternion.identity) as GameObject;
             GO.GetComponent<ExplosionDestroyer>().DestroyExplosion();
+            Destroy(collision.gameObject);
+            Destroy(gameObject.transform.parent.gameObject);
             Destroy(gameObject);
         }
     }
