@@ -8,7 +8,8 @@ namespace SpaceShooterGame
         public GameObject projectile;
         public float projectileSpeed = 5f;
 
-        private Vector3 refAxis;
+        private bool xAxisOutOfBounds;
+        private bool yAxisOutOfBounds;
 
         public void FireProjectile(Command c)
         {
@@ -22,32 +23,34 @@ namespace SpaceShooterGame
             }
         }
 
-        public void Start()
-        {
-            refAxis = transform.position;
-            refAxis.x = 1f;
-            refAxis.y = 0f;
-            refAxis.z = 0f;
-            Debug.DrawRay(transform.position, refAxis);
-        }
-
-        public void Update()
-        {
-            print(isPlayerOutOfBounds());
-
-        }
-
         public void MovePlayer(Vector3 translation)
         {
-            transform.Translate(translation);
+            transform.Translate(ClampedTranslation(translation));
         }
 
-        private bool isPlayerOutOfBounds()
+        private Vector3 ClampedTranslation(Vector3 translation)
         {
             Vector3 testVector = Camera.main.WorldToViewportPoint(transform.position);
-            if (testVector.x < 0.1f || testVector.x > 0.8f || testVector.y > 0.8f || testVector.y < 0.1f)
-                return true;
-            else return false;
+            print(testVector);
+            print("Translation:" + translation);
+            if (testVector.x <= 0f && translation.x < 0f)
+            {
+                translation.x = 0f;
+            }
+            if (testVector.x >= 1f && translation.x > 0f)
+            {
+                translation.x = 0f;
+            }
+            if (testVector.y <= 0f && translation.y < 0f)
+            {
+                translation.y = 0f;
+            }
+            if (testVector.y >= 1f && translation.y > 0f)
+            {
+                translation.y = 0f;
+            }
+            return translation;
+             
         }
 
         private Vector3 offset(Vector3 v, float x = 0, float y = 0, float z = 0)
