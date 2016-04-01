@@ -33,7 +33,7 @@ namespace SpaceShooterGame
 
         public void Update()
         {
-            isPlayerOutOfBounds();
+            print(isPlayerOutOfBounds());
 
         }
 
