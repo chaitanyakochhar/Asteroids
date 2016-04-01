@@ -25,6 +25,7 @@ GameObject:
   - 4: {fileID: 478438}
   - 212: {fileID: 21271854}
   - 61: {fileID: 6191218}
+  - 114: {fileID: 11495538}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4836392, y: -19.287155, z: 0}
+  m_LocalPosition: {x: -4.576945, y: -21.803259, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 478438}
@@ -66,11 +67,23 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0.0000019073486}
   serializedVersion: 2
   m_Size: {x: 3.45, y: 3.18}
+--- !u!114 &11495538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c778ae7ef6a09c46a645e9a40cd685a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionToSpawn: {fileID: 100012, guid: 384371afbb4354cc9a3fc68eab303756, type: 2}
 --- !u!212 &21271854
 SpriteRenderer:
   m_ObjectHideFlags: 1
