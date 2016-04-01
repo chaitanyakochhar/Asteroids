@@ -21,6 +21,7 @@ namespace SpaceshipGame
         {
             sampleJoystick();
             processTouch();
+            processClick();
         }
 
         //Create command only for touches that are on the screen
@@ -32,10 +33,18 @@ namespace SpaceshipGame
                 {
                     case TouchPhase.Ended:
                         {
-                            player.FireProjectile(Command.createCommand(t.position));
+                            player.FireProjectile(Command.createCommandWithoutRaycast(t.position));
                             break;
                         }
                 }
+            }
+        }
+
+        private void processClick()
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                player.FireProjectile(Command.createCommandWithoutRaycast(Input.mousePosition));
             }
         }
 
