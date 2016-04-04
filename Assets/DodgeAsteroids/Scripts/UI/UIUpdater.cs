@@ -8,6 +8,7 @@ public class UIUpdater : MonoBehaviour
 {
     public GameObject Goal;
     public GameObject Arrow;
+    public string gameOverLevel = GameNames.ExitPage;
 
     private GameObject lifeHolder;
     private GameObject alienHolder;
@@ -61,7 +62,10 @@ public class UIUpdater : MonoBehaviour
         lifeStart++;
         if (lifeStart > lifeCount)
         {
-            SceneManager.LoadScene("DodgingAsteroids_Dummy");
+            GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;
+            //InterAppCommunicationManager.result = true;
+            SceneManager.LoadScene(gameOverLevel);
+            
         }
     }
 

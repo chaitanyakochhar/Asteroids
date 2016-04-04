@@ -4,12 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class Goal : MonoBehaviour
 {
-    public string nextLevel = "DodgingAsteroids_Dummy";
+    public string nextLevel = GameNames.ExitPage;
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
+            GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = true;
+            //InterAppCommunicationManager.result = true;
             SceneManager.LoadScene(nextLevel);
         }
     }

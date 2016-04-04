@@ -9,9 +9,6 @@ namespace SpaceShooterGame
         public GameObject projectile;
         public float projectileSpeed = 5f;
 
-        private bool xAxisOutOfBounds;
-        private bool yAxisOutOfBounds;
-
         public void FireProjectile(Command c)
         {
             if (c != null)
