@@ -6,7 +6,7 @@ namespace SpaceShooterGame
     public class ExplosionSpawn : MonoBehaviour
     {
         public GameObject ExplosionToSpawn;
-        public int asteroidHP = 2;
+        public int asteroidHP = 1;
 
         public void OnTriggerEnter2D(Collider2D collision)
         {
