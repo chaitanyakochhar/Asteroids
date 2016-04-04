@@ -8,9 +8,10 @@ public class Goal : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
-            GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = true;
+            if (GameObject.Find("Manager") != null)
+                GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = true;
             //InterAppCommunicationManager.result = true;
             SceneManager.LoadScene(nextLevel);
         }
