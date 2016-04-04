@@ -22,7 +22,7 @@ namespace SpaceShooterGame
                 Destroy(collision.gameObject);
                 if (asteroidHP < 0)
                 {
-                    Destroy(gameObject.transform.parent.gameObject);
+                    Destroy(transform.parent.gameObject);
                     Destroy(gameObject);
                 }
             }

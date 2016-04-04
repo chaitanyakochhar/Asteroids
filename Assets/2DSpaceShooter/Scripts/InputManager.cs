@@ -13,16 +13,23 @@ namespace SpaceShooterGame
 
         public void Start()
         {
-            player = GameObject.Find("Player").GetComponent<Ship>();
+            if (GameObject.Find("Player") != null)
+            {
+                player = GameObject.Find("Player").GetComponent<Ship>();
+
+            }
             //virtualJoystick = GameObject.Find("Joystick Background").GetComponent<VirtualJoystick>();
         }
 
         public void Update()
         {
-            sampleJoystick();
-            sampleKeyboard();
-            processTouch();
-            processClick();
+            if (player != null)
+            {
+                sampleJoystick();
+                sampleKeyboard();
+                processTouch();
+                processClick();
+            }
         }
 
         //Create command only for touches that are on the screen
