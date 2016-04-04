@@ -34,8 +34,6 @@ namespace SpaceShooterGame
         private Vector3 ClampedTranslation(Vector3 translation)
         {
             Vector3 testVector = Camera.main.WorldToViewportPoint(transform.position);
-            print("Viewport: " + testVector);
-            print("Translation:" + translation);
             if (testVector.x <= 0.2f && translation.x < 0f)
             {
                 translation.x = 0f;
@@ -70,11 +68,13 @@ namespace SpaceShooterGame
             HP -= amount;
             if(HP<0)
             {
-                InterAppCommunicationManager i = GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>();
-                i.LoadSceneFromURL(GameNames.ExitPage);
+                //This call is there in the UI, need to fix that, need to put it in the GameManager
+                //InterAppCommunicationManager i = GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>();
+                //i.LoadSceneFromURL(GameNames.ExitPage);
             }
             else
             {
+                GameObject.Find("UI").GetComponent<UIUpdater>().LostLife();
                 StartCoroutine(BlinkWhenHit());
             }
         }

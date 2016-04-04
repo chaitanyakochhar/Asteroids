@@ -18,6 +18,10 @@ namespace SpaceShooterGame
                 player = GameObject.Find("Player").GetComponent<Ship>();
 
             }
+            if(GameObject.Find("Goal")!= null)
+            {
+                GameObject.Find("Goal").GetComponent<Bouncy>().StartBouncy();
+            }
             //virtualJoystick = GameObject.Find("Joystick Background").GetComponent<VirtualJoystick>();
         }
 

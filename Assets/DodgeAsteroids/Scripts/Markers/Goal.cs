@@ -16,4 +16,16 @@ public class Goal : MonoBehaviour
             SceneManager.LoadScene(nextLevel);
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        print("BOOM!");
+        if (collision.tag == "Player")
+        {
+            if (GameObject.Find("Manager") != null)
+                GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = true;
+            //InterAppCommunicationManager.result = true;
+            SceneManager.LoadScene(nextLevel);
+        }
+    }
 }

@@ -27,15 +27,28 @@ public class UIUpdater : MonoBehaviour
         lifeHolder = GameObject.Find("Lives");
         alienHolder = GameObject.Find("Aliens Collected");
 
-        lives = getImageComponentsOfObject(lifeHolder);
-        aliens = getImageComponentsOfObject(alienHolder);
+        if(lifeHolder!=null)
+        {
+            lives = getImageComponentsOfObject(lifeHolder);
+            lifeCount = lives.Length;
+        }
 
-        lifeCount = lives.Length;
-        alienCount = aliens.Length;
+        if (alienHolder != null)
+        {
+            aliens = getImageComponentsOfObject(alienHolder);
+            alienCount = aliens.Length;
+        }
+        
+        if (Arrow != null)
+        {
+            Arrow.GetComponent<SpriteRenderer>().enabled = false;
+            Arrow.GetComponent<BoxCollider>().enabled = false;
+        }
 
-        Arrow.GetComponent<SpriteRenderer>().enabled = false;
-        Arrow.GetComponent<BoxCollider>().enabled = false;
-        Goal.GetComponent<BoxCollider>().enabled = false;
+        if (Goal != null)
+        {
+            Goal.GetComponent<BoxCollider>().enabled = false;
+        }
     }
 
     private void Toggle(Image i, bool toggle)
@@ -57,15 +70,17 @@ public class UIUpdater : MonoBehaviour
         if (lifeStart < lifeCount)
         {
             Toggle(lives[lifeStart], false);
-            
+
         }
         lifeStart++;
         if (lifeStart > lifeCount)
         {
-            GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;
-            //InterAppCommunicationManager.result = true;
-            SceneManager.LoadScene(gameOverLevel);
-            
+            if (GameObject.Find("Manager") != null)
+            {
+                GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;
+                //InterAppCommunicationManager.result = true;
+                SceneManager.LoadScene(gameOverLevel);
+            }
         }
     }
 
@@ -94,7 +109,7 @@ public class UIUpdater : MonoBehaviour
     private Image[] getImageComponentsOfObject(GameObject GO)
     {
         List<Image> images = new List<Image>();
-        foreach(Transform child in GO.transform)
+        foreach (Transform child in GO.transform)
         {
             images.Add(child.GetComponent<Image>());
         }
