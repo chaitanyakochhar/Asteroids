@@ -14,12 +14,13 @@ namespace SpaceShooterGame
         public void Start()
         {
             player = GameObject.Find("Player").GetComponent<Ship>();
-            virtualJoystick = GameObject.Find("Joystick Background").GetComponent<VirtualJoystick>();
+            //virtualJoystick = GameObject.Find("Joystick Background").GetComponent<VirtualJoystick>();
         }
 
         public void Update()
         {
             sampleJoystick();
+            sampleKeyboard();
             processTouch();
             processClick();
         }
@@ -51,11 +52,36 @@ namespace SpaceShooterGame
         //Sample input from virtual joystick, will figure out how to disable fo
         private void sampleJoystick()
         {
-            Vector3 translation = virtualJoystick.SamplePosition();
-            translation.x *= xMovementMultiplier;
-            translation.y *= yMovementMultiplier;
-            player.MovePlayer(translation);
+            if (virtualJoystick != null)
+            {
+                Vector3 translation = virtualJoystick.SamplePosition();
+                translation.x *= xMovementMultiplier;
+                translation.y *= yMovementMultiplier;
+                player.MovePlayer(translation);
+            }
 
+        }
+
+        private void sampleKeyboard()
+        {
+            Vector3 translation = new Vector3();
+            if (Input.GetKey(KeyCode.W))
+            {
+                translation.y += 0.2f;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                translation.x -= 0.2f;
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                translation.y -= 0.2f;
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                translation.x += 0.2f;
+            }
+            player.MovePlayer(translation);
         }
 
     }

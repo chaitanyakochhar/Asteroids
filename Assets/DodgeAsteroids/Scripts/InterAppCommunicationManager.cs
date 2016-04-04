@@ -64,6 +64,14 @@ public class InterAppCommunicationManager : MonoBehaviour
                     
                     break;
                 }
+            case GameNames.ExitPage:
+                {
+                    gameName = GameNames.ShootingAsteroidsGame.ToString();
+                    SceneManager.LoadScene(GameNames.ExitPage);
+
+                    break;
+                }
+
         }
     }
 

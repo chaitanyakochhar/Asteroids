@@ -6,7 +6,7 @@ namespace SpaceShooterGame
     {
         public float speed;
         public GameObject center;
-
+        
         public void Update()
         {
             if(center!= null)

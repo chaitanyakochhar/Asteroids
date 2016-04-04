@@ -8,7 +8,9 @@ namespace SpaceShooterGame
     {
         public GameObject projectile;
         public float projectileSpeed = 5f;
+        public int HP = 5;
 
+        
         public void FireProjectile(Command c)
         {
             if (c != null)
@@ -21,6 +23,7 @@ namespace SpaceShooterGame
             }
         }
 
+        #region MOVEMENT RELATED
         public void MovePlayer(Vector3 translation)
         {
             transform.Translate(ClampedTranslation(translation));
@@ -58,10 +61,38 @@ namespace SpaceShooterGame
             v.z += z;
             return v;
         }
+        #endregion
 
-        public void OnTriggerEnter2D(Collider2D collision)
+        public void ReduceHP(int amount)
         {
-            
+            HP -= amount;
+            if(HP<0)
+            {
+                InterAppCommunicationManager i = GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>();
+                i.LoadSceneFromURL(GameNames.ExitPage);
+            }
+            else
+            {
+                StartCoroutine(BlinkWhenHit());
+            }
+        }
+
+        private IEnumerator BlinkWhenHit()
+        {
+            SpriteRenderer spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            Color c;
+            for(int i = 0; i<5; i++)
+            {
+                c = spriteRenderer.color;
+                c.a = 0;
+                spriteRenderer.color = c;
+                yield return new WaitForSeconds(0.2f);
+                c.a = 1;
+                spriteRenderer.color = c;
+                yield return new WaitForSeconds(0.2f);
+
+            }
+            yield return null;
         }
     }
 }

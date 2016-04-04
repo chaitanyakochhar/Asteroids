@@ -14,6 +14,11 @@ public class CameraLerp : MonoBehaviour
             print("Moving camera");
             moved = true;
             StartCoroutine(MoveCamera());
+            Vector3 newPoint = transform.position;
+            newPoint.x += 2;
+            NavMeshHit hit;
+            NavMesh.SamplePosition(newPoint, out hit, 2, 1);
+            other.GetComponent<NavMeshAgent>().SetDestination(hit.position);
         }
     }
 
