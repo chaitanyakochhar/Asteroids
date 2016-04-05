@@ -7,7 +7,7 @@ namespace SpaceShooterGame
     {
         public void Update()
         {
-            if (Mathf.Abs(Camera.main.WorldToViewportPoint(transform.position).x) > 1.2f || Mathf.Abs(Camera.main.WorldToViewportPoint(transform.position).y) > 1.2f)
+            if (Mathf.Abs(Camera.main.WorldToViewportPoint(transform.position).x) > 0.9f || Mathf.Abs(Camera.main.WorldToViewportPoint(transform.position).y) > 0.9f)
             {
                 GameObject.Find("Player").GetComponent<Ship>().projectileLimit++;
                 Destroy(gameObject);
