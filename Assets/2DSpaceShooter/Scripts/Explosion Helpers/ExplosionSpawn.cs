@@ -20,7 +20,7 @@ namespace SpaceShooterGame
                 GameObject GO = Instantiate(ExplosionToSpawn, transform.position, Quaternion.identity) as GameObject;
                 GO.GetComponent<ExplosionDestroyer>().DestroyExplosion();
                 Destroy(collision.gameObject);
-                if (asteroidHP < 0)
+                if (asteroidHP <= 0)
                 {
                     Destroy(transform.parent.gameObject);
                     Destroy(gameObject);
