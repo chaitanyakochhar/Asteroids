@@ -36,5 +36,15 @@ namespace FixingISSGame
             }
         }
 
+        private void RaycastOntoColorMesh(Touch t)
+        {
+            RaycastHit hit;
+            Command c = Command.createCommandWithHitObjectReference(t.position, out hit);
+            if(hit.transform.tag == "Paintable")
+            {
+                hit.transform.GetComponent<ColorMesh>().RaycastListener(c, hit);
+            }
+        }
+
     }
 }

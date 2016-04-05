@@ -74,10 +74,9 @@ namespace FixingISSGame
         {
             if (Input.GetMouseButton(0))
             {
-                print("Boom");
                 RaycastHit hit;
                 Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit);
-                if (c != null)
+                if (c != null && hit.transform.tag=="Paintable")
                 {
                     hit.transform.GetComponent<ColorMesh>().RaycastListener(c, hit);
                 }

@@ -13,6 +13,10 @@ namespace SpaceShooterGame
             if (collision.transform.parent!=null && collision.transform.parent.name == "Player")
             {
                 collision.transform.parent.GetComponent<Ship>().ReduceHP(1);
+                GameObject GO = Instantiate(ExplosionToSpawn, transform.position, Quaternion.identity) as GameObject;
+                GO.GetComponent<ExplosionDestroyer>().DestroyExplosion();
+                Destroy(transform.parent.gameObject);
+                Destroy(gameObject);
             }
             else
             {

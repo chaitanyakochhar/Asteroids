@@ -82,7 +82,9 @@ namespace SpaceShooterGame
         private IEnumerator BlinkWhenHit()
         {
             SpriteRenderer spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            PolygonCollider2D collider = transform.GetChild(0).GetComponent<PolygonCollider2D>();
             Color c;
+            collider.enabled = false;
             for(int i = 0; i<5; i++)
             {
                 c = spriteRenderer.color;
@@ -94,6 +96,7 @@ namespace SpaceShooterGame
                 yield return new WaitForSeconds(0.2f);
 
             }
+            collider.enabled = true;
             yield return null;
         }
     }
