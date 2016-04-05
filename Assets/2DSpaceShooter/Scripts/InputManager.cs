@@ -24,7 +24,11 @@ namespace SpaceShooterGame
             }
             if(GameObject.Find("Goal")!= null)
             {
-                GameObject.Find("Goal").GetComponent<Bouncy>().StartBouncy();
+                GameObject.Find("Goal").transform.GetChild(0).GetComponent<Bouncy>().StartBouncy();
+            }
+            if(GameObject.Find("Fingerwaypoint")!=null)
+            {
+                GameObject.Find("Fingerwaypoint").transform.GetChild(0).GetComponent<Bouncy>().StartBouncy();
             }
             //virtualJoystick = GameObject.Find("Joystick Background").GetComponent<VirtualJoystick>();
         }

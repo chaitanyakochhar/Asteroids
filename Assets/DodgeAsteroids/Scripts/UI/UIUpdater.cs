@@ -73,8 +73,9 @@ public class UIUpdater : MonoBehaviour
 
         }
         lifeStart++;
-        if (lifeStart > lifeCount)
+        if (lifeStart >= lifeCount)
         {
+            print("BOOM! from death");
             if (GameObject.Find("Manager") != null)
             {
                 GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;
