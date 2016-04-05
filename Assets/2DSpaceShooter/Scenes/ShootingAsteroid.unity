@@ -5845,7 +5845,7 @@ Transform:
   - {fileID: 1622731656}
   - {fileID: 1314044559}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &1250695335
 MonoBehaviour:
   m_ObjectHideFlags: 0
