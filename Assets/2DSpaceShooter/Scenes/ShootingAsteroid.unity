@@ -343,6 +343,10 @@ Prefab:
       propertyPath: m_Name
       value: Red (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
   m_IsPrefabParent: 0
@@ -469,6 +473,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -585,6 +593,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -632,7 +644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &137291894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -785,7 +797,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &186580693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,7 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &205919625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,6 +1094,10 @@ Prefab:
     - target: {fileID: 141450, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
       propertyPath: m_Name
       value: Red (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
@@ -1419,7 +1435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &320965832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,6 +1633,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -1761,7 +1781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &396406671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,7 +2037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &426523955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,7 +2212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &443334102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,7 +2316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &445262521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2431,6 +2451,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -2655,6 +2679,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -2779,6 +2807,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -3041,7 +3073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &652508646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3290,6 +3322,10 @@ Prefab:
       propertyPath: m_Name
       value: Red (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
   m_IsPrefabParent: 0
@@ -3355,6 +3391,10 @@ Prefab:
     - target: {fileID: 141450, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
       propertyPath: m_Name
       value: Red (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
@@ -3702,6 +3742,10 @@ Prefab:
       propertyPath: m_Name
       value: Red (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
   m_IsPrefabParent: 0
@@ -3771,6 +3815,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -3950,7 +3998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &866072728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4125,7 +4173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &874081745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4298,7 +4346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &935999824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4559,7 +4607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1037605152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4704,6 +4752,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -4792,7 +4844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1052167331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4969,7 +5021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1097952240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5147,6 +5199,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -5235,6 +5291,10 @@ Prefab:
       propertyPath: m_Name
       value: Red (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
   m_IsPrefabParent: 0
@@ -5281,7 +5341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1148454796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5433,6 +5493,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -5613,6 +5677,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -6174,7 +6242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1382452441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6455,6 +6523,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -6558,7 +6630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1414202401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6793,7 +6865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1481046005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6920,6 +6992,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -7305,7 +7381,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -1793, y: 140}
+  m_AnchoredPosition: {x: -1665, y: 215}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528650404
@@ -7443,6 +7519,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -7747,6 +7827,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11424092, guid: e2e9a616dc619438c8bcf9672588f90f, type: 2}
+      propertyPath: asteroidHP
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2e9a616dc619438c8bcf9672588f90f, type: 2}
   m_IsPrefabParent: 0
@@ -7955,6 +8039,10 @@ Prefab:
       propertyPath: m_Name
       value: Red (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
   m_IsPrefabParent: 0
@@ -8029,7 +8117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1644617470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8188,6 +8276,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -8321,6 +8413,10 @@ Prefab:
       propertyPath: m_Name
       value: Purple (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11424092, guid: e2e9a616dc619438c8bcf9672588f90f, type: 2}
+      propertyPath: asteroidHP
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2e9a616dc619438c8bcf9672588f90f, type: 2}
   m_IsPrefabParent: 0
@@ -8430,6 +8526,10 @@ Prefab:
     - target: {fileID: 141450, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
       propertyPath: m_Name
       value: Red (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
@@ -9020,6 +9120,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -9067,7 +9171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1835423250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9195,6 +9299,10 @@ Prefab:
       propertyPath: m_Name
       value: Red (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
   m_IsPrefabParent: 0
@@ -9315,7 +9423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1891135589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9612,7 +9720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &1940790884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9865,6 +9973,10 @@ Prefab:
       propertyPath: m_Name
       value: Grey (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -9931,6 +10043,10 @@ Prefab:
     - target: {fileID: 141450, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
       propertyPath: m_Name
       value: Red (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
@@ -10118,7 +10234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionToSpawn: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
-  asteroidHP: 2
+  asteroidHP: 1
 --- !u!114 &2029757691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10299,6 +10415,10 @@ Prefab:
     - target: {fileID: 124094, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
       propertyPath: m_Name
       value: Grey (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11429458, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
+      propertyPath: asteroidHP
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11468652, guid: 072e7917dc3ba4796aa131efc5839b4b, type: 2}
@@ -10500,6 +10620,14 @@ Prefab:
       propertyPath: projectileSpeed
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 497226, guid: 0e0ae407f43c4e147b2ea58f856c042a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 497226, guid: 0e0ae407f43c4e147b2ea58f856c042a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e0ae407f43c4e147b2ea58f856c042a, type: 2}
   m_IsPrefabParent: 0
@@ -10639,6 +10767,10 @@ Prefab:
     - target: {fileID: 141450, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
       propertyPath: m_Name
       value: Red (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11425018, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
+      propertyPath: asteroidHP
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 901baabe1c0724758bdfdd1b3025b711, type: 2}
