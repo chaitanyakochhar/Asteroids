@@ -27,10 +27,10 @@ public class InterAppCommunicationManager : MonoBehaviour
         {
             LoadSceneFromURL(GameNames.DodgingAsteroidsGame);
         }
-        //if (Input.GetKeyUp(KeyCode.Alpha2))
-        //{
-        //    LoadSceneFromURL(GameNames.ShootingAsteroidsGame);
-        //}
+        if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            LoadSceneFromURL(GameNames.ShootingAsteroidsGame);
+        }
         //if (Input.GetKeyUp(KeyCode.Alpha3))
         //{
         //    LoadSceneFromURL(GameNames.FixingInternationalSpaceStationGame);

@@ -13,7 +13,7 @@ GameObject:
   - 60: {fileID: 6004396}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 176686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7736976, y: 0.9480077, z: 0}
+  m_LocalPosition: {x: -6.89, y: -20.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 497226}
@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 152132}
   m_LocalRotation: {x: 0, y: 0, z: -0.25881907, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 477418}
   m_RootOrder: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 129834, guid: d8384c67c3728024e9fa88e925b0f026, type: 2}
-  projectileSpeed: 25
+  projectileSpeed: 50
   projectileLimit: 10
   HP: 5
 --- !u!212 &21268718
