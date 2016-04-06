@@ -22,7 +22,7 @@ namespace FixingISSGame
         public void Update()
         {
             touchListener();
-            mouseRaycaster();
+            //mouseRaycaster();
         }
 
         public void touchListener()
@@ -78,7 +78,7 @@ namespace FixingISSGame
                 Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit);
                 if (c != null && hit.transform.tag=="Paintable")
                 {
-                    hit.transform.GetComponent<ColorMesh>().RaycastListener(c, hit);
+                    hit.transform.GetComponent<ColorMesh>().RaycastListener(hit.textureCoord, Color.black);
                 }
             }
         }

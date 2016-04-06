@@ -3,8 +3,6 @@ using System.Collections;
 
 public class ColorMesh : MonoBehaviour
 {
-    Color[] c;
-    Texture2D tNew;
     public void Start()
     {
         Texture2D t = transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
@@ -12,12 +10,12 @@ public class ColorMesh : MonoBehaviour
         transform.GetComponent<Renderer>().material.mainTexture = tNew;
     }
 
-    public void RaycastListener(Command c, RaycastHit hitInfo)
+    public void RaycastListener(Vector2 textureCoord, Color targetColor)
     {
-        Vector2 point = hitInfo.textureCoord;
+        Vector2 point = textureCoord;
         Texture2D t = transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
-        ColorTexture(point, t, 50, 50);
-        print(GetColorPercentage(t, Color.red));
+        ColorTexture(point, t, targetColor, 50, 50);
+        print(GetColorPercentage(t, targetColor));
 
     }
 
@@ -31,7 +29,7 @@ public class ColorMesh : MonoBehaviour
         return c;
     }
 
-    private void ColorTexture(Vector2 point, Texture2D textureToPaint, int widthOfBrush = 10, int heightOfBrush = 10)
+    private void ColorTexture(Vector2 point, Texture2D textureToPaint, Color targetColor, int widthOfBrush = 10, int heightOfBrush = 10)
     {
         point.x *= textureToPaint.width;
         point.y *= textureToPaint.height;
@@ -47,7 +45,7 @@ public class ColorMesh : MonoBehaviour
             heightOfBrush += offset;
         }
 
-        textureToPaint.SetPixels((int)point.x, (int)point.y, widthOfBrush, heightOfBrush, createColorArray(widthOfBrush * heightOfBrush, Color.red));
+        textureToPaint.SetPixels((int)point.x, (int)point.y, widthOfBrush, heightOfBrush, createColorArray(widthOfBrush * heightOfBrush, targetColor));
         textureToPaint.Apply();
     }
 
