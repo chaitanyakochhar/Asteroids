@@ -5,13 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/LandingPage.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/DodgeAsteroids/Scenes/Levels/DodgingAsteroid.unity
   - enabled: 1
     path: Assets/2DSpaceShooter/Scenes/ShootingAsteroid.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/FixingISS/FixingISS.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/ExitPage.unity
