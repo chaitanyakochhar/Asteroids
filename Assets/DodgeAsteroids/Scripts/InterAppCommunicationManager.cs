@@ -31,10 +31,10 @@ public class InterAppCommunicationManager : MonoBehaviour
         {
             LoadSceneFromURL(GameNames.ShootingAsteroidsGame);
         }
-        //if (Input.GetKeyUp(KeyCode.Alpha3))
-        //{
-        //    LoadSceneFromURL(GameNames.FixingInternationalSpaceStationGame);
-        //}
+        if (Input.GetKeyUp(KeyCode.Alpha3))
+        {
+            LoadSceneFromURL(GameNames.FixingInternationalSpaceStationGame);
+        }
 
     }
 
@@ -66,9 +66,7 @@ public class InterAppCommunicationManager : MonoBehaviour
                 }
             case GameNames.ExitPage:
                 {
-                    gameName = GameNames.ShootingAsteroidsGame.ToString();
                     SceneManager.LoadScene(GameNames.ExitPage);
-
                     break;
                 }
 

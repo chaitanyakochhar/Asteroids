@@ -12,5 +12,17 @@ namespace FixingISSGame
         {
             hasItem = false;
         }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            print("bang");
+            if(other.tag=="Instrument" && other.transform.GetComponent<Screw>() != null && !hasItem)
+            {
+                hasItem = true;
+                Vector3 newPosition = transform.position;
+                newPosition.z = other.transform.position.z;
+                other.transform.GetComponent<Screw>().ChangeState(newPosition);
+            }
+        }
     }
 }

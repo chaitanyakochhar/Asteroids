@@ -1,56 +1,97 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+
 namespace FixingISSGame
 {
     [RequireComponent(typeof(SpriteRenderer))]
-    [RequireComponent(typeof(Collider2D))]
+    [RequireComponent(typeof(BoxCollider))]
     public class Screw : Instrument
     {
 
         public Sprite screwInsertedImage;
+        public float numberOfTapsNeeded = 2;
+        public ScrewState screwState = ScrewState.LOOSE;
 
-        public GameObject target; //Requires a trigger2d to process image change
-        public int numberOfTaps = 2;
+        private Image progressBar;
+        private Image progressBarBackground;
+        private float tapsMade = 0;
 
-        private ScrewState screwState = ScrewState.LOOSE;
+        public void Start()
+        {
+            progressBar = transform.GetChild(0).GetChild(0).GetComponent<Image>();
+            progressBarBackground = transform.GetChild(0).GetChild(1).GetComponent<Image>();
+            progressBarBackground.enabled = false;
+        }
+
+        #region Instrument Methods
 
         public override void ActivateInstrument(Command c, Touch t)
         {
-            if (screwState == ScrewState.LOOSE)
-                base.ActivateInstrument(c, t);
+            switch (screwState)
+            {
+                case ScrewState.LOOSE:
+                    {
+                        base.ActivateInstrument(c, t);
+                        break;
+                    }
+                case ScrewState.IN_SLOT:
+                    {
+                        TapToTighten();
+                        break;
+                    }
+            }
         }
-
         public override void MoveInstrument(Command c, Touch t)
         {
-            ;
+            if (t.fingerId == fingerID && screwState == ScrewState.LOOSE)
+            {
+                print("FingerID match for " + name);
+                location = c.worldPoint;
+                location.z = transform.position.z;
+                transform.position = location;
+            }
         }
-
         public override void DeactivateInstrument(Command c, Touch t)
         {
             if (screwState == ScrewState.LOOSE)
                 base.DeactivateInstrument(c, t);
         }
 
-        public void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.GetComponent<Slot>()!=null && collision.GetComponent<Slot>().hasItem == false)
-            {
-                collision.GetComponent<Slot>().hasItem = true;
-                ChangeState();
-            }
-        }
+        #endregion
+
 
         public void TapToTighten()
         {
-            numberOfTaps--;
+            if (tapsMade < numberOfTapsNeeded)
+            {
+                tapsMade++;
+                float fraction = tapsMade / numberOfTapsNeeded;
+                progressBar.fillAmount = fraction;
+            }
+
+            if(tapsMade == numberOfTapsNeeded)
+            {
+                progressBar.fillAmount = 1;
+                progressBar.enabled = false;
+                progressBarBackground.enabled = false;
+                screwState = ScrewState.TIGHT;
+            }
+
         }
 
-        public void ChangeState()
+        public void ChangeState(Vector3 locationOfSlot)
         {
-            if(screwInsertedImage!=null)
+            if (screwInsertedImage != null)
             {
                 screwState = ScrewState.IN_SLOT;
                 GetComponent<SpriteRenderer>().sprite = screwInsertedImage;
+                transform.position = locationOfSlot;
+                tapsMade++;
+                float fraction = tapsMade / numberOfTapsNeeded;
+                print(fraction);
+                progressBar.fillAmount = fraction;
+                progressBarBackground.enabled = true;
 
             }
         }

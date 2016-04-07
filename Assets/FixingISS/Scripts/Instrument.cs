@@ -6,7 +6,7 @@ namespace FixingISSGame
     public class Instrument : MonoBehaviour
     {
         public Color colorToUse;
-        public GameObject canPaintThis;
+        public GameObject[] canPaintThis;
 
         protected bool hasBeenSelected = false;
         protected int fingerID = -1;
@@ -42,12 +42,18 @@ namespace FixingISSGame
         private void RaycastOntoColorMesh(Touch t)
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, Vector3.forward, out hit) && canPaintThis!=null)
-                if (hit.transform == canPaintThis.transform)
+            if (Physics.Raycast(transform.position, Vector3.forward, out hit) && canPaintThis != null)
+            {
+                foreach (GameObject paint in canPaintThis)
                 {
-                    hit.transform.GetComponent<ColorMesh>().RaycastListener(hit.textureCoord, colorToUse);
+                    if (hit.transform == paint.transform)
+                    {
+                        hit.transform.GetComponent<ColorMesh>().RaycastListener(hit.textureCoord, colorToUse);
+                        break;
+                    }
                 }
-        }
 
+            }
+        }
     }
 }
