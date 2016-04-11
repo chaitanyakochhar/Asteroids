@@ -10,5 +10,6 @@ namespace FixingISSGame
         public abstract void Activate(Command c, Touch t);
         public abstract void Move(Command c, Touch t);
         public abstract void Deactivate(Command c, Touch t);
+        public abstract bool Evaluate();
     }
 }

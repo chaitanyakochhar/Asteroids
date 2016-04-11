@@ -115,6 +115,13 @@ namespace FixingISSGame
             GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 0f);
         }
 
-
+        public override bool Evaluate()
+        {
+            if (itemState == ItemState.DONE)
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 }

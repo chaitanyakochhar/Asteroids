@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+[RequireComponent(typeof(TrailRenderer))]
 public class Fly2D : MonoBehaviour
 {
     public Vector3 velocity;
