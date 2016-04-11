@@ -13,15 +13,19 @@ namespace FixingISSGame
         public float numberOfTapsNeeded = 2;
         public ScrewState screwState = ScrewState.LOOSE;
 
-        private Image progressBar;
-        private Image progressBarBackground;
+        private Image progressBarImage;
+        private Image progressBarBackgroundImage;
         private float tapsMade = 0;
+
+        private Color startColor = Color.red;
+        private Color endColor = Color.green;
 
         public void Start()
         {
-            progressBar = transform.GetChild(0).GetChild(0).GetComponent<Image>();
-            progressBarBackground = transform.GetChild(0).GetChild(1).GetComponent<Image>();
-            progressBarBackground.enabled = false;
+            progressBarImage = transform.GetChild(0).GetChild(0).GetComponent<Image>();
+            progressBarBackgroundImage = transform.GetChild(0).GetChild(1).GetComponent<Image>();
+            progressBarBackgroundImage.enabled = false;
+
         }
 
         #region Instrument Methods
@@ -37,6 +41,7 @@ namespace FixingISSGame
                     }
                 case ScrewState.IN_SLOT:
                     {
+                        print("Screw in Slot");
                         TapToTighten();
                         break;
                     }
@@ -44,18 +49,18 @@ namespace FixingISSGame
         }
         public override void MoveInstrument(Command c, Touch t)
         {
+
             if (t.fingerId == fingerID && screwState == ScrewState.LOOSE)
             {
-                print("FingerID match for " + name);
                 location = c.worldPoint;
                 location.z = transform.position.z;
                 transform.position = location;
             }
+
         }
         public override void DeactivateInstrument(Command c, Touch t)
         {
-            if (screwState == ScrewState.LOOSE)
-                base.DeactivateInstrument(c, t);
+            base.DeactivateInstrument(c, t);
         }
 
         #endregion
@@ -67,33 +72,43 @@ namespace FixingISSGame
             {
                 tapsMade++;
                 float fraction = tapsMade / numberOfTapsNeeded;
-                progressBar.fillAmount = fraction;
+                GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, fraction);
             }
+
 
             if(tapsMade == numberOfTapsNeeded)
             {
-                progressBar.fillAmount = 1;
-                progressBar.enabled = false;
-                progressBarBackground.enabled = false;
+                progressBarBackgroundImage.enabled = false;
                 screwState = ScrewState.TIGHT;
+                GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 1f);
             }
-
+             
         }
 
         public void ChangeState(Vector3 locationOfSlot)
         {
-            if (screwInsertedImage != null)
-            {
-                screwState = ScrewState.IN_SLOT;
-                GetComponent<SpriteRenderer>().sprite = screwInsertedImage;
-                transform.position = locationOfSlot;
-                tapsMade++;
-                float fraction = tapsMade / numberOfTapsNeeded;
-                print(fraction);
-                progressBar.fillAmount = fraction;
-                progressBarBackground.enabled = true;
+            transform.position = locationOfSlot;
+            screwState = ScrewState.IN_SLOT;
+            GetComponent<SpriteRenderer>().sprite = screwInsertedImage;
+            GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 0f);
+            progressBarBackgroundImage.enabled = true;
+        }
 
+        private Color ColorLerp(Color startColor, Color intermediateColor, Color endColor, float fraction)
+        {
+            float intermediateFraction;
+            if (fraction<=0.5)
+            {
+               intermediateFraction = fraction + 0.5f;
+               return Color.Lerp(startColor, intermediateColor, intermediateFraction);
             }
+            else
+            {
+                intermediateFraction = fraction - 0.5f;
+                intermediateFraction *= 2f;
+                return Color.Lerp(startColor, endColor, intermediateFraction);
+            }
+            
         }
     }
 }

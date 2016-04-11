@@ -35,8 +35,13 @@ namespace FixingISSGame
                     {
                         case TouchPhase.Began:
                             {
+                                print("FINGER:" + t.fingerId + " ,PHASE:" + t.phase);
                                 RaycastHit hit;
-                                Command c = Command.createCommandWithHitObjectReference(t.position, out hit);
+                                Command c = Command.createCommandWithHitObjectReferenceIgnoreUI(t.position, out hit);
+                                if (c == null)
+                                {
+                                    print("Command is null. Dammit.");
+                                }
                                 if (c != null)
                                 {
                                     if (hit.transform.tag == "Instrument")
@@ -76,7 +81,7 @@ namespace FixingISSGame
             {
                 RaycastHit hit;
                 Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit);
-                if (c != null && hit.transform.tag=="Paintable")
+                if (c != null && hit.transform.tag == "Paintable")
                 {
                     hit.transform.GetComponent<ColorMesh>().RaycastListener(hit.textureCoord, Color.black);
                 }

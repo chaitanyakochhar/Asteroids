@@ -22,6 +22,7 @@ namespace FixingISSGame
                 Vector3 newPosition = transform.position;
                 newPosition.z = other.transform.position.z;
                 other.transform.GetComponent<Screw>().ChangeState(newPosition);
+                GetComponent<BoxCollider>().enabled = false;
             }
         }
     }
