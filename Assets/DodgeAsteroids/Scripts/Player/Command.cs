@@ -26,11 +26,27 @@ public class Command
         return null;
     }
 
-    public static Command createCommandWithHitObjectReference(Vector2 destination, out RaycastHit hit)
+    public static Command createCommandWithHitObjectReference(Vector2 destination, out RaycastHit hit, bool ignoreUI=true)
+    {
+        bool blockedByUIElement = false;
+        if(ignoreUI==true)
+        {
+            blockedByUIElement = EventSystem.current.IsPointerOverGameObject();
+        }
+        Ray r = Camera.main.ScreenPointToRay(destination);
+        bool hasHit = Physics.Raycast(r, out hit);
+        if (hasHit && !blockedByUIElement)
+        {
+            return new Command(destination, hit.point);
+        }
+        return null;
+    }
+
+    public static Command createCommandWithHitObjectReferenceIgnoreUI(Vector2 destination, out RaycastHit hit)
     {
         Ray r = Camera.main.ScreenPointToRay(destination);
         bool hasHit = Physics.Raycast(r, out hit);
-        if (hasHit && !EventSystem.current.IsPointerOverGameObject())
+        if (hasHit)// && !EventSystem.current.IsPointerOverGameObject())
         {
             return new Command(destination, hit.point);
         }
