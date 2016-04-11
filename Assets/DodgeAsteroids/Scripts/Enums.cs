@@ -1,9 +1,9 @@
-﻿public enum State
+﻿public enum PlayerState
 {
     REST, MOTION
 };
 
-public enum ScrewState
+public enum ItemState
 {
-    LOOSE, IN_SLOT, TIGHT
+    LOOSE, IN_PROGRESS, DONE
 }

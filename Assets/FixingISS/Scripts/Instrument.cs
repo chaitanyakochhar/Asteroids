@@ -1,27 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 namespace FixingISSGame
 {
-    public class Instrument : MonoBehaviour
+    public class Instrument : Item
     {
         public Color colorToUse;
         public GameObject[] canPaintThis;
-
-        protected bool hasBeenSelected = false;
-        protected int fingerID = -1;
         protected Vector3 location;
-        // Update is called once per frame
 
-        public virtual void ActivateInstrument(Command c, Touch t)
+        #region Item methods
+        public override void Activate(Command c, Touch t)
         {
             if (fingerID == -1)
             {
                 fingerID = t.fingerId;
             }
         }
-
-        public virtual void MoveInstrument(Command c, Touch t)
+        public override void Move(Command c, Touch t)
         {
             if (fingerID == t.fingerId)
             {
@@ -32,13 +29,16 @@ namespace FixingISSGame
                 RaycastOntoColorMesh(t);
             }
         }
-        public virtual void DeactivateInstrument(Command c, Touch t)
+        public override void Deactivate(Command c, Touch t)
         {
             if (fingerID == t.fingerId)
             {
                 fingerID = -1;
             }
+
         }
+        #endregion
+
         private void RaycastOntoColorMesh(Touch t)
         {
             RaycastHit hit;

@@ -6,24 +6,22 @@ namespace FixingISSGame
 {
     public class InputManager : MonoBehaviour
     {
-        public List<Instrument> instruments;
+        private GameObject[] ItemGOs;
+        private List<Item> items;
 
+        #region MonoBehaviors
         public void Start()
         {
-            GameObject[] GOs = GameObject.FindGameObjectsWithTag("Instrument");
-            instruments = new List<Instrument>();
-            foreach (GameObject GO in GOs)
-            {
-                instruments.Add(GO.GetComponent<Instrument>());
-            }
             Input.multiTouchEnabled = true;
-        }
+            ItemGOs = GameObject.FindGameObjectsWithTag("Instrument");
+            items = getItems(ItemGOs);
 
+        }
         public void Update()
         {
             touchListener();
-            //mouseRaycaster();
         }
+        #endregion
 
         public void touchListener()
         {
@@ -35,7 +33,6 @@ namespace FixingISSGame
                     {
                         case TouchPhase.Began:
                             {
-                                print("FINGER:" + t.fingerId + " ,PHASE:" + t.phase);
                                 RaycastHit hit;
                                 Command c = Command.createCommandWithHitObjectReferenceIgnoreUI(t.position, out hit);
                                 if (c == null)
@@ -46,7 +43,7 @@ namespace FixingISSGame
                                 {
                                     if (hit.transform.tag == "Instrument")
                                     {
-                                        hit.transform.GetComponent<Instrument>().ActivateInstrument(c, t);
+                                        hit.transform.GetComponent<Item>().Activate(c, t);
                                     }
                                 }
 
@@ -54,19 +51,18 @@ namespace FixingISSGame
                             }
                         case TouchPhase.Moved:
                             {
-                                foreach (Instrument instrument in instruments)
+                                foreach (Item item in items)
                                 {
-                                    instrument.MoveInstrument(Command.createCommandWithoutRaycast(t.position), t);
+                                    item.Move(Command.createCommandWithoutRaycast(t.position), t);
                                 }
                                 break;
                             }
                         case TouchPhase.Ended:
                             {
-                                foreach (Instrument instrument in instruments)
+                                foreach (Item item in items)
                                 {
-                                    instrument.DeactivateInstrument(Command.createCommandWithoutRaycast(t.position), t);
+                                    item.Deactivate(Command.createCommandWithoutRaycast(t.position), t);
                                 }
-
                                 break;
                             }
                     }
@@ -74,7 +70,6 @@ namespace FixingISSGame
             }
 
         }
-
         public void mouseRaycaster()
         {
             if (Input.GetMouseButton(0))
@@ -86,6 +81,19 @@ namespace FixingISSGame
                     hit.transform.GetComponent<ColorMesh>().RaycastListener(hit.textureCoord, Color.black);
                 }
             }
+        }
+        public List<Item> getItems(GameObject[] GOs)
+        {
+            List<Item> i = new List<Item>();
+            foreach (GameObject GO in GOs)
+            {
+                if (GO.GetComponent<Item>() == null)
+                {
+                    print("NULLLLLLL");
+                }
+                i.Add(GO.GetComponent<Item>());
+            }
+            return i;
         }
     }
 }

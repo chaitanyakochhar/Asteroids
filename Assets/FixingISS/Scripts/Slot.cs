@@ -15,7 +15,7 @@ namespace FixingISSGame
 
         public void OnTriggerEnter(Collider other)
         {
-            print("bang");
+            print("Entered trigger, screw slotting in..");
             if(other.tag=="Instrument" && other.transform.GetComponent<Screw>() != null && !hasItem)
             {
                 hasItem = true;
