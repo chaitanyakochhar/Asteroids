@@ -1985,7 +1985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470494, guid: 0efbd9e7db59c1a4baa3730ec620a7b8, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11442156, guid: 0efbd9e7db59c1a4baa3730ec620a7b8, type: 2}
       propertyPath: canPaintThis.Array.data[0]
