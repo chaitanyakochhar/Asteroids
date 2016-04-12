@@ -55,5 +55,10 @@ namespace FixingISSGame
 
             }
         }
+
+        public override bool Evaluate()
+        {
+            return true;
+        }
     }
 }
