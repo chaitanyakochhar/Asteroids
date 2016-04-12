@@ -117,8 +117,10 @@ namespace FixingISSGame
 
         public override bool Evaluate()
         {
+            print(itemState);
             if (itemState == ItemState.DONE)
             {
+                print(true);
                 return true;
             }
             else return false;

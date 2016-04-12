@@ -13,5 +13,5 @@ EditorBuildSettings:
     path: Assets/2DSpaceShooter/Scenes/ShootingAsteroid.unity
   - enabled: 1
     path: Assets/FixingISS/FixingISS.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/ExitPage.unity

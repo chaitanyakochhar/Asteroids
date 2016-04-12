@@ -27,6 +27,7 @@ namespace FixingISSGame
 
         public bool Evaluate()
         {
+            print(currentPercentage);
             if (passPercentage <= currentPercentage)
             {
                 return true;
