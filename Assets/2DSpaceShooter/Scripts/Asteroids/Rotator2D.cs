@@ -10,8 +10,7 @@ namespace SpaceShooterGame
         public void Update()
         {
             if(center!= null)
-            transform.RotateAround(center.transform.position, Vector3.forward, Time.deltaTime * speed);
+                transform.RotateAround(center.transform.position, Vector3.forward, Time.deltaTime * speed);
         }
-
     }
 }

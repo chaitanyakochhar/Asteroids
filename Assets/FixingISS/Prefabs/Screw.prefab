@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6592842}
   - 114: {fileID: 11433058}
   - 54: {fileID: 5438784}
+  - 114: {fileID: 11400790}
   m_Layer: 0
   m_Name: Screw
   m_TagString: Instrument
@@ -58,6 +59,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.93333334, y: 1.4166666, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11400790
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7889b2c524589d4daf9017a8dfff7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  center: {fileID: 157510}
 --- !u!114 &11433058
 MonoBehaviour:
   m_ObjectHideFlags: 1

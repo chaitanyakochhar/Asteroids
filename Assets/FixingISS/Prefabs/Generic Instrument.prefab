@@ -11,6 +11,7 @@ GameObject:
   - 65: {fileID: 6577674}
   - 114: {fileID: 11442156}
   - 212: {fileID: 21249206}
+  - 114: {fileID: 11432820}
   m_Layer: 0
   m_Name: Generic Instrument
   m_TagString: Instrument
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -219, y: 3.36, z: -2}
+  m_LocalPosition: {x: -162.55972, y: 1.9315703, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,8 +41,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.4333334, y: 3.95, z: 0.2}
-  m_Center: {x: 1.2166667, y: -1.975, z: 0}
+  m_Size: {x: 1.85, y: 3.5333333, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11432820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7889b2c524589d4daf9017a8dfff7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -30
+  center: {fileID: 154204}
 --- !u!114 &11442156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc012c5e40dd87e4b9be0b134c77eb0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorToUse: {r: 0.8980393, g: 0.9294118, b: 0.5529412, a: 0}
+  colorToUse: {r: 0.33333334, g: 0.53333336, b: 0.60784316, a: 0}
   canPaintThis:
   - {fileID: 0}
   - {fileID: 0}
@@ -83,7 +97,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 59b2bf41929fa497f94c5b9f90e33739, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a2979474614f439dbb8030629013fdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
