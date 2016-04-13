@@ -15,6 +15,18 @@ namespace SpaceShooterGame
             StartCoroutine(MoveBetweenPoints());
         }
 
+        public void Toggle(bool toggle)
+        {
+            if(toggle)
+            {
+                StartCoroutine(MoveBetweenPoints());
+            }
+            else
+            {
+                StopCoroutine(MoveBetweenPoints());
+            }
+        }
+
         private IEnumerator MoveBetweenPoints()
         {
             while (true)

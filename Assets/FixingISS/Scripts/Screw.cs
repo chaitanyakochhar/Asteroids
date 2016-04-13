@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
-using System;
+using SpaceShooterGame;
 
 namespace FixingISSGame
 {
@@ -12,6 +10,9 @@ namespace FixingISSGame
         public GameObject screwInsertedImage;
         public float numberOfTapsNeeded = 2;
 
+        protected Rotator2D rotator2d;
+        protected Mover2D mover2d;
+
         private Color startColor = Color.red;
         private Color endColor = Color.green;
         private Vector3 location;
@@ -21,18 +22,21 @@ namespace FixingISSGame
         public void Start()
         {
             itemState = ItemState.LOOSE;
+            rotator2d = GetComponent<Rotator2D>();
+            mover2d = GetComponent<Mover2D>();
         }
 
         public override void Activate(Command c, Touch t)
         {
 
-
+            
             switch (itemState)
             {
                 case ItemState.LOOSE:
                     {
                         if(fingerID == -1)
                         {
+                            StopEffects();
                             fingerID = t.fingerId;
                         }
                         break;
@@ -69,6 +73,46 @@ namespace FixingISSGame
             if (fingerID == t.fingerId)
             {
                 fingerID = -1;
+                if (itemState == ItemState.LOOSE)
+                {
+                    StartEffects();
+                }
+            }
+            
+        }
+
+        public override bool Evaluate()
+        {
+            print(itemState);
+            if (itemState == ItemState.DONE)
+            {
+                print(true);
+                return true;
+            }
+            else return false;
+        }
+        public override void StartEffects()
+        {
+            if (rotator2d != null)
+            {
+                rotator2d.enabled = true;
+                transform.rotation = Quaternion.identity;
+            }
+            if (mover2d != null)
+            {
+                mover2d.Toggle(true);
+            }
+        }
+        public override void StopEffects()
+        {
+            if (rotator2d != null)
+            {
+                rotator2d.enabled = false;
+                transform.rotation = Quaternion.identity;
+            }
+            if (mover2d != null)
+            {
+                mover2d.Toggle(false);
             }
         }
 
@@ -115,15 +159,6 @@ namespace FixingISSGame
             GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 0f);
         }
 
-        public override bool Evaluate()
-        {
-            print(itemState);
-            if (itemState == ItemState.DONE)
-            {
-                print(true);
-                return true;
-            }
-            else return false;
-        }
+
     }
 }

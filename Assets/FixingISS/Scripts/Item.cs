@@ -11,5 +11,7 @@ namespace FixingISSGame
         public abstract void Move(Command c, Touch t);
         public abstract void Deactivate(Command c, Touch t);
         public abstract bool Evaluate();
+        public abstract void StartEffects();
+        public abstract void StopEffects();
     }
 }
