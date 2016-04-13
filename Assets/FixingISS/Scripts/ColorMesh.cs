@@ -8,12 +8,16 @@ namespace FixingISSGame
         public float passPercentage = 90f;
 
         private float currentPercentage = 0f;
+        private SpriteRenderer alert;
 
         public void Start()
         {
             Texture2D t = transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
             Texture2D tNew = Instantiate(t) as Texture2D;
             transform.GetComponent<Renderer>().material.mainTexture = tNew;
+            alert = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            alert.GetComponent<Bouncy>().StartBouncy();
+            alert.enabled = false;
         }
 
         public void RaycastListener(Vector2 textureCoord, Color targetColor)
@@ -34,6 +38,7 @@ namespace FixingISSGame
             }
             else
             {
+                StartCoroutine(bouncyEnable());
                 return false;
             }
         }
@@ -82,6 +87,13 @@ namespace FixingISSGame
                     }
                 }
             return positivePixels * 100 / totalPixels;
+        }
+
+        private IEnumerator bouncyEnable()
+        {
+            alert.enabled = true;
+            yield return new WaitForSeconds(4);
+            alert.enabled = false;
         }
    
     }

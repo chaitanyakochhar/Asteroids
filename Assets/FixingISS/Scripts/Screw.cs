@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using SpaceShooterGame;
+using System;
+using System.Collections;
 
 namespace FixingISSGame
 {
-    [RequireComponent(typeof(SpriteRenderer))]
-    [RequireComponent(typeof(BoxCollider))]
+
+
     public class Screw : Item
     {
         public GameObject screwInsertedImage;
@@ -18,36 +20,41 @@ namespace FixingISSGame
         private Vector3 location;
         private int tapsMade = 0;
         private float fraction = 0;
+        private SpriteRenderer alert;
 
         public void Start()
         {
             itemState = ItemState.LOOSE;
             rotator2d = GetComponent<Rotator2D>();
             mover2d = GetComponent<Mover2D>();
+            source = GetComponent<AudioSource>();
+            alert = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            alert.enabled = false;
         }
 
         public override void Activate(Command c, Touch t)
         {
-
-            
             switch (itemState)
             {
                 case ItemState.LOOSE:
                     {
-                        if(fingerID == -1)
+                        if (fingerID == -1)
                         {
                             StopEffects();
+                            PlaySound(itemState);
                             fingerID = t.fingerId;
                         }
                         break;
                     }
                 case ItemState.IN_PROGRESS:
                     {
+                        PlaySound(itemState);
                         TapToTighten();
                         break;
                     }
                 case ItemState.DONE:
                     {
+                        PlaySound(itemState);
                         break;
                     }
                 default:
@@ -78,7 +85,7 @@ namespace FixingISSGame
                     StartEffects();
                 }
             }
-            
+
         }
 
         public override bool Evaluate()
@@ -86,10 +93,13 @@ namespace FixingISSGame
             print(itemState);
             if (itemState == ItemState.DONE)
             {
-                print(true);
                 return true;
             }
-            else return false;
+            else
+            {
+                StartCoroutine(bouncyEnable());
+                return false;
+            }
         }
         public override void StartEffects()
         {
@@ -159,6 +169,42 @@ namespace FixingISSGame
             GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 0f);
         }
 
+        public override void PlaySound(ItemState itemState)
+        {
+            switch (itemState)
+            {
+                case ItemState.LOOSE:
+                    {
+                        if (activationSound != null)
+                        {
+                            source.PlayOneShot(activationSound);
+                        }
+                        break;
+                    }
+                case ItemState.IN_PROGRESS:
+                    {
+                        if (inProgressSound != null && inProgressSound.Length > 0)
+                        {
+                            source.PlayOneShot(inProgressSound[UnityEngine.Random.Range(0, inProgressSound.Length - 1)]);
+                        }
+                        break;
+                    }
+                case ItemState.DONE:
+                    {
+                        if (doneSound != null)
+                        {
+                            source.PlayOneShot(doneSound);
+                        }
+                        break;
+                    }
+            }
+        }
 
+        private IEnumerator bouncyEnable()
+        {
+            alert.enabled = true;
+            yield return new WaitForSeconds(4);
+            alert.enabled = false;
+        }
     }
 }
