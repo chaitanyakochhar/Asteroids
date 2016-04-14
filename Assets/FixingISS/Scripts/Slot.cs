@@ -16,13 +16,18 @@ namespace FixingISSGame
         public void OnTriggerEnter(Collider other)
         {
             print("Entered trigger, screw slotting in..");
-            if(other.tag=="Instrument" && other.transform.GetComponent<Screw>() != null && !hasItem)
+            if(other.tag=="Instrument" && !hasItem)
             {
-                hasItem = true;
-                Vector3 newPosition = transform.position;
-                newPosition.z = other.transform.position.z;
-                other.transform.GetComponent<Screw>().ChangeState(newPosition);
-                GetComponent<BoxCollider>().enabled = false;
+                if(other.GetComponent<Screw>()!=null || other.GetComponent<Panel>() != null)
+                {
+                    Vector3 newPosition = transform.position;
+                    newPosition.z = other.transform.position.z;
+                    if (other.GetComponent<Screw>() != null)
+                        other.transform.GetComponent<Screw>().ChangeState(newPosition);
+                    else
+                        other.transform.GetComponent<Panel>().ChangeState(newPosition);
+                    GetComponent<BoxCollider>().enabled = false;
+                }
             }
         }
     }

@@ -1,23 +1,24 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
+using System;
+
 namespace FixingISSGame
 {
-    public class ColorMesh : MonoBehaviour
+    public class ColorMesh : Item
     {
 
         public float passPercentage = 90f;
 
         private float currentPercentage = 0f;
-        private SpriteRenderer alert;
 
         public void Start()
         {
             Texture2D t = transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
             Texture2D tNew = Instantiate(t) as Texture2D;
             transform.GetComponent<Renderer>().material.mainTexture = tNew;
-            alert = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            alert = transform.GetChild(0).gameObject;
             alert.GetComponent<Bouncy>().StartBouncy();
-            alert.enabled = false;
+            alert.SetActive(false);
         }
 
         public void RaycastListener(Vector2 textureCoord, Color targetColor)
@@ -26,10 +27,14 @@ namespace FixingISSGame
             Texture2D t = transform.GetComponent<Renderer>().material.mainTexture as Texture2D;
             ColorTexture(point, t, targetColor, 50, 50);
             currentPercentage = GetColorPercentage(t, targetColor);
+            if(passPercentage<=currentPercentage)
+            {
+                ActivateTheseObjectsOnCompletion();
+            }
 
         }
 
-        public bool Evaluate()
+        public override bool Evaluate()
         {
             print(currentPercentage);
             if (passPercentage <= currentPercentage)
@@ -89,12 +94,49 @@ namespace FixingISSGame
             return positivePixels * 100 / totalPixels;
         }
 
-        private IEnumerator bouncyEnable()
+        protected override IEnumerator bouncyEnable()
         {
-            alert.enabled = true;
+            alert.SetActive(true);
             yield return new WaitForSeconds(4);
-            alert.enabled = false;
+            alert.SetActive(false);
         }
-   
+
+        public override void ActivateTheseObjectsOnCompletion()
+        {
+            foreach(GameObject GO in activateOnCompletion)
+            {
+                GO.SetActive(true);
+            }
+        }
+
+        #region not used
+        public override void StartEffects()
+        {
+            ;
+        }
+        public override void StopEffects()
+        {
+            ;
+        }
+        public override void PlaySound(ItemState itemState)
+        {
+            ;
+        }
+
+        public override void Activate(Command c, Touch t)
+        {
+            ;
+        }
+
+        public override void Move(Command c, Touch t)
+        {
+            ;
+        }
+
+        public override void Deactivate(Command c, Touch t)
+        {
+            ;
+        }
+        #endregion
     }
 }

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using SpaceShooterGame;
+using System;
+using System.Collections;
 
 namespace FixingISSGame
 {
@@ -8,8 +10,6 @@ namespace FixingISSGame
         public Color colorToUse;
         public GameObject[] canPaintThis;
         protected Vector3 location;
-        protected Rotator2D rotator2d;
-        protected Mover2D mover2d;
 
         public void Start()
         {
@@ -31,7 +31,6 @@ namespace FixingISSGame
         {
             if (fingerID == t.fingerId)
             {
-                print("FingerID match for " + name);
                 location = c.worldPoint;
                 location.z = transform.position.z;
                 transform.position = location;
@@ -114,6 +113,19 @@ namespace FixingISSGame
                         break;
                     }
             }
+        }
+
+        public override void ActivateTheseObjectsOnCompletion()
+        {
+            foreach(GameObject GO in activateOnCompletion)
+            {
+                GO.SetActive(true);
+            }
+        }
+
+        protected override IEnumerator bouncyEnable()
+        {
+            throw new NotImplementedException();
         }
     }
 }

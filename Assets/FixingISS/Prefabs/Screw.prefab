@@ -193,6 +193,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6c08a77ce3b1e46c68fef385d311f5cb, type: 3}
   doneSound: {fileID: 8300000, guid: 3b12e04374982413abff9d927ee64b69, type: 3}
   alert: {fileID: 0}
+  activateOnCompletion: []
   screwInsertedImage: {fileID: 184412, guid: a16d5ac70fa5988469a950a02b1a8169, type: 2}
   numberOfTapsNeeded: 4
 --- !u!114 &11442306
@@ -234,7 +235,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1393532879
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_Sprite: {fileID: 21300000, guid: 917d0d20c4af44de18cec7a446dd00f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

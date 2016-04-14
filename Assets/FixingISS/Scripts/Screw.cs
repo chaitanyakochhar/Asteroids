@@ -5,22 +5,15 @@ using System.Collections;
 
 namespace FixingISSGame
 {
-
-
     public class Screw : Item
     {
         public GameObject screwInsertedImage;
         public float numberOfTapsNeeded = 2;
 
-        protected Rotator2D rotator2d;
-        protected Mover2D mover2d;
-
         private Color startColor = Color.red;
         private Color endColor = Color.green;
-        private Vector3 location;
         private int tapsMade = 0;
         private float fraction = 0;
-        private SpriteRenderer alert;
 
         public void Start()
         {
@@ -28,8 +21,8 @@ namespace FixingISSGame
             rotator2d = GetComponent<Rotator2D>();
             mover2d = GetComponent<Mover2D>();
             source = GetComponent<AudioSource>();
-            alert = transform.GetChild(0).GetComponent<SpriteRenderer>();
-            alert.enabled = false;
+            alert = transform.GetChild(0).gameObject;
+            alert.SetActive(false);
         }
 
         public override void Activate(Command c, Touch t)
@@ -63,9 +56,9 @@ namespace FixingISSGame
                     }
             }
         }
-
         public override void Move(Command c, Touch t)
         {
+            Vector3 location;
             if (fingerID == t.fingerId && itemState == ItemState.LOOSE)
             {
                 print("FingerID match for " + name);
@@ -74,7 +67,6 @@ namespace FixingISSGame
                 transform.position = location;
             }
         }
-
         public override void Deactivate(Command c, Touch t)
         {
             if (fingerID == t.fingerId)
@@ -87,7 +79,6 @@ namespace FixingISSGame
             }
 
         }
-
         public override bool Evaluate()
         {
             print(itemState);
@@ -125,50 +116,6 @@ namespace FixingISSGame
                 mover2d.Toggle(false);
             }
         }
-
-        public void TapToTighten()
-        {
-            if (tapsMade < numberOfTapsNeeded)
-            {
-                tapsMade++;
-                fraction = tapsMade / numberOfTapsNeeded;
-                GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, fraction);
-            }
-
-
-            if (tapsMade == numberOfTapsNeeded)
-            {
-                itemState = ItemState.DONE;
-                GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 1f);
-            }
-
-        }
-
-        private Color ColorLerp(Color startColor, Color intermediateColor, Color endColor, float fraction)
-        {
-            float intermediateFraction;
-            if (fraction <= 0.5)
-            {
-                intermediateFraction = fraction + 0.5f;
-                return Color.Lerp(startColor, intermediateColor, intermediateFraction);
-            }
-            else
-            {
-                intermediateFraction = fraction - 0.5f;
-                intermediateFraction *= 2f;
-                return Color.Lerp(intermediateColor, endColor, intermediateFraction);
-            }
-
-        }
-
-        public void ChangeState(Vector3 locationOfSlot)
-        {
-            transform.position = locationOfSlot;
-            itemState = ItemState.IN_PROGRESS;
-            GetComponent<SpriteRenderer>().sprite = screwInsertedImage.GetComponent<SpriteRenderer>().sprite;
-            GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 0f);
-        }
-
         public override void PlaySound(ItemState itemState)
         {
             switch (itemState)
@@ -199,12 +146,60 @@ namespace FixingISSGame
                     }
             }
         }
-
-        private IEnumerator bouncyEnable()
+        public override void ActivateTheseObjectsOnCompletion()
         {
-            alert.enabled = true;
+            foreach(GameObject GO in activateOnCompletion)
+            {
+                GO.SetActive(true);
+            }
+        }
+
+        public void TapToTighten()
+        {
+            if (tapsMade < numberOfTapsNeeded)
+            {
+                tapsMade++;
+                fraction = tapsMade / numberOfTapsNeeded;
+                GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, fraction);
+            }
+
+
+            if (tapsMade == numberOfTapsNeeded)
+            {
+                itemState = ItemState.DONE;
+                GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 1f);
+            }
+
+        }
+        private Color ColorLerp(Color startColor, Color intermediateColor, Color endColor, float fraction)
+        {
+            float intermediateFraction;
+            if (fraction <= 0.5)
+            {
+                intermediateFraction = fraction + 0.5f;
+                return Color.Lerp(startColor, intermediateColor, intermediateFraction);
+            }
+            else
+            {
+                intermediateFraction = fraction - 0.5f;
+                intermediateFraction *= 2f;
+                return Color.Lerp(intermediateColor, endColor, intermediateFraction);
+            }
+
+        }
+        public void ChangeState(Vector3 locationOfSlot)
+        {
+            transform.position = locationOfSlot;
+            itemState = ItemState.IN_PROGRESS;
+            GetComponent<SpriteRenderer>().sprite = screwInsertedImage.GetComponent<SpriteRenderer>().sprite;
+            GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 0f);
+            GetComponent<SpriteRenderer>().sortingOrder = 1;
+        }
+        protected override IEnumerator bouncyEnable()
+        {
+            alert.SetActive(true);
             yield return new WaitForSeconds(4);
-            alert.enabled = false;
+            alert.SetActive(false);
         }
     }
 }

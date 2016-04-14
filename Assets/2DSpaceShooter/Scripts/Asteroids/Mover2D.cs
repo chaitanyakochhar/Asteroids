@@ -23,7 +23,7 @@ namespace SpaceShooterGame
             }
             else
             {
-                StopCoroutine(MoveBetweenPoints());
+                StopAllCoroutines();
             }
         }
 

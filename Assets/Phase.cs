@@ -16,19 +16,16 @@ public class Phase
             {
                 case "Paintable":
                     {
-                        Debug.Log("paintable found");
                         final &= obj.GetComponent<ColorMesh>().Evaluate();
                         break;
                     }
                 case "Instrument":
                     {
-                        Debug.Log("instrument found");
                         final &= obj.GetComponent<Item>().Evaluate();
                         break;
                     }
             }
         }
-
         return final;
     }
 
