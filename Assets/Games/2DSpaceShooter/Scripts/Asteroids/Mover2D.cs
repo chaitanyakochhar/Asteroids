@@ -34,6 +34,7 @@ namespace SpaceShooterGame
                 foreach(GameObject waypoint in waypoints)
                 {
                     Vector3 initialPosition = transform.position;
+                    
                     startTime = Time.time;
                     while((Time.time - startTime) <= timeBetweenPoints)
                     {
