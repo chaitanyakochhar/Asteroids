@@ -8,10 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LandingPage.unity
   - enabled: 1
-    path: Assets/DodgeAsteroids/Scenes/Levels/DodgingAsteroid.unity
+    path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Tutorial.unity
   - enabled: 1
-    path: Assets/2DSpaceShooter/Scenes/ShootingAsteroid.unity
+    path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Game.unity
   - enabled: 1
-    path: Assets/FixingISS/FixingISS.unity
+    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Tutorial.unity
+  - enabled: 1
+    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Game.unity
+  - enabled: 1
+    path: Assets/Games/FixingISS/FixingISS.unity
   - enabled: 1
     path: Assets/ExitPage.unity
