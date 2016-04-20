@@ -36,12 +36,15 @@ public class TypeyText : MonoBehaviour
     private IEnumerator typeOutCoroutine(string text)
     {
         body.text = "";
-        foreach (char x in text)
+        char[] separators = { ' ' };
+        string[] splitText = text.Split(separators);
+        foreach (string x in splitText)
         {
-            body.text += x;
+            body.text += x+" ";
             yield return new WaitForSeconds(textDelay);
             yield return null;
         }
+        body.
 
         GetComponent<Authenticator>().isAuthenticated = true;
         yield return null;
