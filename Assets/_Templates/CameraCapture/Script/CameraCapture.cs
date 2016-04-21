@@ -86,8 +86,16 @@ public class CameraCapture : MonoBehaviour
     private WebCamTexture GetWebcamStream(GameObject renderTarget)
     {
         WebCamTexture t = new WebCamTexture(device.name);
-        Renderer r = renderTarget.GetComponent<Renderer>();
-        r.material.mainTexture = t;
+        if(renderTarget.GetComponent<RectTransform>()!=null)
+        {
+            RawImage r = renderTarget.GetComponent<RawImage>();
+            r.texture = t;
+        }
+        else
+        {
+            Renderer r = renderTarget.GetComponent<Renderer>();
+            r.material.mainTexture = t;
+        }
         t.Play();
         return t;
     }

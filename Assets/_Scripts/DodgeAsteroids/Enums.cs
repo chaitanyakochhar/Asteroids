@@ -17,3 +17,8 @@ public enum CameraState2
 {
     IDLE, START_CAMERA, TAKING_PICTURE, CHOOSE_NEXT_OBJECT
 }
+
+public enum PickObjectButtonSetting
+{
+    HOLD, CLICK
+}
