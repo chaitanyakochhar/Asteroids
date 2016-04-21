@@ -47,7 +47,6 @@ public class Enabler : MonoBehaviour
 
             if (result)
             {
-                print("Result is true now");
                 foreach (GameObject GO in objectsToEnable)
                 {
                     GO.SetActive(true);
