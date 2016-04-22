@@ -9,7 +9,7 @@ public class AuthenticationManager : MonoBehaviour
     public GameObject[] objectsToAuthenticate;
     public string nextSceneToLoad;
 
-    private int blinkCount = 5;
+    private int blinkCount = 2;
     private float blinkDuration = 1;
 
     public void ValidateObjects()
@@ -63,7 +63,7 @@ public class AuthenticationManager : MonoBehaviour
                 }
                 if (r != null)
                 {
-                    MakeItBlink(r.material);
+                    StartCoroutine(MakeItBlink(r.material));
                 }
                 if (s != null)
                 {

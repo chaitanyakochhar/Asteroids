@@ -33,5 +33,7 @@ EditorBuildSettings:
     path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WhyDodging.unity
   - enabled: 0
     path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WhyShooting.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Games/Full Story/The International Space Station/AirlockGame.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/Punch/DrawPurpleAlien.unity
