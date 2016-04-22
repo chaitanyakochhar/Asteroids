@@ -7,6 +7,7 @@ public class Enabler : MonoBehaviour
     public GameObject[] objectsToCheck;
     public GameObject[] objectsToEnable;
     public bool disableObjectsToEnable = true;
+    public bool PlayEffects = true;
     private List<Authenticator> checkAuthenticators;
 
     public void Start()
@@ -51,7 +52,7 @@ public class Enabler : MonoBehaviour
                 {
                     GO.SetActive(true);
                     Effect e = GO.GetComponent<Effect>();
-                    if(e!=null)
+                    if(e!=null && PlayEffects)
                     {
                         e.StartEffect();
                     }
