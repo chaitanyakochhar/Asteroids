@@ -8,32 +8,56 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/LandingPage.unity
   - enabled: 0
-    path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Tutorial.unity
-  - enabled: 0
-    path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Game.unity
-  - enabled: 0
-    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Tutorial.unity
-  - enabled: 0
-    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Game.unity
-  - enabled: 0
-    path: Assets/Games/FixingISS/FixingISS.unity
-  - enabled: 0
     path: Assets/ExitPage.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Full Story/Introduction/ChooseTeams.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Full Story/Introduction/BlastOff.unity
-  - enabled: 0
-    path: Assets/Games/Full Story/Discover Alien Life/DiscoverAlienLife.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Games/Full Story/The International Space Station/ISSIntro.unity
-  - enabled: 0
-    path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WarningAsteroids.unity
-  - enabled: 0
-    path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WhyDodging.unity
-  - enabled: 0
-    path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WhyShooting.unity
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Games/Full Story/The International Space Station/ApproachingISS.unity
+  - enabled: 1
     path: Assets/Games/Full Story/The International Space Station/AirlockGame.unity
   - enabled: 1
+    path: Assets/Games/FixingISS/FixingISS.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/DiscoverAlienLife.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WarningAsteroids.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WhyShooting.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WhyDodging.unity
+  - enabled: 1
+    path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Tutorial.unity
+  - enabled: 1
+    path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Game.unity
+  - enabled: 1
+    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Tutorial.unity
+  - enabled: 1
+    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Game.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Shooting/ShootFail.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Green Alien Arc/GreenAlienGoodbye.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Green Alien Arc/GreenAlienLanding_Dodge.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Green Alien Arc/GreenAlienLanding_Laser.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/Calm/CalmPurpleAlien.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/Calm/PurpleAlienPicture.unity
+  - enabled: 1
     path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/Punch/DrawPurpleAlien.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/Punch/PunchPurpleAlien.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/Punch/PurpleAlienMommy.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/MeetPurpleAlien.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Discover Alien Life/Purple Alien Arc/PurpleAlienAngry.unity
+  - enabled: 1
+    path: Assets/Games/Full Story/Ending.unity

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 namespace FixingISSGame
 {
     public class GameManager : MonoBehaviour
@@ -25,8 +27,8 @@ namespace FixingISSGame
                     print("We're done here!");
                     InterAppCommunicationManager i = GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>();
                     i.result = true;
-                    i.CallbackSmartyPalNativeApp(i.gameName, i.result);
-
+                    //i.CallbackSmartyPalNativeApp(i.gameName, i.result);
+                    SceneManager.LoadScene("Ending");
                 }
                 else
                 {
