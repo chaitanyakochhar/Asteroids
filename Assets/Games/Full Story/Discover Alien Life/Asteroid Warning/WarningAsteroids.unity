@@ -4105,14 +4105,14 @@ RectTransform:
   m_GameObject: {fileID: 557621411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1371273164}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.3153203, y: 0.34500003}
-  m_AnchorMax: {x: 0.5, y: 0.40500003}
-  m_AnchoredPosition: {x: 0, y: -11}
-  m_SizeDelta: {x: -32, y: 31}
+  m_AnchorMin: {x: 0.266, y: 0.3426008}
+  m_AnchorMax: {x: 0.5, y: 0.4764256}
+  m_AnchoredPosition: {x: 2.8, y: -9}
+  m_SizeDelta: {x: -83, y: -26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557621413
 MonoBehaviour:
@@ -8188,6 +8188,122 @@ Transform:
   m_Children: []
   m_Father: {fileID: 389006959}
   m_RootOrder: 19
+--- !u!1 &1037651123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1037651126}
+  - 82: {fileID: 1037651125}
+  - 114: {fileID: 1037651124}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1037651124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037651123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 983a5e25cf7bb4e0cb5be9b9a7aee637, type: 3}
+  waitTime: 1
+--- !u!82 &1037651125
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037651123}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1037651126
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037651123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 188.54602, y: 38.431667, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &1043083592
 GameObject:
   m_ObjectHideFlags: 0
@@ -9922,6 +10038,7 @@ MonoBehaviour:
   - {fileID: 557621411}
   - {fileID: 1794870866}
   disableObjectsToEnable: 1
+  PlayEffects: 1
 --- !u!4 &1286002337
 Transform:
   m_ObjectHideFlags: 0
@@ -13338,14 +13455,14 @@ RectTransform:
   m_GameObject: {fileID: 1794870866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1371273164}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 0.34500003}
-  m_AnchorMax: {x: 0.674, y: 0.40500003}
-  m_AnchoredPosition: {x: 17, y: -11.0000305}
-  m_SizeDelta: {x: -18, y: 31}
+  m_AnchorMin: {x: 0.55581254, y: 0.3426008}
+  m_AnchorMax: {x: 0.78713286, y: 0.4764256}
+  m_AnchoredPosition: {x: -5.5, y: -7}
+  m_SizeDelta: {x: -77, y: -26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794870868
 MonoBehaviour:
