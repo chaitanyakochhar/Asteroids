@@ -39,6 +39,7 @@ public class Listener : MonoBehaviour
                     GetComponent<AudioSource>().PlayOneShot(failSound);
                 }
                 objectsPicked.Clear();
+                GetComponent<Highlighter>().HighlightPhase(currentPhase);
             }
         }
 

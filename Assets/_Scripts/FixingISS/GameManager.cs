@@ -8,7 +8,11 @@ namespace FixingISSGame
         public Phase[] phases;
         public GameObject[] cameraWaypoints;
         public GameObject intermediateDestination;
+        public AudioClip playForStickers;
         public int lerpDuration = 2;
+
+        public AudioClip failSound;
+        public AudioClip passSound;
 
         public void evaluateCurrentPhase()
         {
@@ -27,8 +31,13 @@ namespace FixingISSGame
                 else
                 {
                     print("Transition to the next part of the game");
+                    Camera.main.GetComponent<AudioSource>().PlayOneShot(passSound);
                     StartCoroutine(CameraLerp(Camera.main.transform.position, intermediateDestination.transform.position, cameraWaypoints[currentPhase - 1].transform.position, Camera.main.gameObject, lerpDuration));
                 }
+            }
+            else
+            {
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(failSound);
             }
         }
 
@@ -54,6 +63,7 @@ namespace FixingISSGame
                 yield return null;
             }
             Camera.main.orthographic = true;
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(playForStickers);
             yield return null;
         }
 

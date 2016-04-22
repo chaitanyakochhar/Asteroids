@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using System.Collections;
+using System.Collections.Generic;
+
 
 public class Command
 {
-
     public Vector2 screenPoint { get; set; }
     public Vector3 worldPoint { get; set; }
 
@@ -19,7 +19,12 @@ public class Command
         Ray r = Camera.main.ScreenPointToRay(destination);
         RaycastHit hit;
         bool hasHit = Physics.Raycast(r, out hit);
-        if(hasHit && !EventSystem.current.IsPointerOverGameObject())
+        bool hasHitUI = PointIsOverUI(destination);
+        if (hasHitUI)
+        {
+            Debug.Log("I have hit UI");
+        }
+        if(hasHit && !hasHitUI)
         {
             return new Command(destination, hit.point);
         }
@@ -61,6 +66,17 @@ public class Command
             return new Command(destination, worldPoint);
         }
         return null;
+    }
+
+    private static List<RaycastResult> tempResult = new List<RaycastResult>();
+
+    private static bool PointIsOverUI(Vector2 location)
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = location;
+        tempResult.Clear();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, tempResult);
+        return tempResult.Count > 0;
     }
     
 }

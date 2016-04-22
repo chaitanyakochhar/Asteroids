@@ -27,6 +27,7 @@ public class Highlighter : MonoBehaviour
 
     private IEnumerator HighlightCoroutine(int phaseIndex)
     {
+        yield return new WaitForSeconds(1);
         int surfaceToHighlight;
         float startTime;
         for (int i = 0; i < phases[phaseIndex].correctObjects.Length; i++)

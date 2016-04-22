@@ -6,7 +6,7 @@ public class Enabler : MonoBehaviour
 {
     public GameObject[] objectsToCheck;
     public GameObject[] objectsToEnable;
-
+    public bool disableObjectsToEnable = true;
     private List<Authenticator> checkAuthenticators;
 
     public void Start()
@@ -22,15 +22,15 @@ public class Enabler : MonoBehaviour
                 checkAuthenticators.Add(a);
             }
         }
-        if (checkAuthenticators.Count > 0)
+        if (checkAuthenticators.Count > 0 && disableObjectsToEnable)
         {
             foreach (GameObject GO in objectsToEnable)
             {
                 GO.SetActive(false);
             }
-            StartCoroutine(pollForActivation());
-
         }
+
+        StartCoroutine(pollForActivation());
     }
 
     private IEnumerator pollForActivation()
@@ -50,6 +50,11 @@ public class Enabler : MonoBehaviour
                 foreach (GameObject GO in objectsToEnable)
                 {
                     GO.SetActive(true);
+                    Effect e = GO.GetComponent<Effect>();
+                    if(e!=null)
+                    {
+                        e.StartEffect();
+                    }
                     yield return null;
                 }
                 break;

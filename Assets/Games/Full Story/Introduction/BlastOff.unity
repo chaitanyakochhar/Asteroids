@@ -618,6 +618,7 @@ GameObject:
   - 222: {fileID: 73788714}
   - 114: {fileID: 73788713}
   - 114: {fileID: 73788712}
+  - 114: {fileID: 73788715}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -680,7 +681,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 73788713}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 73788715}
+        m_MethodName: OnClickListener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &73788713
@@ -716,6 +728,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 73788710}
+--- !u!114 &73788715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 73788710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeLoad: 1
+  sceneToLoad: ISSIntro
 --- !u!1 &89464443
 GameObject:
   m_ObjectHideFlags: 0
@@ -9276,6 +9301,7 @@ GameObject:
   - 222: {fileID: 1225465969}
   - 114: {fileID: 1225465968}
   - 114: {fileID: 1225465967}
+  - 114: {fileID: 1225465970}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -9338,7 +9364,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1225465968}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1225465970}
+        m_MethodName: OnClickListener
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1225465968
@@ -9374,6 +9411,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1225465965}
+--- !u!114 &1225465970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1225465965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeLoad: 0
+  sceneToLoad: DiscoverAlienLife
 --- !u!1 &1234166951
 GameObject:
   m_ObjectHideFlags: 0
@@ -9928,6 +9978,7 @@ MonoBehaviour:
   objectsToEnable:
   - {fileID: 1225465965}
   - {fileID: 73788710}
+  disableObjectsToEnable: 1
 --- !u!4 &1286002337
 Transform:
   m_ObjectHideFlags: 0

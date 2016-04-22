@@ -17,10 +17,10 @@ public class UIUpdater : MonoBehaviour
     private Image[] lives;
 
     private int lifeCount;
-    private int alienCount;
+    public int alienCount { get; set; }
 
     private int lifeStart = 0;
-    private int alienStart = 0;
+    public int alienStart = 0;
 
     public void Start()
     {
@@ -43,11 +43,6 @@ public class UIUpdater : MonoBehaviour
         {
             Arrow.GetComponent<SpriteRenderer>().enabled = false;
             Arrow.GetComponent<BoxCollider>().enabled = false;
-        }
-
-        if (Goal != null)
-        {
-            Goal.GetComponent<BoxCollider>().enabled = false;
         }
     }
 

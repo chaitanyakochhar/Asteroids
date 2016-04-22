@@ -4651,6 +4651,7 @@ MonoBehaviour:
   Goal: {fileID: 0}
   Arrow: {fileID: 0}
   gameOverLevel: ExitPage
+  alienStart: 0
 --- !u!1001 &666766058
 Prefab:
   m_ObjectHideFlags: 0

@@ -16,10 +16,13 @@ public class AuthenticationManager : MonoBehaviour
     {
         foreach (GameObject GO in objectsToAuthenticate)
         {
-            Authenticator a = GO.GetComponent<Authenticator>();
-            if (a != null)
+            if (GO != null)
             {
-                finalResult &= a.isAuthenticated;
+                Authenticator a = GO.GetComponent<Authenticator>();
+                if (a != null)
+                {
+                    finalResult &= a.isAuthenticated;
+                }
             }
         }
 
