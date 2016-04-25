@@ -9791,7 +9791,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToCheck:
   - {fileID: 173797776}
-  objectsToEnable: []
+  objectsToEnable:
+  - {fileID: 1326018180}
+  - {fileID: 1653046154}
   disableObjectsToEnable: 1
   PlayEffects: 0
 --- !u!4 &1286002337
@@ -10150,6 +10152,10 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1326018177}
   m_Script: {fileID: 11500000, guid: fc0d65029bc5563448d03287d02d1b51, type: 3}
+--- !u!1 &1326018180 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 198152, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
+  m_PrefabInternal: {fileID: 1326018177}
 --- !u!1 &1338742756
 GameObject:
   m_ObjectHideFlags: 0

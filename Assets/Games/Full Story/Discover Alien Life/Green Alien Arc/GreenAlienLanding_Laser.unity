@@ -896,7 +896,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.6455078, y: 0.35500002}
   m_AnchorMax: {x: 0.8016719, y: 0.61482465}
   m_AnchoredPosition: {x: 15, y: 37}
@@ -1386,12 +1386,12 @@ RectTransform:
   m_Children:
   - {fileID: 2127822193}
   - {fileID: 1151281548}
-  - {fileID: 573615765}
   - {fileID: 1104303505}
   - {fileID: 155221994}
   - {fileID: 563547139}
   - {fileID: 712713862}
   - {fileID: 1943495089}
+  - {fileID: 573615765}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -4198,7 +4198,7 @@ RectTransform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.12323438, y: 0.36936167}
   m_AnchorMax: {x: 0.22371876, y: 0.5}
   m_AnchoredPosition: {x: 5, y: 39}
@@ -4528,11 +4528,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_AnchorMin: {x: 0.771, y: 0.85030097}
   m_AnchorMax: {x: 0.9626094, y: 1}
-  m_AnchoredPosition: {x: 43.5, y: -2}
-  m_SizeDelta: {x: 88, y: -4.5}
+  m_AnchoredPosition: {x: 21.393951, y: -2}
+  m_SizeDelta: {x: 43.788, y: -4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573615766
 MonoBehaviour:
@@ -6113,7 +6113,7 @@ RectTransform:
   m_LocalScale: {x: 12, y: 12, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5575313, y: 0.35500002}
   m_AnchorMax: {x: 0.6455078, y: 0.47524476}
   m_AnchoredPosition: {x: 56, y: 36}
@@ -8732,7 +8732,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.22371876, y: 0.35500002}
   m_AnchorMax: {x: 0.37300003, y: 0.61482465}
   m_AnchoredPosition: {x: -58, y: 75}
@@ -14293,7 +14293,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_AnchorMin: {x: 0.8016719, y: 0.35500002}
   m_AnchorMax: {x: 0.90621096, y: 0.5}
   m_AnchoredPosition: {x: -9, y: 40}

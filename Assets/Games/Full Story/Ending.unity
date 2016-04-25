@@ -1034,7 +1034,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 339fa8460333a5845854f963dc77a8bb, type: 3}
     m_FontSize: 53
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 70
     m_Alignment: 4
@@ -9773,6 +9773,8 @@ MonoBehaviour:
   objectsToEnable:
   - {fileID: 0}
   - {fileID: 73788710}
+  disableObjectsToEnable: 1
+  PlayEffects: 1
 --- !u!4 &1286002337
 Transform:
   m_ObjectHideFlags: 0
