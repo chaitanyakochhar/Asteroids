@@ -899,10 +899,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1151281548}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.034179688, y: 0}
+  m_AnchorMax: {x: 0.966, y: 1}
   m_AnchoredPosition: {x: 0.25, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173797778
 MonoBehaviour:
@@ -930,7 +930,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 25
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -954,11 +954,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: Great, our mission is to head to the International Space Station,
-    a huge space laboratory that orbits around the Earth 15 times a day. We need to
-    locate the space station as it circles around the Earth, and fix a solar panel.
+  textToTypeOut: You did it! Thanks to your great teamwork, you were able to fix the
+    Space Station. The crew of the International Space Station thanks you for your
+    help. Perhaps they'll need our help again someday, but for now let's head back
+    to Earth as heroes.
   DataManagerKey: 
-  textDelay: 0.17
+  textDelay: 0.24
 --- !u!114 &173797781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1316,10 +1317,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1363725142}
   - {fileID: 1225465966}
   - {fileID: 1151281548}
-  - {fileID: 1363725142}
-  - {fileID: 1222652947}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -8799,11 +8799,11 @@ RectTransform:
   m_Children:
   - {fileID: 173797777}
   m_Father: {fileID: 222845378}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.26900002}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 0, y: 2}
+  m_AnchorMax: {x: 1, y: 0.2742072}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: 0, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1151281549
 MonoBehaviour:
@@ -8817,14 +8817,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15294118, g: 0.5294118, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f2f41ae58df196b44ae3effa9d641b35, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9099,73 +9099,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 389006959}
   m_RootOrder: 118
---- !u!1 &1222652946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1222652947}
-  - 222: {fileID: 1222652949}
-  - 114: {fileID: 1222652948}
-  m_Layer: 5
-  m_Name: Image (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1222652947
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1222652946}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 222845378}
-  m_RootOrder: 3
-  m_AnchorMin: {x: 0.12978907, y: 0.42663836}
-  m_AnchorMax: {x: 0.36716408, y: 0.6003617}
-  m_AnchoredPosition: {x: 0, y: 5.5}
-  m_SizeDelta: {x: 0, y: -1}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1222652948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1222652946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4fe5ee4e5d8260c4b9fe769bc5268e41, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1222652949
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1222652946}
 --- !u!1 &1225465965
 GameObject:
   m_ObjectHideFlags: 0
@@ -9196,7 +9129,7 @@ RectTransform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.84700006, y: 0.84900004}
   m_AnchorMax: {x: 0.9794922, y: 1}
   m_AnchoredPosition: {x: 5.7, y: -1.6000004}
@@ -9299,7 +9232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
-  sceneToLoad: ApproachingISS
+  sceneToLoad: Ending
 --- !u!1 &1234166951
 GameObject:
   m_ObjectHideFlags: 0
@@ -9851,7 +9784,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToCheck:
   - {fileID: 173797776}
-  objectsToEnable: []
+  objectsToEnable:
+  - {fileID: 1225465965}
   disableObjectsToEnable: 1
   PlayEffects: 1
 --- !u!4 &1286002337
@@ -10137,7 +10071,7 @@ GameObject:
   - 224: {fileID: 1363725142}
   - 222: {fileID: 1363725144}
   - 114: {fileID: 1363725143}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ISS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10150,16 +10084,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1363725141}
-  m_LocalRotation: {x: 0, y: 0, z: 0.42261833, w: 0.9063078}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 2
-  m_AnchorMin: {x: 0.56144536, y: 0.53269684}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.116000004, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15, y: -30}
-  m_SizeDelta: {x: -123.99994, y: -66}
+  m_AnchoredPosition: {x: 42, y: 20}
+  m_SizeDelta: {x: -579.99994, y: -373.00003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363725143
 MonoBehaviour:
@@ -10180,7 +10114,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 50a4fe75675a8054e9a3bea41b9ac6aa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6fc1fe02cce8f44c967ac341da1503a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13353,8 +13287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 4853374f29b814f9da5aea9e280a80f9, type: 3}
-  waitTime: 1
+  clip: {fileID: 8300000, guid: 1ac4ad0eb32394a488fb0629f5d32c88, type: 3}
+  waitTime: 0
 --- !u!82 &1804764632
 AudioSource:
   m_ObjectHideFlags: 0
