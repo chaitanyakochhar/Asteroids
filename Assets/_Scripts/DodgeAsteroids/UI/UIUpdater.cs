@@ -75,8 +75,9 @@ public class UIUpdater : MonoBehaviour
             {
                 GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;
                 //InterAppCommunicationManager.result = true;
-                SceneManager.LoadScene(gameOverLevel);
+                
             }
+            SceneManager.LoadScene(gameOverLevel);
         }
     }
 

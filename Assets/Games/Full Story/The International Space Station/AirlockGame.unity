@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delaySeconds: 5
-  sceneToLoad: 
+  sceneToLoad: FixingISS
 --- !u!4 &602186371
 Transform:
   m_ObjectHideFlags: 0
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e96cc1eb2867b48bd2c1637d4ed0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickObjectButtonSetting: 0
+  pickObjectButtonSetting: 1
   iconColor: {r: 0.9686275, g: 0.42352945, b: 0.03137255, a: 1}
 --- !u!114 &750961089
 MonoBehaviour:
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e96cc1eb2867b48bd2c1637d4ed0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickObjectButtonSetting: 0
+  pickObjectButtonSetting: 1
   iconColor: {r: 0.89019614, g: 0.86666673, b: 0.078431375, a: 1}
 --- !u!114 &932779754
 MonoBehaviour:
@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e96cc1eb2867b48bd2c1637d4ed0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickObjectButtonSetting: 0
+  pickObjectButtonSetting: 1
   iconColor: {r: 0.7803922, g: 0.054901965, b: 0.10980393, a: 1}
 --- !u!114 &1039949531
 MonoBehaviour:
@@ -1583,7 +1583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e96cc1eb2867b48bd2c1637d4ed0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickObjectButtonSetting: 0
+  pickObjectButtonSetting: 1
   iconColor: {r: 0.0627451, g: 0.7803922, b: 0.10980393, a: 1}
 --- !u!114 &1339190250
 MonoBehaviour:
@@ -2175,7 +2175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e96cc1eb2867b48bd2c1637d4ed0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickObjectButtonSetting: 0
+  pickObjectButtonSetting: 1
   iconColor: {r: 0.4784314, g: 0.078431375, b: 0.74509805, a: 1}
 --- !u!114 &1729781872
 MonoBehaviour:
@@ -2385,7 +2385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9e96cc1eb2867b48bd2c1637d4ed0cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickObjectButtonSetting: 0
+  pickObjectButtonSetting: 1
   iconColor: {r: 0.003921569, g: 0, b: 0.8117648, a: 1}
 --- !u!114 &1758583288
 MonoBehaviour:

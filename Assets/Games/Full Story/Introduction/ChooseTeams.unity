@@ -605,6 +605,14 @@ Prefab:
       propertyPath: key
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11418204, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431454, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
   m_IsPrefabParent: 0
@@ -778,7 +786,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 62f7caf2046bf7a488fd50c7ca7c7ada, type: 3}
     m_FontSize: 50
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 50
     m_Alignment: 4
@@ -1146,6 +1154,14 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11418204, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431454, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
   m_IsPrefabParent: 0
@@ -1510,19 +1526,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 143706, guid: a4b77d0091f18544a8fcde8209beade8, type: 2}
   m_PrefabInternal: {fileID: 1894734606}
---- !u!114 &1803602019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1803602014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533c5a417f1f8054cb8577b373d936bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0
-  clip: {fileID: 8300000, guid: 947f2cda1c7514fc5a7382801962d749, type: 3}
 --- !u!82 &1803602020
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1823,7 +1826,7 @@ Prefab:
     - target: {fileID: 11457750, guid: a4b77d0091f18544a8fcde8209beade8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1803602019}
+      objectReference: {fileID: 0}
     - target: {fileID: 11457750, guid: a4b77d0091f18544a8fcde8209beade8, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: StartEffect

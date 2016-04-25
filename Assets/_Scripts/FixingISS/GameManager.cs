@@ -15,6 +15,7 @@ namespace FixingISSGame
 
         public AudioClip failSound;
         public AudioClip passSound;
+        public string nextScene = "Ending";
 
         public void evaluateCurrentPhase()
         {
@@ -22,13 +23,13 @@ namespace FixingISSGame
             if (result)
             {
                 currentPhase++;
-                if (currentPhase > phases.Length)
+                if (currentPhase >= phases.Length)
                 {
                     print("We're done here!");
                     InterAppCommunicationManager i = GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>();
                     i.result = true;
                     //i.CallbackSmartyPalNativeApp(i.gameName, i.result);
-                    SceneManager.LoadScene("Ending");
+                    SceneManager.LoadScene(nextScene);
                 }
                 else
                 {
