@@ -3712,6 +3712,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 27
       objectReference: {fileID: 0}
+    - target: {fileID: 11441364, guid: 05e1a571a60c6c046b5dc7b3e1701cc3, type: 2}
+      propertyPath: nextLevel
+      value: GreenAlienLanding_Laser
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 05e1a571a60c6c046b5dc7b3e1701cc3, type: 2}
   m_IsPrefabParent: 0
@@ -4650,7 +4654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Goal: {fileID: 0}
   Arrow: {fileID: 0}
-  gameOverLevel: ExitPage
+  gameOverLevel: ShootFail
   alienStart: 0
 --- !u!1001 &666766058
 Prefab:

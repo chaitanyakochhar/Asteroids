@@ -14,6 +14,7 @@ public class AuthenticationManager : MonoBehaviour
 
     public void ValidateObjects()
     {
+        finalResult = true;
         foreach (GameObject GO in objectsToAuthenticate)
         {
             if (GO != null)
