@@ -899,10 +899,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1151281548}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.25, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.016601562, y: 0}
+  m_AnchorMax: {x: 0.9794922, y: 1}
+  m_AnchoredPosition: {x: 2.25, y: 0}
+  m_SizeDelta: {x: 38, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173797778
 MonoBehaviour:
@@ -930,7 +930,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 23
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -9026,14 +9026,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15294118, g: 0.5294118, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f2f41ae58df196b44ae3effa9d641b35, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11105,7 +11105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 74ae8a5c6b5c1484db9c7496f8c06522, type: 3}
-  waitTime: 1
+  waitTime: 0
 --- !u!82 &1528658237
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13906,15 +13906,15 @@ RectTransform:
   m_GameObject: {fileID: 1875347298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 214250916}
   m_Father: {fileID: 222845378}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0.84000003, y: 0.8326019}
-  m_AnchorMax: {x: 0.9716797, y: 0.97239816}
-  m_AnchoredPosition: {x: 13.5, y: 1.5}
-  m_SizeDelta: {x: 25, y: -7}
+  m_AnchorMin: {x: 0.7421641, y: 0.78179634}
+  m_AnchorMax: {x: 0.9785156, y: 0.97239816}
+  m_AnchoredPosition: {x: 28, y: -1.5}
+  m_SizeDelta: {x: 79, y: -51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875347300
 MonoBehaviour:
@@ -15669,6 +15669,14 @@ Prefab:
     - target: {fileID: 11493928, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: WhyShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218736, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8218736, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
