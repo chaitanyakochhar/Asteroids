@@ -899,10 +899,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1151281548}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.0223518, y: 0}
+  m_AnchorMax: {x: 0.97800004, y: 1}
   m_AnchoredPosition: {x: 0.125, y: 0}
-  m_SizeDelta: {x: -0.25, y: 0}
+  m_SizeDelta: {x: 45.75, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173797778
 MonoBehaviour:
@@ -958,7 +958,7 @@ MonoBehaviour:
     no! The alien thought you were insulting him so he wants to fight you. Do you
     fight the alien or try and calm him down?'
   DataManagerKey: 
-  textDelay: 0.25
+  textDelay: 0.24
 --- !u!114 &173797781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9153,14 +9153,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15294118, g: 0.5294118, b: 0.627451, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f2f41ae58df196b44ae3effa9d641b35, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11597,7 +11597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 82b698b1e630040e1970627726ea04df, type: 3}
-  waitTime: 1
+  waitTime: 0
 --- !u!82 &1581097235
 AudioSource:
   m_ObjectHideFlags: 0
