@@ -12,10 +12,21 @@ public class DrawableSurface : MonoBehaviour
     private Vector2 lastPoint;
     private Vector2 currentPoint;
     public bool EraserMode { get; set; }
+    public bool isTouchDevice { get; set; }
+    private RuntimePlatform platform;
 
     void Start()
     {
         EraserMode = false;
+        platform = Application.platform;
+        if (platform == RuntimePlatform.Android || platform == RuntimePlatform.IPhonePlayer)
+        {
+            isTouchDevice = true;
+        }
+        else
+        {
+            isTouchDevice = false;
+        }
         Texture2D t = GetComponent<Renderer>().material.mainTexture as Texture2D;
         tNew = Instantiate(t) as Texture2D;
         transform.GetComponent<Renderer>().material.mainTexture = tNew;
@@ -24,7 +35,11 @@ public class DrawableSurface : MonoBehaviour
 
     public void Update()
     {
-        ClickHandler();
+        if (isTouchDevice)
+        {
+
+        }
+        else ClickHandler();
     }
 
     private void ClickHandler()
@@ -42,6 +57,15 @@ public class DrawableSurface : MonoBehaviour
                 lastPoint = hit.textureCoord;
                 lastPoint.x *= tNew.width;
                 lastPoint.y *= tNew.height;
+                if (EraserMode)
+                {
+                    tNew = Drawing.Paint(lastPoint, brushRadius, Color.clear, 10, tNew);
+
+                }
+                else
+                {
+                    tNew = Drawing.Paint(lastPoint, brushRadius, colorBeingUsed, 10, tNew);
+                }
             }
         }
 
@@ -77,7 +101,63 @@ public class DrawableSurface : MonoBehaviour
 
     private void TouchHandler()
     {
-        ;
+
+
+        foreach (Touch t in Input.touches)
+        {
+            RaycastHit hit;
+            Command c = Command.createCommandWithHitObjectReference(t.position, out hit);
+            if (c == null)
+            {
+                print("Fail");
+            }
+            else
+            {
+                switch (t.phase)
+                {
+                    case TouchPhase.Began:
+                        {
+                            lastPoint = hit.textureCoord;
+                            lastPoint.x *= tNew.width;
+                            lastPoint.y *= tNew.height;
+                            if (EraserMode)
+                            {
+                                tNew = Drawing.Paint(lastPoint, brushRadius, Color.clear, 10, tNew);
+
+                            }
+                            else
+                            {
+                                tNew = Drawing.Paint(lastPoint, brushRadius, colorBeingUsed, 10, tNew);
+                            }
+                            tNew.Apply();
+                            break;
+                        }
+                    case TouchPhase.Moved:
+                        {
+                            print(hit.textureCoord);
+                            currentPoint = hit.textureCoord;
+                            currentPoint.x *= tNew.width;
+                            currentPoint.y *= tNew.height;
+                            if (EraserMode)
+                            {
+                                tNew = Drawing.PaintLine(lastPoint, currentPoint, brushRadius, Color.clear, 10, tNew);
+
+                            }
+                            else
+                            {
+                                tNew = Drawing.PaintLine(lastPoint, currentPoint, brushRadius, colorBeingUsed, 10, tNew);
+                            }
+                            tNew.Apply();
+                            lastPoint = currentPoint;
+                            break;
+                        }
+                    case TouchPhase.Ended:
+                        {
+                            break;
+                        }
+                }
+            }
+        }
     }
 
     private void Paint(Vector2 textureCoord)
