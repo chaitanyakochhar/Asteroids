@@ -520,7 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NumSamples: 5
-  brushRadius: 10
+  brushRadius: 4
   colorBeingUsed: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &540646050
 GameObject:
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a57062c138a54c4b921012c0f534988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eraserRadius: 70
+  eraserRadius: 25
 --- !u!1 &853924143
 GameObject:
   m_ObjectHideFlags: 0

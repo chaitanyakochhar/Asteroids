@@ -6,6 +6,7 @@ public class PlayerDataManager : MonoBehaviour
     public Dictionary<string, string> textCaptured { get; private set; }
     public Dictionary<string, AudioClip> audioCaptured { get; private set; }
     public Dictionary<string, Texture2D> imagesCaptured { get; private set; }
+    public LinkedList<string> decisions;
 
     // Use this for initialization
     void Start()
@@ -13,6 +14,7 @@ public class PlayerDataManager : MonoBehaviour
         textCaptured = new Dictionary<string, string>();
         audioCaptured = new Dictionary<string, AudioClip>();
         imagesCaptured = new Dictionary<string, Texture2D>();
+        decisions = new LinkedList<string>();
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(this);
     }
@@ -43,5 +45,10 @@ public class PlayerDataManager : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public void AddDecision(string decision)
+    {
+        decisions.AddLast(decision);
     }
 }
