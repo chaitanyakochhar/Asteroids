@@ -1,18 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DrawableSurface : MonoBehaviour
 {
-    public float brushRadius = 10f;
+    public Samples NumSamples = Samples.Samples4;
+    public float brushRadius = 1000f;
     public Color colorBeingUsed = Color.black;
-    private Texture2D tNew;
 
+    private Texture2D tNew;
+    private Vector2 lastPoint;
+    private Vector2 currentPoint;
+    public bool EraserMode { get; set; }
 
     void Start()
     {
+        EraserMode = false;
         Texture2D t = GetComponent<Renderer>().material.mainTexture as Texture2D;
         tNew = Instantiate(t) as Texture2D;
         transform.GetComponent<Renderer>().material.mainTexture = tNew;
+        ClearOut();
     }
 
     public void Update()
@@ -22,24 +29,55 @@ public class DrawableSurface : MonoBehaviour
 
     private void ClickHandler()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            Command c = Command.createCommandWithHitObjectReferenceIgnoreUI(Input.mousePosition, out hit);
+            Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit);
             if (c == null)
             {
                 print("Fail");
             }
-            if (c != null)
-                print(hit.textureCoord);
-            StartCoroutine(CirclePaint(hit.textureCoord, brushRadius));
-
+            else
+            {
+                lastPoint = hit.textureCoord;
+                lastPoint.x *= tNew.width;
+                lastPoint.y *= tNew.height;
+            }
         }
+
+        if (Input.GetMouseButton(0))
+        {
+            RaycastHit hit;
+            Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit);
+            if (c == null)
+            {
+                print("Fail");
+            }
+            else
+            {
+                print(hit.textureCoord);
+                currentPoint = hit.textureCoord;
+                currentPoint.x *= tNew.width;
+                currentPoint.y *= tNew.height;
+                if (EraserMode)
+                {
+                    tNew = Drawing.PaintLine(lastPoint, currentPoint, brushRadius, Color.clear, 10, tNew);
+
+                }
+                else
+                {
+                    tNew = Drawing.PaintLine(lastPoint, currentPoint, brushRadius, colorBeingUsed, 10, tNew);
+                }
+                tNew.Apply();
+                lastPoint = currentPoint;
+            }
+        }
+
     }
 
     private void TouchHandler()
     {
-
+        ;
     }
 
     private void Paint(Vector2 textureCoord)
@@ -50,26 +88,25 @@ public class DrawableSurface : MonoBehaviour
         tNew.Apply();
     }
 
-    private IEnumerator CirclePaint(Vector2 textureCoord, float radius)
+    private Vector2[] calculateIntermediates(Vector2 startPoint, Vector2 endPoint, int samplePoints = 2)
     {
-        textureCoord.x *= tNew.width;
-        textureCoord.y *= tNew.height;
-        float dist;
-        for (int x = 0;x<tNew.width;x++)
-            for(int y = 0; y < tNew.height; y++)
-            {
-                float diffX = x - textureCoord.x;
-                float diffY = y - textureCoord.y;
-
-                dist = Mathf.Sqrt((diffX * diffX) + (diffY * diffY));
-                if(dist<=radius)
-                {
-                    tNew.SetPixel(x, y, colorBeingUsed);
-                }
-            }
-        tNew.Apply();
-        yield return null;
+        Vector2[] intermediates = new Vector2[samplePoints];
+        for (int i = 0; i < samplePoints; i++)
+        {
+            intermediates[i] = Vector2.Lerp(startPoint, endPoint, (i + 1) / samplePoints);
+        }
+        return intermediates;
     }
 
+    private void ClearOut()
+    {
+        Color[] blanks = new Color[tNew.width * tNew.height];
+        for (int i = 0; i < blanks.Length; i++)
+        {
+            blanks[i] = Color.clear;
+        }
+        tNew.SetPixels(blanks);
+        tNew.Apply();
+    }
 
 }

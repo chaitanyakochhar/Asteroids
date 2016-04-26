@@ -22,3 +22,14 @@ public enum PickObjectButtonSetting
 {
     HOLD, CLICK
 }
+
+public enum Samples
+{
+    None,
+    Samples2,
+    Samples4,
+    Samples8,
+    Samples16,
+    Samples32,
+    RotatedDisc
+}
