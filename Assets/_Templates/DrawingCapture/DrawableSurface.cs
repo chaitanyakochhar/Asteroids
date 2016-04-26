@@ -37,7 +37,7 @@ public class DrawableSurface : MonoBehaviour
     {
         if (isTouchDevice)
         {
-
+            TouchHandler();
         }
         else ClickHandler();
     }
