@@ -1,0 +1,27 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:bfaced5d4821d7522c272b563d876fd2:d018ab207dacf1a8b9d7a674faaca23e:49336b3fb4ca7298e54a098597475563$
+#
+:format=40000
+:texture=PurpleAlienHappy.png
+:size=1024x1024
+
+Purple03;1;704;286;319;0.5;0.5
+Purple06;1;704;286;319;0.5;0.5
+Purple02;289;704;286;319;0.5;0.5
+Purple07;289;704;286;319;0.5;0.5
+Purple04;577;704;286;319;0.5;0.5
+Purple05;577;704;286;319;0.5;0.5
+Purple013;1;386;286;316;0.5;0.504746835443038
+Purple09;1;386;286;316;0.5;0.504746835443038
+Purple010;289;390;286;312;0.5;0.5112179487179487
+Purple012;289;390;286;312;0.5;0.5112179487179487
+Purple01;577;383;286;319;0.5;0.5
+Purple015;577;383;286;319;0.5;0.5
+Purple011;1;64;286;317;0.5;0.5031545741324921
+Purple014;1;64;286;317;0.5;0.5031545741324921
+Purple08;1;64;286;317;0.5;0.5031545741324921

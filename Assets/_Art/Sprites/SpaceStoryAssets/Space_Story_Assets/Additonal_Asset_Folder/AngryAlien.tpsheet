@@ -1,0 +1,18 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:5d27122731ea9485d284d84899e5e876:cf27ce382ff3b2e8ca1c40c4a06bd35e:a3d59c07e36e2a1a8ac1978f28469d8b$
+#
+:format=40000
+:texture=AngryAlien.png
+:size=1024x1024
+
+angry1;1;685;309;338;0.5;0.5
+angry2;312;686;320;337;0.4984375;0.5014836795252225
+angry6;312;686;320;337;0.4984375;0.5014836795252225
+angry3;634;686;325;337;0.4969230769230769;0.5014836795252225
+angry5;634;686;325;337;0.4969230769230769;0.5014836795252225
+angry4;1;348;331;335;0.5000000000000001;0.5044776119402986
