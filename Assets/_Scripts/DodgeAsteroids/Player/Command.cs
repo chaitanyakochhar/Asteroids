@@ -33,14 +33,14 @@ public class Command
 
     public static Command createCommandWithHitObjectReference(Vector2 destination, out RaycastHit hit, bool ignoreUI=true)
     {
-        bool blockedByUIElement = false;
+        bool hasHitUI = false;
         if(ignoreUI==true)
         {
-            blockedByUIElement = EventSystem.current.IsPointerOverGameObject();
+            hasHitUI = PointIsOverUI(destination);
         }
         Ray r = Camera.main.ScreenPointToRay(destination);
         bool hasHit = Physics.Raycast(r, out hit);
-        if (hasHit && !blockedByUIElement)
+        if (hasHit && !hasHitUI)
         {
             return new Command(destination, hit.point);
         }

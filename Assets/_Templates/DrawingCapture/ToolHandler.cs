@@ -14,15 +14,21 @@ public class ToolHandler : MonoBehaviour
         brushRadius = d.brushRadius;
     }
 
-    public void Eraser()
+    public void Eraser(bool test)
     {
-        d.EraserMode = true;
-        d.brushRadius = eraserRadius;
+        if (test)
+        {
+            d.EraserMode = true;
+            d.brushRadius = eraserRadius;
+        }
     }
 
-    public void Pencil()
+    public void Pencil(bool test)
     {
-        d.EraserMode = false;
-        d.brushRadius = brushRadius;
+        if (test)
+        {
+            d.EraserMode = false;
+            d.brushRadius = brushRadius;
+        }
     }
 }

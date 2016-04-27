@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class DrawableSurface : MonoBehaviour
 {
     public Samples NumSamples = Samples.Samples4;
-    public float brushRadius = 1000f;
+    public float brushRadius = 10f;
     public Color colorBeingUsed = Color.black;
 
     private Texture2D tNew;
@@ -57,15 +57,6 @@ public class DrawableSurface : MonoBehaviour
                 lastPoint = hit.textureCoord;
                 lastPoint.x *= tNew.width;
                 lastPoint.y *= tNew.height;
-                if (EraserMode)
-                {
-                    tNew = Drawing.Paint(lastPoint, brushRadius, Color.clear, 10, tNew);
-
-                }
-                else
-                {
-                    tNew = Drawing.Paint(lastPoint, brushRadius, colorBeingUsed, 10, tNew);
-                }
             }
         }
 
@@ -79,7 +70,6 @@ public class DrawableSurface : MonoBehaviour
             }
             else
             {
-                print(hit.textureCoord);
                 currentPoint = hit.textureCoord;
                 currentPoint.x *= tNew.width;
                 currentPoint.y *= tNew.height;
@@ -120,16 +110,6 @@ public class DrawableSurface : MonoBehaviour
                             lastPoint = hit.textureCoord;
                             lastPoint.x *= tNew.width;
                             lastPoint.y *= tNew.height;
-                            if (EraserMode)
-                            {
-                                tNew = Drawing.Paint(lastPoint, brushRadius, Color.clear, 10, tNew);
-
-                            }
-                            else
-                            {
-                                tNew = Drawing.Paint(lastPoint, brushRadius, colorBeingUsed, 10, tNew);
-                            }
-                            tNew.Apply();
                             break;
                         }
                     case TouchPhase.Moved:
@@ -166,16 +146,6 @@ public class DrawableSurface : MonoBehaviour
         textureCoord.y *= tNew.height;
         tNew.SetPixel((int)textureCoord.x, (int)textureCoord.y, Color.black);
         tNew.Apply();
-    }
-
-    private Vector2[] calculateIntermediates(Vector2 startPoint, Vector2 endPoint, int samplePoints = 2)
-    {
-        Vector2[] intermediates = new Vector2[samplePoints];
-        for (int i = 0; i < samplePoints; i++)
-        {
-            intermediates[i] = Vector2.Lerp(startPoint, endPoint, (i + 1) / samplePoints);
-        }
-        return intermediates;
     }
 
     private void ClearOut()
