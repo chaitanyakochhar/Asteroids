@@ -14,6 +14,10 @@ public class StartPlayOnClick : Effect
         if(clip!=null)
         {
             GetComponent<AudioSource>().PlayOneShot(clip);
+            if(GetComponent<UIBounce>()!=null)
+            {
+                GetComponent<UIBounce>().StopEffect();
+            }
         }
     }
 
