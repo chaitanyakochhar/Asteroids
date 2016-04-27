@@ -30,6 +30,7 @@ public class Highlighter : MonoBehaviour
         yield return new WaitForSeconds(1);
         int surfaceToHighlight;
         float startTime;
+        if(phaseIndex<=phases.Length)
         for (int i = 0; i < phases[phaseIndex].correctObjects.Length; i++)
         {
 
