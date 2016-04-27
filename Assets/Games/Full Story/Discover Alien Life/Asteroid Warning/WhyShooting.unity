@@ -14136,6 +14136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Decision: Why Shooting
+  PushOnStart: 0
 --- !u!1 &1896045057
 GameObject:
   m_ObjectHideFlags: 0
@@ -15620,35 +15621,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1.5
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 172.5
+      value: 138.5
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -271
+      value: -134
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -83
+      value: -137
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.38677347
+      value: 0.467
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.2927884
+      value: 0.28462154
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.65132815
+      value: 0.59767973
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.40081316
+      value: 0.47200003
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_Pivot.x

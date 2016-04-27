@@ -10381,35 +10381,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -6
+      value: -14.5
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 180
+      value: 89
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_SizeDelta.x
-      value: -254
+      value: -131
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_SizeDelta.y
-      value: -126
+      value: -144
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.3896094
+      value: 0.45813283
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.25857615
+      value: 0.26900002
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.6376563
+      value: 0.5857266
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.42333278
+      value: 0.4652643
       objectReference: {fileID: 0}
     - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_Pivot.x
@@ -10446,6 +10446,22 @@ Prefab:
     - target: {fileID: 11493928, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: ApproachingISS
+      objectReference: {fileID: 0}
+    - target: {fileID: 22439234, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -84.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 22492828, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -84.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22440994, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 10c3873f851a99c42b93d89d644cd174, type: 2}
@@ -10706,6 +10722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Decision: Approaching ISS
+  PushOnStart: 0
 --- !u!1 &1458097593
 GameObject:
   m_ObjectHideFlags: 0
