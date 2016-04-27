@@ -1530,6 +1530,19 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 143706, guid: a4b77d0091f18544a8fcde8209beade8, type: 2}
   m_PrefabInternal: {fileID: 1894734606}
+--- !u!114 &1803602015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1803602014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decision: Choose Teams
+  PushOnStart: 1
 --- !u!82 &1803602020
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1930,6 +1943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b81ab710721ca6478a01f86940e1802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decisions: []
 --- !u!4 &2117102965
 Transform:
   m_ObjectHideFlags: 0
