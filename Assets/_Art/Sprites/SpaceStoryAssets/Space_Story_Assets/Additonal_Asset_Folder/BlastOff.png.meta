@@ -1,9 +1,44 @@
 fileFormatVersion: 2
 guid: d213ab2514e704c2c8320a4396f37ba5
-timeCreated: 1461778685
+timeCreated: 1461789403
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: BlastOff_0
+    21300002: BlastOff_1
+    21300004: BlastOff_2
+    21300006: BlastOff_3
+    21300008: BlastOff_4
+    21300010: BlastOff_5
+    21300012: BlastOff_6
+    21300014: BlastOff_7
+    21300016: BlastOff_8
+    21300018: BlastOff_9
+    21300020: BlastOff_10
+    21300022: BlastOff_11
+    21300024: BlastOff_12
+    21300026: BlastOff_13
+    21300028: BlastOff_14
+    21300030: BlastOff_15
+    21300032: BlastOff_16
+    21300034: BlastOff_17
+    21300036: BlastOff_18
+    21300038: BlastOff_19
+    21300040: BlastOff_20
+    21300042: BlastOff_21
+    21300044: BlastOff_22
+    21300046: BlastOff_23
+    21300048: BlastOff_24
+    21300050: BlastOff_25
+    21300052: BlastOff_26
+    21300054: BlastOff_27
+    21300056: BlastOff_28
+    21300058: BlastOff_29
+    21300060: BlastOff_30
+    21300062: BlastOff_31
+    21300064: BlastOff_32
+    21300066: BlastOff_33
+    21300068: BlastOff_34
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +65,807 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: BlastOff_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2031
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: BlastOff_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 2024
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: BlastOff_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2016
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -12, y: 16}
+        - {x: -20, y: 9}
+        - {x: -20, y: -12}
+        - {x: -13, y: -16}
+        - {x: 17, y: -16}
+        - {x: 20, y: -13}
+        - {x: 20, y: 8}
+        - {x: 12, y: 16}
+    - name: BlastOff_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2018
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: BlastOff_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 2012
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 17}
+        - {x: -16, y: 7}
+        - {x: -17, y: 4}
+        - {x: -17, y: -10}
+        - {x: -5, y: -17}
+        - {x: 17, y: -17}
+        - {x: 17, y: 3}
+        - {x: 5, y: 17}
+    - name: BlastOff_5
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 2010
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 19}
+        - {x: -20, y: 2}
+        - {x: -20, y: -13}
+        - {x: -10, y: -19}
+        - {x: 20, y: -19}
+        - {x: 20, y: 2}
+        - {x: 5, y: 19}
+    - name: BlastOff_6
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 2009
+        width: 54
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27, y: 18.5}
+        - {x: -27, y: -12.5}
+        - {x: -20, y: -18.5}
+        - {x: 27, y: -18.5}
+        - {x: 27, y: 0.5}
+        - {x: 16, y: 18.5}
+    - name: BlastOff_7
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 2004
+        width: 57
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -28.5, y: 20.5}
+        - {x: -28.5, y: -16.5}
+        - {x: -7.5, y: -20.5}
+        - {x: 28.5, y: -20.5}
+        - {x: 28.5, y: -0.5}
+        - {x: 10.5, y: 20.5}
+    - name: BlastOff_8
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 1995
+        width: 65
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32.5, y: 25}
+        - {x: -32.5, y: -14}
+        - {x: -9.5, y: -25}
+        - {x: 32.5, y: -25}
+        - {x: 32.5, y: -2}
+        - {x: 12.5, y: 25}
+    - name: BlastOff_9
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1994
+        width: 84
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22, y: 26}
+        - {x: -42, y: 26}
+        - {x: -42, y: -5}
+        - {x: -27, y: -26}
+        - {x: 35, y: -26}
+        - {x: 41, y: -23}
+        - {x: 42, y: -23}
+        - {x: 42, y: 1}
+    - name: BlastOff_10
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 1988
+        width: 89
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13.5, y: 29}
+        - {x: -42.5, y: 29}
+        - {x: -44.5, y: 24}
+        - {x: -44.5, y: -20}
+        - {x: -36.5, y: -29}
+        - {x: 39.5, y: -29}
+        - {x: 44.5, y: -20}
+        - {x: 44.5, y: -1}
+        - {x: 34.5, y: 20}
+    - name: BlastOff_11
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1983
+        width: 101
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6.5, y: 32.5}
+        - {x: -18.5, y: 32.5}
+        - {x: -24.5, y: 30.5}
+        - {x: -22.5, y: 24.5}
+        - {x: -49.5, y: 18.5}
+        - {x: -50.5, y: 17.5}
+        - {x: -50.5, y: -22.5}
+        - {x: -36.5, y: -32.5}
+        - {x: 50.5, y: -32.5}
+        - {x: 50.5, y: -5.5}
+        - {x: 38.5, y: 15.5}
+    - name: BlastOff_12
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 1979
+        width: 112
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -56, y: 33}
+        - {x: -56, y: -25}
+        - {x: -52, y: -33}
+        - {x: 23, y: -33}
+        - {x: 56, y: -23}
+        - {x: 56, y: 9}
+        - {x: 30, y: 33}
+    - name: BlastOff_13
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 1974
+        width: 116
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 37}
+        - {x: -57, y: 37}
+        - {x: -58, y: 36}
+        - {x: -58, y: -9}
+        - {x: -37, y: -37}
+        - {x: 32, y: -37}
+        - {x: 58, y: -18}
+        - {x: 58, y: 5}
+        - {x: 42, y: 30}
+    - name: BlastOff_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1891
+        width: 259
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71.5, y: 40.5}
+        - {x: -90.5, y: 40.5}
+        - {x: -106.5, y: 32.5}
+        - {x: -129.5, y: 4.5}
+        - {x: -129.5, y: -11.5}
+        - {x: -111.5, y: -40.5}
+        - {x: -23.5, y: -40.5}
+        - {x: 0.5, y: -20.5}
+        - {x: 0.5, y: 2.5}
+        - {x: -25.5, y: 31.5}
+      - - {x: 3.5, y: 40.5}
+        - {x: 0.5, y: 39.5}
+        - {x: 0.5, y: -26.5}
+        - {x: 10.5, y: -40.5}
+        - {x: 96.5, y: -40.5}
+        - {x: 123.5, y: -24.5}
+        - {x: 129.5, y: -14.5}
+        - {x: 129.5, y: 19.5}
+        - {x: 88.5, y: 40.5}
+    - name: BlastOff_15
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1891
+        width: 130
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: 39.5}
+        - {x: -65, y: -14.5}
+        - {x: -49, y: -29.5}
+        - {x: -32, y: -39.5}
+        - {x: 25, y: -39.5}
+        - {x: 65, y: -9.5}
+        - {x: 65, y: 39.5}
+    - name: BlastOff_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1886
+        width: 135
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 22.5, y: 43}
+        - {x: -39.5, y: 43}
+        - {x: -58.5, y: 34}
+        - {x: -67.5, y: 20}
+        - {x: -67.5, y: -29}
+        - {x: -33.5, y: -43}
+        - {x: 22.5, y: -43}
+        - {x: 53.5, y: -24}
+        - {x: 67.5, y: -3}
+        - {x: 67.5, y: 25}
+    - name: BlastOff_17
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1884
+        width: 137
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47.5, y: 44}
+        - {x: -68.5, y: 23}
+        - {x: -68.5, y: -44}
+        - {x: 68.5, y: -44}
+        - {x: 68.5, y: 32}
+        - {x: 48.5, y: 44}
+    - name: BlastOff_18
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1876
+        width: 152
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: 39}
+        - {x: 28, y: 48}
+        - {x: -33, y: 48}
+        - {x: -46, y: 41}
+        - {x: -49, y: 29}
+        - {x: -45, y: 28}
+        - {x: -76, y: -1}
+        - {x: -76, y: -32}
+        - {x: -36, y: -48}
+        - {x: 20, y: -48}
+        - {x: 68, y: -16}
+        - {x: 76, y: 3}
+        - {x: 76, y: 28}
+    - name: BlastOff_19
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 1860
+        width: 170
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -62, y: 56}
+        - {x: -62, y: 37}
+        - {x: -60, y: 29}
+        - {x: -85, y: -9}
+        - {x: -85, y: -40}
+        - {x: -57, y: -56}
+        - {x: 3, y: -56}
+        - {x: 79, y: -11}
+        - {x: 85, y: 9}
+        - {x: 85, y: 56}
+    - name: BlastOff_20
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1740
+        width: 194
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -89, y: 59}
+        - {x: -97, y: 41}
+        - {x: -97, y: -51}
+        - {x: -82, y: -59}
+        - {x: 26, y: -59}
+        - {x: 84, y: -34}
+        - {x: 97, y: 3}
+        - {x: 97, y: 59}
+    - name: BlastOff_21
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1733
+        width: 207
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41.5, y: 62}
+        - {x: -72.5, y: 50}
+        - {x: -63.5, y: 39}
+        - {x: -60.5, y: 37}
+        - {x: -103.5, y: -1}
+        - {x: -103.5, y: -46}
+        - {x: -72.5, y: -62}
+        - {x: 30.5, y: -62}
+        - {x: 103.5, y: -9}
+        - {x: 103.5, y: 44}
+        - {x: 75.5, y: 62}
+    - name: BlastOff_22
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1716
+        width: 230
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -84, y: 72}
+        - {x: -76, y: 47}
+        - {x: -73, y: 44}
+        - {x: -115, y: 5}
+        - {x: -115, y: -61}
+        - {x: -100, y: -72}
+        - {x: 11, y: -72}
+        - {x: 69, y: -42}
+        - {x: 115, y: 4}
+        - {x: 115, y: 36}
+        - {x: 86, y: 72}
+    - name: BlastOff_23
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1711
+        width: 236
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 61, y: 74.5}
+        - {x: -110, y: 74.5}
+        - {x: -118, y: 59.5}
+        - {x: -118, y: -64.5}
+        - {x: -80, y: -74.5}
+        - {x: 29, y: -74.5}
+        - {x: 114, y: -4.5}
+        - {x: 118, y: 1.5}
+        - {x: 118, y: 54.5}
+    - name: BlastOff_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1552
+        width: 244
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -65, y: 78}
+        - {x: -71, y: 70}
+        - {x: -90, y: 46}
+        - {x: -122, y: 1}
+        - {x: -122, y: -44}
+        - {x: -45, y: -78}
+        - {x: 18, y: -78}
+        - {x: 122, y: -3}
+        - {x: 122, y: 69}
+        - {x: 83, y: 78}
+    - name: BlastOff_25
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 1546
+        width: 270
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 107, y: 81}
+        - {x: -82, y: 81}
+        - {x: -95, y: 44}
+        - {x: -135, y: -14}
+        - {x: -135, y: -38}
+        - {x: -38, y: -81}
+        - {x: 17, y: -81}
+        - {x: 117, y: -12}
+        - {x: 135, y: 6}
+        - {x: 135, y: 55}
+    - name: BlastOff_26
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1536
+        width: 278
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 104, y: 76}
+        - {x: 79, y: 84}
+        - {x: 60, y: 86}
+        - {x: -53, y: 86}
+        - {x: -91, y: 74}
+        - {x: -95, y: 50}
+        - {x: -89, y: 50}
+        - {x: -139, y: -30}
+        - {x: -139, y: -40}
+        - {x: -95, y: -58}
+        - {x: -87, y: -55}
+        - {x: -46, y: -86}
+        - {x: 4, y: -86}
+        - {x: 19, y: -84}
+        - {x: 132, y: 3}
+        - {x: 139, y: 28}
+        - {x: 139, y: 52}
+    - name: BlastOff_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1344
+        width: 306
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 150, y: 87}
+        - {x: 108, y: 94}
+        - {x: -73, y: 94}
+        - {x: -107, y: 65}
+        - {x: -97, y: 54}
+        - {x: -153, y: -25}
+        - {x: -153, y: -41}
+        - {x: -103, y: -67}
+        - {x: -48, y: -94}
+        - {x: 10, y: -94}
+        - {x: 21, y: -93}
+        - {x: 101, y: -43}
+        - {x: 153, y: 21}
+        - {x: 153, y: 75}
+    - name: BlastOff_28
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1332
+        width: 316
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 143, y: 74}
+        - {x: 109, y: 89}
+        - {x: 66, y: 98}
+        - {x: 53, y: 100}
+        - {x: -67, y: 100}
+        - {x: -116, y: 69}
+        - {x: -127, y: 13}
+        - {x: -158, y: -32}
+        - {x: -158, y: -47}
+        - {x: -104, y: -60}
+        - {x: -49, y: -100}
+        - {x: -9, y: -100}
+        - {x: 15, y: -96}
+        - {x: 153, y: 2}
+        - {x: 158, y: 24}
+        - {x: 158, y: 64}
+    - name: BlastOff_29
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1328
+        width: 336
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 168, y: 72.5}
+        - {x: 110, y: 101.5}
+        - {x: -60, y: 101.5}
+        - {x: -101, y: 88.5}
+        - {x: -107, y: 61.5}
+        - {x: -168, y: -24.5}
+        - {x: -168, y: -40.5}
+        - {x: -128, y: -54.5}
+        - {x: -122, y: -55.5}
+        - {x: -102, y: -55.5}
+        - {x: -85, y: -48.5}
+        - {x: -41, y: -101.5}
+        - {x: 29, y: -101.5}
+        - {x: 122, y: -44.5}
+        - {x: 158, y: 5.5}
+        - {x: 168, y: 25.5}
+    - name: BlastOff_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1112
+        width: 341
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 170.5, y: 41}
+        - {x: 170.5, y: 80}
+        - {x: 116.5, y: 106}
+        - {x: -73.5, y: 106}
+        - {x: -116.5, y: 89}
+        - {x: -116.5, y: 61}
+        - {x: -92.5, y: 31}
+        - {x: -170.5, y: -5}
+        - {x: -170.5, y: -32}
+        - {x: -107.5, y: -67}
+        - {x: -21.5, y: -55}
+        - {x: -38.5, y: -106}
+        - {x: 8.5, y: -106}
+        - {x: 23.5, y: -102}
+        - {x: 39.5, y: -80}
+        - {x: 131.5, y: -15}
+        - {x: 161.5, y: 15}
+    - name: BlastOff_31
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1087
+        width: 369
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 184.5, y: 100.5}
+        - {x: 168.5, y: 114.5}
+        - {x: 132.5, y: 118.5}
+        - {x: -65.5, y: 118.5}
+        - {x: -129.5, y: 86.5}
+        - {x: -127.5, y: 57.5}
+        - {x: -121.5, y: 6.5}
+        - {x: -151.5, y: -11.5}
+        - {x: -184.5, y: -62.5}
+        - {x: -184.5, y: -72.5}
+        - {x: -120.5, y: -86.5}
+        - {x: -107.5, y: -81.5}
+        - {x: -96.5, y: -78.5}
+        - {x: -80.5, y: -64.5}
+        - {x: -15.5, y: -73.5}
+        - {x: -30.5, y: -118.5}
+        - {x: 25.5, y: -118.5}
+        - {x: 73.5, y: -71.5}
+        - {x: 157.5, y: -11.5}
+        - {x: 184.5, y: 54.5}
+    - name: BlastOff_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 374
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 187, y: 71}
+        - {x: 187, y: 100}
+        - {x: 171, y: 122}
+        - {x: 133, y: 126}
+        - {x: 35, y: 126}
+        - {x: -1, y: 108}
+        - {x: -61, y: 126}
+        - {x: -65, y: 126}
+        - {x: -133, y: 80}
+        - {x: -136, y: 53}
+        - {x: -132, y: 53}
+        - {x: -86, y: 24}
+        - {x: -149, y: 1}
+        - {x: -187, y: -72}
+        - {x: -187, y: -97}
+        - {x: -122, y: -98}
+        - {x: -95, y: -91}
+        - {x: -18, y: -62}
+        - {x: -29, y: -126}
+        - {x: 23, y: -126}
+        - {x: 64, y: -83}
+        - {x: 136, y: -22}
+        - {x: 179, y: 36}
+      - - {x: -76, y: 49}
+        - {x: -73, y: 50}
+        - {x: -73, y: 53}
+        - {x: -76, y: 54}
+        - {x: -78, y: 52}
+    - name: BlastOff_33
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 804
+        width: 400
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 200, y: 76}
+        - {x: 200, y: 124}
+        - {x: 154, y: 140}
+        - {x: 56, y: 140}
+        - {x: 0, y: 113}
+        - {x: -44, y: 120}
+        - {x: -61, y: 118}
+        - {x: -99, y: 103}
+        - {x: -135, y: 70}
+        - {x: -145, y: 45}
+        - {x: -137, y: 44}
+        - {x: -120, y: 51}
+        - {x: -90, y: 7}
+        - {x: -143, y: -7}
+        - {x: -193, y: -66}
+        - {x: -200, y: -93}
+        - {x: -200, y: -111}
+        - {x: -147, y: -125}
+        - {x: -84, y: -111}
+        - {x: -63, y: -68}
+        - {x: -25, y: -140}
+        - {x: 24, y: -140}
+        - {x: 79, y: -117}
+        - {x: 81, y: -75}
+        - {x: 152, y: -13}
+        - {x: 190, y: 40}
+      - - {x: -78, y: 44}
+        - {x: -75, y: 45}
+        - {x: -75, y: 48}
+        - {x: -78, y: 49}
+        - {x: -80, y: 47}
+    - name: BlastOff_34
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 523
+        width: 406
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 203, y: 89}
+        - {x: 203, y: 115}
+        - {x: 193, y: 123}
+        - {x: 179, y: 130}
+        - {x: 158, y: 139}
+        - {x: 38, y: 139}
+        - {x: -70, y: 118}
+        - {x: -124, y: 89}
+        - {x: -145, y: 44}
+        - {x: -135, y: 44}
+        - {x: -92, y: 8}
+        - {x: -148, y: -14}
+        - {x: -203, y: -73}
+        - {x: -203, y: -88}
+        - {x: -144, y: -114}
+        - {x: -97, y: -111}
+        - {x: -11, y: -68}
+        - {x: -11, y: -136}
+        - {x: -10, y: -139}
+        - {x: 33, y: -139}
+        - {x: 64, y: -133}
+        - {x: 181, y: 0}
+        - {x: 195, y: 51}
+      - - {x: -76, y: 44}
+        - {x: -73, y: 45}
+        - {x: -73, y: 48}
+        - {x: -76, y: 49}
+        - {x: -78, y: 47}
     outline: []
   spritePackingTag: 
   userData: 

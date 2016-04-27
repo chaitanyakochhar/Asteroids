@@ -765,6 +765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Decision: Repair Space Station
+  PushOnStart: 0
 --- !u!1 &89464443
 GameObject:
   m_ObjectHideFlags: 0
@@ -9412,6 +9413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Decision: Discover Alien Life
+  PushOnStart: 0
 --- !u!1 &1234166951
 GameObject:
   m_ObjectHideFlags: 0
