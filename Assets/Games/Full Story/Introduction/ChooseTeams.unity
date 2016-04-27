@@ -603,7 +603,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11405688, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
       propertyPath: key
-      value: Player 2
+      value: Scientist Name
       objectReference: {fileID: 0}
     - target: {fileID: 11418204, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
       propertyPath: m_FontData.m_BestFit
@@ -1162,6 +1162,10 @@ Prefab:
       propertyPath: m_FontData.m_BestFit
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11405688, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
+      propertyPath: key
+      value: Pilot Name
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53ee257d29478c04b89cc178cb26b74e, type: 2}
   m_IsPrefabParent: 0
@@ -1247,7 +1251,7 @@ GameObject:
   - 114: {fileID: 1650140682}
   - 114: {fileID: 1650140684}
   m_Layer: 5
-  m_Name: Pilot Surface
+  m_Name: Pilot Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1612,7 +1616,7 @@ GameObject:
   - 114: {fileID: 1846929465}
   - 114: {fileID: 1846929467}
   m_Layer: 5
-  m_Name: Scientist Surface
+  m_Name: Scientist Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

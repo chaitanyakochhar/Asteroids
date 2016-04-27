@@ -70,7 +70,7 @@ public class CameraCapture : MonoBehaviour
                 }
             case CameraState2.CHOOSE_NEXT_OBJECT:
                 {
-                    playerDataManager.AddData<Texture2D>(playerDataManager.imagesCaptured, "Player " + i, capturedTexture);
+                    playerDataManager.AddData<Texture2D>(playerDataManager.imagesCaptured, captureSurfaces[i-1].name, capturedTexture);
                     captureSurfaces[i-1].GetComponent<Authenticator>().isAuthenticated = true;
                     state = CameraState2.START_CAMERA;
                     break;

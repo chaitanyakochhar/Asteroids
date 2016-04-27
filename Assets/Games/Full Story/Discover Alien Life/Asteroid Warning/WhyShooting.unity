@@ -13891,6 +13891,7 @@ GameObject:
   - 114: {fileID: 1875347303}
   - 82: {fileID: 1875347305}
   - 114: {fileID: 1875347304}
+  - 114: {fileID: 1875347306}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -13911,10 +13912,10 @@ RectTransform:
   - {fileID: 214250916}
   m_Father: {fileID: 222845378}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0.7421641, y: 0.78179634}
-  m_AnchorMax: {x: 0.9785156, y: 0.97239816}
-  m_AnchoredPosition: {x: 28, y: -1.5}
-  m_SizeDelta: {x: 79, y: -51}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -115, y: -96}
+  m_SizeDelta: {x: 321, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875347300
 MonoBehaviour:
@@ -13968,6 +13969,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1875347304}
         m_MethodName: StartEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1875347306}
+        m_MethodName: OnClickHandler
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14112,6 +14124,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1875347306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1875347298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decision: Why Shooting
 --- !u!1 &1896045057
 GameObject:
   m_ObjectHideFlags: 0

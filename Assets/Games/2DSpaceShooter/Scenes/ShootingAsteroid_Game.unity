@@ -15081,6 +15081,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e0ae407f43c4e147b2ea58f856c042a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2111253656 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 176686, guid: 0e0ae407f43c4e147b2ea58f856c042a, type: 2}
+  m_PrefabInternal: {fileID: 2111253655}
+--- !u!114 &2111253657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2111253656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decision: Shooting Asteroid
+  PushOnStart: 1
 --- !u!1 &2116428468
 GameObject:
   m_ObjectHideFlags: 0

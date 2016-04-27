@@ -76,7 +76,6 @@ public class DrawableSurface : MonoBehaviour
                 if (EraserMode)
                 {
                     tNew = Drawing.PaintLine(lastPoint, currentPoint, brushRadius, Color.clear, 10, tNew);
-
                 }
                 else
                 {
