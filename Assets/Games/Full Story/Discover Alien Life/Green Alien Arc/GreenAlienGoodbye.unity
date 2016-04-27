@@ -954,10 +954,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: 'After spending some time with the tribe of aliens we''ve met, you
-    both decide it''s about time to head back home. We say goodbye to our new alien
-    friends, and promise to come back and visit them soon. The alien tribe gathers
-    to see us off on journey home, as we set off back towards Earth. '
+  textToTypeOut: "After spending some time playing with the tribe of aliens we\u2019ve
+    met, and accomplishing our mission of finding life on planet, Bleep-Blop, it\u2019s
+    about time to head back home. Look at our new aliens gathering to see us off on
+    our journey home! \u201CGoodbye friends! Come back and visit us soon!\u201D"
   DataManagerKey: 
   textDelay: 0.25
 --- !u!114 &173797781
@@ -13283,7 +13283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: fd0b84c701abd4552bc031fad454bb46, type: 3}
+  clip: {fileID: 8300000, guid: 725ac4473cf944a79817f1798c152f8b, type: 3}
   waitTime: 0
 --- !u!82 &1793661672
 AudioSource:
