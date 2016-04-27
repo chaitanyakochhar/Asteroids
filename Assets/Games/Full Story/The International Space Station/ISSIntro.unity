@@ -954,10 +954,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: You did it! Thanks to your great teamwork, you were able to fix the
-    Space Station. The crew of the International Space Station thanks you for your
-    help. Perhaps they'll need our help again someday, but for now let's head back
-    to Earth as heroes.
+  textToTypeOut: Great, our mission is to head to the International Space Station,
+    a huge space laboratory that orbits around the Earth 15 times a day. We need to
+    locate the space station as it circles around the Earth, and fix a solar panel.
   DataManagerKey: 
   textDelay: 0.24
 --- !u!114 &173797781
@@ -1318,6 +1317,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1363725142}
+  - {fileID: 2030109892}
   - {fileID: 1225465966}
   - {fileID: 1151281548}
   m_Father: {fileID: 0}
@@ -8799,7 +8799,7 @@ RectTransform:
   m_Children:
   - {fileID: 173797777}
   m_Father: {fileID: 222845378}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.2742072}
   m_AnchoredPosition: {x: 0, y: -0.5}
@@ -9130,7 +9130,7 @@ RectTransform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.84700006, y: 0.84900004}
   m_AnchorMax: {x: 0.9794922, y: 1}
   m_AnchoredPosition: {x: 5.7, y: -1.6000004}
@@ -9257,6 +9257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Decision: Introducing ISS
+  PushOnStart: 0
 --- !u!1 &1234166951
 GameObject:
   m_ObjectHideFlags: 0
@@ -10110,13 +10111,13 @@ RectTransform:
   m_GameObject: {fileID: 1363725141}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
   m_RootOrder: 0
   m_AnchorMin: {x: 0.116000004, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 42, y: 20}
+  m_AnchoredPosition: {x: 155, y: 175}
   m_SizeDelta: {x: -579.99994, y: -373.00003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363725143
@@ -10138,7 +10139,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c6fc1fe02cce8f44c967ac341da1503a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50a4fe75675a8054e9a3bea41b9ac6aa, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -13311,7 +13312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 1ac4ad0eb32394a488fb0629f5d32c88, type: 3}
+  clip: {fileID: 8300000, guid: 4853374f29b814f9da5aea9e280a80f9, type: 3}
   waitTime: 0
 --- !u!82 &1804764632
 AudioSource:
@@ -14431,6 +14432,73 @@ Transform:
   m_Children: []
   m_Father: {fileID: 389006959}
   m_RootOrder: 125
+--- !u!1 &2030109891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 2030109892}
+  - 222: {fileID: 2030109894}
+  - 114: {fileID: 2030109893}
+  m_Layer: 8
+  m_Name: ISS (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2030109892
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030109891}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 222845378}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0.116000004, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -383, y: -9}
+  m_SizeDelta: {x: -580, y: -373.0001}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2030109893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030109891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 4fe5ee4e5d8260c4b9fe769bc5268e41, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2030109894
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2030109891}
 --- !u!1 &2084402662
 GameObject:
   m_ObjectHideFlags: 0
