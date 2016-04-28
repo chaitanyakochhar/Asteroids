@@ -1114,6 +1114,7 @@ GameObject:
   - 114: {fileID: 173797778}
   - 114: {fileID: 173797781}
   - 114: {fileID: 173797780}
+  - 114: {fileID: 173797782}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1188,9 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: '3... 2... 1... BLAST OFF! Okay, Pilot, now that our ship''s broken
-    free of Earth''s gravity, where are we headed? Discuss with your crew and choose
-    a mission: Discover Alien Life or Repair the Space Station.'
+  textToTypeOut: 
   DataManagerKey: 
   textDelay: 0.3
 --- !u!114 &173797781
@@ -1205,6 +1204,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAuthenticated: 0
+--- !u!114 &173797782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173797776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696435c216876784e8926a9c67fcc02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePlaceholder: {fileID: 1044839571}
+  textToTypeOut:
+  - 3... 2... 1... BLAST OFF!
+  - Okay, Pilot, now that our ship's broken free of Earth's gravity, where are we
+    headed?
+  - 'Discuss with your crew and choose a mission: Discover Alien Life or Repair the
+    Space Station.'
+  images:
+  - {fileID: 21300000, guid: 81e9ae4a8fe365141a49a8000fa37aaf, type: 3}
+  - {fileID: 21300000, guid: 81e9ae4a8fe365141a49a8000fa37aaf, type: 3}
+  - {fileID: 21300000, guid: 81e9ae4a8fe365141a49a8000fa37aaf, type: 3}
+  delays:
+  - 12
+  - 1
+  - 1
+  textDelay: 0.3
 --- !u!1 &183097554
 GameObject:
   m_ObjectHideFlags: 0

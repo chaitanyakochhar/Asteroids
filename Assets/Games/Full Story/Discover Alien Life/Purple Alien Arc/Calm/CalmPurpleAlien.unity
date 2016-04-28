@@ -879,7 +879,7 @@ GameObject:
   - 222: {fileID: 173797779}
   - 114: {fileID: 173797778}
   - 114: {fileID: 173797781}
-  - 114: {fileID: 173797780}
+  - 114: {fileID: 173797782}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -943,24 +943,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 173797776}
---- !u!114 &173797780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 173797776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textToTypeOut: "You calm the alien down by giving him a pat on the back. You explain
-    that you come in peace and just want to talk. \"Oh I'm sorry, friend. I get nervous
-    around new people...I feel like they're always staring at my eye,\" the alien
-    says. You tell him that\u2019s okay, and ask if you can take a picture with him
-    to show the people back home."
-  DataManagerKey: 
-  textDelay: 0.25
 --- !u!114 &173797781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,6 +955,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAuthenticated: 0
+--- !u!114 &173797782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 173797776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696435c216876784e8926a9c67fcc02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagePlaceholder: {fileID: 2040143874}
+  textToTypeOut:
+  - 'You calm the alien down by giving him a pat on the back. You explain that you
+    come in peace and just want to talk. '
+  - Oh I'm sorry, friend. I get nervous around new people...I feel like they're always
+    staring at my eye.
+  - "You tell him that\u2019s okay, and ask if you can take a picture with him to
+    show the people back home."
+  images:
+  - {fileID: 21300000, guid: f8eac4a041abfdd4f86a6849a864c157, type: 3}
+  - {fileID: 21300000, guid: 868b4da53bae1b44db14b2115ef27dc3, type: 3}
+  - {fileID: 21300000, guid: f8eac4a041abfdd4f86a6849a864c157, type: 3}
+  delays:
+  - 1
+  - 1
+  - 1
+  textDelay: 0.25
 --- !u!1 &183097554
 GameObject:
   m_ObjectHideFlags: 0

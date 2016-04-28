@@ -44,7 +44,6 @@ public class TypeyText : MonoBehaviour
             yield return new WaitForSeconds(textDelay);
             yield return null;
         }
-        body.
 
         GetComponent<Authenticator>().isAuthenticated = true;
         yield return null;
