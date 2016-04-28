@@ -1,9 +1,15 @@
 fileFormatVersion: 2
 guid: 2f6c91412aca54e188f8e8e10e1a06aa
-timeCreated: 1461875393
+timeCreated: 1461877289
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: CryingAlien_0
+    21300002: CryingAlien_1
+    21300004: CryingAlien_2
+    21300006: CryingAlien_3
+    21300008: CryingAlien_4
+    21300010: CryingAlien_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +36,251 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: CryingAlien_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 246
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: CryingAlien_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1
+        width: 265
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132.5, y: -108}
+        - {x: 132.5, y: -98}
+        - {x: 109.5, y: -73}
+        - {x: 132.5, y: -34}
+        - {x: 132.5, y: -2}
+        - {x: 82.5, y: 95}
+        - {x: 132.5, y: 112}
+        - {x: 132.5, y: 142}
+        - {x: 122.5, y: 159}
+        - {x: -36.5, y: 159}
+        - {x: -51.5, y: 156}
+        - {x: -78.5, y: 159}
+        - {x: -112.5, y: 159}
+        - {x: -132.5, y: 140}
+        - {x: -132.5, y: 122}
+        - {x: -130.5, y: 115}
+        - {x: -127.5, y: 69}
+        - {x: -132.5, y: 52}
+        - {x: -132.5, y: 17}
+        - {x: -120.5, y: -36}
+        - {x: -132.5, y: -118}
+        - {x: -132.5, y: -155}
+        - {x: -122.5, y: -159}
+        - {x: -80.5, y: -159}
+        - {x: -50.5, y: -124}
+        - {x: 77.5, y: -138}
+        - {x: 120.5, y: -127}
+      - - {x: -120.5, y: 113}
+        - {x: -124.5, y: 111}
+        - {x: -124.5, y: 105}
+        - {x: -123.5, y: 103}
+        - {x: -120.5, y: 102}
+        - {x: -105.5, y: 102}
+        - {x: -105.5, y: 111}
+        - {x: -109.5, y: 113}
+    - name: CryingAlien_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 242
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: CryingAlien_3
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 1
+        width: 265
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132.5, y: -108}
+        - {x: 132.5, y: -98}
+        - {x: 109.5, y: -73}
+        - {x: 132.5, y: -34}
+        - {x: 132.5, y: -2}
+        - {x: 82.5, y: 95}
+        - {x: 132.5, y: 112}
+        - {x: 132.5, y: 142}
+        - {x: 122.5, y: 159}
+        - {x: 92.5, y: 159}
+        - {x: 62.5, y: 134}
+        - {x: 21.5, y: 159}
+        - {x: -36.5, y: 159}
+        - {x: -51.5, y: 156}
+        - {x: -78.5, y: 159}
+        - {x: -112.5, y: 159}
+        - {x: -132.5, y: 140}
+        - {x: -132.5, y: 119}
+        - {x: -131.5, y: 115}
+        - {x: -132.5, y: 93}
+        - {x: -132.5, y: 13}
+        - {x: -120.5, y: -36}
+        - {x: -132.5, y: -118}
+        - {x: -132.5, y: -155}
+        - {x: -122.5, y: -159}
+        - {x: -80.5, y: -159}
+        - {x: -50.5, y: -124}
+        - {x: 77.5, y: -138}
+        - {x: 120.5, y: -127}
+      - - {x: -128.5, y: 94}
+        - {x: -132.5, y: 93}
+        - {x: -132.5, y: 82}
+        - {x: -131.5, y: 80}
+        - {x: -117.5, y: 80}
+        - {x: -114.5, y: 83}
+        - {x: -114.5, y: 91}
+        - {x: -115.5, y: 94}
+      - - {x: -105.5, y: 107}
+        - {x: -108.5, y: 104}
+        - {x: -108.5, y: 98}
+        - {x: -106.5, y: 96}
+        - {x: -97.5, y: 96}
+        - {x: -96.5, y: 98}
+        - {x: -96.5, y: 104}
+        - {x: -100.5, y: 107}
+      - - {x: -124.5, y: 108}
+        - {x: -121.5, y: 105}
+        - {x: -118.5, y: 105}
+        - {x: -113.5, y: 108}
+        - {x: -114.5, y: 111}
+        - {x: -123.5, y: 111}
+    - name: CryingAlien_4
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1
+        width: 265
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132.5, y: -108}
+        - {x: 132.5, y: -98}
+        - {x: 109.5, y: -73}
+        - {x: 132.5, y: -34}
+        - {x: 132.5, y: -2}
+        - {x: 82.5, y: 95}
+        - {x: 132.5, y: 112}
+        - {x: 132.5, y: 142}
+        - {x: 122.5, y: 159}
+        - {x: 92.5, y: 159}
+        - {x: 62.5, y: 134}
+        - {x: 21.5, y: 159}
+        - {x: -36.5, y: 159}
+        - {x: -51.5, y: 156}
+        - {x: -78.5, y: 159}
+        - {x: -112.5, y: 159}
+        - {x: -132.5, y: 140}
+        - {x: -132.5, y: 122}
+        - {x: -130.5, y: 115}
+        - {x: -118.5, y: 87}
+        - {x: -132.5, y: 53}
+        - {x: -132.5, y: 17}
+        - {x: -120.5, y: -36}
+        - {x: -132.5, y: -118}
+        - {x: -132.5, y: -155}
+        - {x: -122.5, y: -159}
+        - {x: -80.5, y: -159}
+        - {x: -50.5, y: -124}
+        - {x: 77.5, y: -138}
+        - {x: 120.5, y: -127}
+      - - {x: -124.5, y: 108}
+        - {x: -121.5, y: 105}
+        - {x: -118.5, y: 105}
+        - {x: -113.5, y: 108}
+        - {x: -114.5, y: 111}
+        - {x: -123.5, y: 111}
+    - name: CryingAlien_5
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 1
+        width: 265
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132.5, y: -108}
+        - {x: 132.5, y: -98}
+        - {x: 109.5, y: -73}
+        - {x: 132.5, y: -34}
+        - {x: 132.5, y: -5}
+        - {x: 106.5, y: 35}
+        - {x: 82.5, y: 95}
+        - {x: 132.5, y: 112}
+        - {x: 132.5, y: 142}
+        - {x: 122.5, y: 159}
+        - {x: 92.5, y: 159}
+        - {x: 62.5, y: 134}
+        - {x: 21.5, y: 159}
+        - {x: -36.5, y: 159}
+        - {x: -51.5, y: 156}
+        - {x: -78.5, y: 159}
+        - {x: -110.5, y: 159}
+        - {x: -112.5, y: 158}
+        - {x: -132.5, y: 140}
+        - {x: -132.5, y: 122}
+        - {x: -130.5, y: 117}
+        - {x: -132.5, y: 95}
+        - {x: -132.5, y: 3}
+        - {x: -120.5, y: -36}
+        - {x: -132.5, y: -118}
+        - {x: -132.5, y: -155}
+        - {x: -122.5, y: -159}
+        - {x: -80.5, y: -159}
+        - {x: -50.5, y: -124}
+        - {x: 77.5, y: -138}
+        - {x: 120.5, y: -127}
+      - - {x: -124.5, y: 108}
+        - {x: -121.5, y: 105}
+        - {x: -118.5, y: 105}
+        - {x: -113.5, y: 108}
+        - {x: -114.5, y: 111}
+        - {x: -123.5, y: 111}
     outline: []
   spritePackingTag: 
   userData: 
