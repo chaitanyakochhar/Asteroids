@@ -209,7 +209,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 2
+  m_Text: Scientist
 --- !u!222 &182176445
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -822,7 +822,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 1
+  m_Text: Pilot
 --- !u!222 &657990391
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1585,7 +1585,7 @@ MonoBehaviour:
   waitTime: 2
   bounceDuration: 0.3
   bounceCount: 5
-  bounceAmount: {x: 1.2, y: 1.2}
+  bounceAmount: {x: 1.2, y: 1.2, z: 1}
 --- !u!114 &1803602017
 MonoBehaviour:
   m_ObjectHideFlags: 0

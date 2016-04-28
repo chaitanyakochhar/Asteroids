@@ -9,7 +9,8 @@ public class UIBounce : Effect
     public float waitTime = 2f;
     public float bounceDuration = 0.3f;
     public int bounceCount = 5;
-    public Vector2 bounceAmount = new Vector3(1.2f, 1.2f, 1f);
+    public Vector3 bounceAmount = new Vector3(1.2f, 1.2f, 1f);
+    private Vector3 startScale;
 
     private float startTime;
 
@@ -23,13 +24,13 @@ public class UIBounce : Effect
                 startTime = Time.time;
                 while((Time.time - startTime) <= bounceDuration)
                 {
-                    GetComponent<Image>().rectTransform.localScale = Vector3.Lerp(Vector3.one, bounceAmount, (Time.time - startTime) / bounceDuration);
+                    GetComponent<Image>().rectTransform.localScale = Vector3.Lerp(startScale, bounceAmount, (Time.time - startTime) / bounceDuration);
                     yield return null;
                 }
                 startTime = Time.time;
                 while ((Time.time - startTime) <= bounceDuration)
                 {
-                    GetComponent<Image>().rectTransform.localScale = Vector3.Lerp(bounceAmount, Vector3.one, (Time.time - startTime) / bounceDuration);
+                    GetComponent<Image>().rectTransform.localScale = Vector3.Lerp(bounceAmount, startScale, (Time.time - startTime) / bounceDuration);
                     yield return null;
                 }
             }
@@ -48,6 +49,7 @@ public class UIBounce : Effect
     // Use this for initialization
     void Start()
     {
+        startScale = GetComponent<Image>().rectTransform.localScale;
         if (START_EFFECT_ON_PLAY)
         {
             StartEffect();

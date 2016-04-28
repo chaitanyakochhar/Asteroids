@@ -23,12 +23,16 @@ public class ShakeLerp : MonoBehaviour {
     {
         while (true)
         {
-            float startTime = Time.time;
-            float pingPong; 
-            while ((Time.time - startTime)<= OscillationCount)
+            if (Time.timeScale > 0)
             {
-                pingPong = -1 + Mathf.PingPong(Time.time, 2f);
-                transform.Rotate(Vector3.back, 1f * pingPong);
+                float startTime = Time.time;
+                float pingPong;
+                while ((Time.time - startTime) <= OscillationCount)
+                {
+                    pingPong = -1 + Mathf.PingPong(Time.time, 2f);
+                    transform.Rotate(Vector3.back, 1f * pingPong);
+                    yield return null;
+                }
                 yield return null;
             }
             yield return null;

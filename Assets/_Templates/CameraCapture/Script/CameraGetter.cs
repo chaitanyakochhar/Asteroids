@@ -1,16 +1,22 @@
 ﻿using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class CameraGetter : MonoBehaviour
 {
     public string key;
     public void Start()
     {
-        Texture2D t;
-        bool test = GameObject.Find("Data Manager").GetComponent<PlayerDataManager>().imagesCaptured.TryGetValue(key, out t);
+        Texture2D t = null;
+        bool test = false;
+        if (GameObject.Find("Data Manager") != null)
+            test = GameObject.Find("Data Manager").GetComponent<PlayerDataManager>().imagesCaptured.TryGetValue(key, out t);
         if (test)
         {
-            GetComponent<Renderer>().material.mainTexture = t;
+            if (GetComponent<RectTransform>() == null)
+                GetComponent<Renderer>().material.mainTexture = t;
+            else
+                GetComponent<RawImage>().texture = t;
             t.Apply();
         }
     }
