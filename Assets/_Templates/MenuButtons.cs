@@ -36,6 +36,9 @@ public class MenuButtons : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        GameObject.Find("Data Manager").GetComponent<PlayerDataManager>().audioCaptured.Clear();
+        GameObject.Find("Data Manager").GetComponent<PlayerDataManager>().imagesCaptured.Clear();
+        GameObject.Find("Data Manager").GetComponent<PlayerDataManager>().textCaptured.Clear();
         SceneManager.LoadScene(0);
     }
     public void RestartScene()
