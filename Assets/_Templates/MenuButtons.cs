@@ -8,10 +8,12 @@ public class MenuButtons : MonoBehaviour
     public GameObject PlayButton;
 
     private bool collapsed = false;
+    private AudioSource[] sources;
 
     public void Start()
     {
         ToggleCollapse();
+        sources = Object.FindObjectsOfType<AudioSource>();
     }
 
     public void Pause(GameObject caller)
@@ -20,14 +22,14 @@ public class MenuButtons : MonoBehaviour
         {
             Time.timeScale = 0f;
             caller.GetComponent<Image>().sprite = PlayButton.GetComponent<SpriteRenderer>().sprite;
-            Camera.main.GetComponent<AudioListener>().enabled = false;
+            Mute();
         }
 
         else
         {
             Time.timeScale = 1f;
             caller.GetComponent<Image>().sprite = PauseButton.GetComponent<SpriteRenderer>().sprite;
-            Camera.main.GetComponent<AudioListener>().enabled = true;
+            UnMute();
         }
     }
 
@@ -46,6 +48,21 @@ public class MenuButtons : MonoBehaviour
     {
         collapsed = !collapsed;
         transform.GetChild(0).gameObject.SetActive(!collapsed);
+    }
+
+    public void Mute()
+    {
+        foreach(AudioSource source in sources)
+        {
+            source.Pause();
+        }
+    }
+    public void UnMute()
+    {
+        foreach (AudioSource source in sources)
+        {
+            source.UnPause();
+        }
     }
 
 }
