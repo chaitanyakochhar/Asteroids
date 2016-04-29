@@ -980,9 +980,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f8eac4a041abfdd4f86a6849a864c157, type: 3}
   delays:
   - 1
-  - 1
-  - 1
-  textDelay: 0.2
+  - 0
+  - 15
+  textDelay: 0.23
 --- !u!1 &183097554
 GameObject:
   m_ObjectHideFlags: 0
