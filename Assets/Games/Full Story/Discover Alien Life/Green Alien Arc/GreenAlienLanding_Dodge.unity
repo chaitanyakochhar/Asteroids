@@ -514,51 +514,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 19.67213
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 39.34426
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 67.17213
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 35.655735
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 40
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22432244, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_LocalScale.x
@@ -6255,6 +6255,7 @@ GameObject:
   - 224: {fileID: 712713862}
   - 222: {fileID: 712713864}
   - 114: {fileID: 712713863}
+  - 114: {fileID: 712713865}
   m_Layer: 5
   m_Name: Image (1)
   m_TagString: Untagged
@@ -6312,6 +6313,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 712713861}
+--- !u!114 &712713865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 712713861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f8f54933226a64a84c68dc08ef7a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displacement: {x: 0, y: 50, z: 0}
+  clip: {fileID: 0}
+  duration: 0.3
+  PLAY_EFFECT_ON_START: 1
 --- !u!1 &719001043
 GameObject:
   m_ObjectHideFlags: 0

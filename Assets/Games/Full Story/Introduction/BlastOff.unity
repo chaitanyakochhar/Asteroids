@@ -706,6 +706,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 165296885}
+        m_MethodName: StartEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &73788713
@@ -752,7 +763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeLoad: 1
+  delayBeforeLoad: 2
   sceneToLoad: ISSIntro
 --- !u!114 &73788716
 MonoBehaviour:
@@ -1152,6 +1163,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 165296884}
   - 212: {fileID: 165296883}
+  - 114: {fileID: 165296885}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -1198,9 +1210,24 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -31.46, y: -5.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1231551813}
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &165296885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 165296882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891ecdae761a34e4c85689367e897fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destination: {fileID: 604521883}
+  duration: 2
+  PLAY_ON_START: 0
 --- !u!1 &173797776
 GameObject:
   m_ObjectHideFlags: 0
@@ -4894,6 +4921,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 389006959}
   m_RootOrder: 81
+--- !u!1 &604521883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 604521884}
+  m_Layer: 0
+  m_Name: Rocket Lerp Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &604521884
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 604521883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.26, y: 1.9, z: 0.48400003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!1 &616304995
 GameObject:
   m_ObjectHideFlags: 0
@@ -9712,6 +9766,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 165296885}
+        m_MethodName: StartEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1225465968
@@ -9758,7 +9823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeLoad: 0
+  delayBeforeLoad: 2
   sceneToLoad: DiscoverAlienLife
 --- !u!114 &1225465971
 MonoBehaviour:
@@ -9789,6 +9854,82 @@ MonoBehaviour:
   bounceDuration: 0.3
   bounceCount: 5
   bounceAmount: {x: 1.5, y: 1.5, z: 1}
+--- !u!1 &1231551812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 164588, guid: db7bf1d84be69704897994d63870e6f8, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1231551813}
+  - 96: {fileID: 1231551814}
+  m_Layer: 0
+  m_Name: TrailHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1231551813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 410732, guid: db7bf1d84be69704897994d63870e6f8, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231551812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2, y: -0.57, z: 0.818}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_Children: []
+  m_Father: {fileID: 165296884}
+  m_RootOrder: 0
+--- !u!96 &1231551814
+TrailRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9630562, guid: db7bf1d84be69704897994d63870e6f8,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231551812}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Time: 0.5
+  m_StartWidth: 0.3
+  m_EndWidth: 0.1
+  m_Colors:
+    m_Color[0]:
+      serializedVersion: 2
+      rgba: 4294952062
+    m_Color[1]:
+      serializedVersion: 2
+      rgba: 4294554017
+    m_Color[2]:
+      serializedVersion: 2
+      rgba: 4286956799
+    m_Color[3]:
+      serializedVersion: 2
+      rgba: 4283216630
+    m_Color[4]:
+      serializedVersion: 2
+      rgba: 39423
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
 --- !u!1 &1234166951
 GameObject:
   m_ObjectHideFlags: 0
