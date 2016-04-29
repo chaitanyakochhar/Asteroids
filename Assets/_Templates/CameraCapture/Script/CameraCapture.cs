@@ -106,8 +106,23 @@ public class CameraCapture : MonoBehaviour
         {
             capturedTexture = new Texture2D(webcamTexture.width, webcamTexture.height);
             capturedTexture.SetPixels(webcamTexture.GetPixels());
+            capturedTexture.Apply();
             webcamTexture.Stop();
+            SetPicture(capturedTexture, captureSurfaces[i]);
+            
             i++;
+        }
+    }
+
+    private void SetPicture(Texture2D picture, GameObject surface) 
+    {
+        if(surface.GetComponent<RectTransform>()!=null)
+        {
+            surface.GetComponent<RawImage>().texture = picture as Texture2D;
+        }
+        else
+        {
+            surface.GetComponent<Renderer>().material.mainTexture = picture;
         }
     }
 
