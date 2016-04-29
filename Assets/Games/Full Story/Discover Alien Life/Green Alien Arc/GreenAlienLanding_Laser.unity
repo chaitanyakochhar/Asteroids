@@ -947,7 +947,6 @@ GameObject:
   - 114: {fileID: 173797778}
   - 114: {fileID: 173797781}
   - 114: {fileID: 173797780}
-  - 114: {fileID: 173797782}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1031,8 +1030,10 @@ MonoBehaviour:
   images:
   - {fileID: 21300000, guid: bc0cdbd9e92ca564c848203a7eb07a31, type: 3}
   - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
-  delays: []
-  textDelay: 0.25
+  delays:
+  - 1
+  - 0
+  textDelay: 0.21
 --- !u!114 &173797781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,20 +1046,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAuthenticated: 0
---- !u!114 &173797782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 173797776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textToTypeOut: 
-  DataManagerKey: 
-  textDelay: 0.25
 --- !u!1 &183097554
 GameObject:
   m_ObjectHideFlags: 0
