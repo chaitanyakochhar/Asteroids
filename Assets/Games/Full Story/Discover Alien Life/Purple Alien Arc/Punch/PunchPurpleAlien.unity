@@ -1035,20 +1035,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imagePlaceholder: {fileID: 673324221}
   textToTypeOut:
-  - You take a swing and punch him hard in the eye. His eye wells up and he starts
-    to cry. Before you can do anything else, he runs away sobbing....
   - '"Owww! That hurt you big meanie! I''m gonna tell my mommy!"'
   - "Well, that didn\u2019t go so well\u2026 You didn\u2019t get any evidence, but
     maybe you can draw a picture of him to show the people back on Earth?"
   images:
-  - {fileID: 21300000, guid: 261da0c78318eb740854535c8902c55c, type: 3}
-  - {fileID: 21300000, guid: 2e44e251a25350e4dbfe0e61fac26785, type: 3}
+  - {fileID: 21300000, guid: fbd69fc008bf81e4ba2f99c267210e3e, type: 3}
   - {fileID: 21300000, guid: 261da0c78318eb740854535c8902c55c, type: 3}
   delays:
   - 1
   - 3
   - 1
-  textDelay: 0.25
+  textDelay: 0.37
 --- !u!114 &173797781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14114,8 +14111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: b9cc6e30b06c540638739f5ff8b1a153, type: 3}
-  waitTime: 1
+  clip: {fileID: 8300000, guid: 39c829378698f4118852e8ebab6e0ba2, type: 3}
+  waitTime: 0
 --- !u!82 &1865463586
 AudioSource:
   m_ObjectHideFlags: 0

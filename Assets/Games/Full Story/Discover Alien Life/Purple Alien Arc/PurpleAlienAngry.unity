@@ -1066,7 +1066,7 @@ MonoBehaviour:
   - Oh no! The alien thought you were insulting him so he wants to fight you. Do you
     fight the alien or try and calm him down?
   images:
-  - {fileID: 21300000, guid: bc323071c7c794ea480337933737f3b3, type: 3}
+  - {fileID: 21300000, guid: b3132271a573d454badb9de0985c466c, type: 3}
   - {fileID: 21300000, guid: ffdc45b0fafff27438ead71081b54573, type: 3}
   delays:
   - 1
