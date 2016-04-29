@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Enabler : MonoBehaviour
 {
@@ -27,7 +28,14 @@ public class Enabler : MonoBehaviour
         {
             foreach (GameObject GO in objectsToEnable)
             {
-                GO.SetActive(false);
+                if (GO.GetComponent<Button>() != null)
+                {
+                    GO.GetComponent<Button>().interactable = false;
+                }
+                else
+                {
+                    GO.SetActive(false);
+                }
             }
         }
 
@@ -50,9 +58,16 @@ public class Enabler : MonoBehaviour
             {
                 foreach (GameObject GO in objectsToEnable)
                 {
-                    GO.SetActive(true);
+                    if (GO.GetComponent<Button>() != null)
+                    {
+                        GO.GetComponent<Button>().interactable = true;
+                    }
+                    else
+                    {
+                        GO.SetActive(true);
+                    }
                     Effect e = GO.GetComponent<Effect>();
-                    if(e!=null && PlayEffects)
+                    if (e != null && PlayEffects)
                     {
                         e.StartEffect();
                     }
