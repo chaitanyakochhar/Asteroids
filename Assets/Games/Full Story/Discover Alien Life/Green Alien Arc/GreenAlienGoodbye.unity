@@ -993,7 +993,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
   delays:
   - 1
-  - 0.5
+  - 0.05
   textDelay: 0.26
 --- !u!1 &183097554
 GameObject:
@@ -14591,6 +14591,7 @@ GameObject:
   - 224: {fileID: 1943495089}
   - 222: {fileID: 1943495091}
   - 114: {fileID: 1943495090}
+  - 114: {fileID: 1943495092}
   m_Layer: 5
   m_Name: Image (2)
   m_TagString: Untagged
@@ -14612,7 +14613,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.8016719, y: 0.35500002}
   m_AnchorMax: {x: 0.90621096, y: 0.5}
-  m_AnchoredPosition: {x: 24, y: 74}
+  m_AnchoredPosition: {x: 24, y: 65}
   m_SizeDelta: {x: -7, y: -11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1943495090
@@ -14648,6 +14649,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1943495088}
+--- !u!114 &1943495092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943495088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f8f54933226a64a84c68dc08ef7a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displacement: {x: 0, y: 40, z: 0}
+  clip: {fileID: 0}
+  duration: 0.1
+  PLAY_EFFECT_ON_START: 1
 --- !u!1 &1964946395
 GameObject:
   m_ObjectHideFlags: 0
@@ -14832,6 +14848,7 @@ GameObject:
   - 224: {fileID: 1979342156}
   - 222: {fileID: 1979342158}
   - 114: {fileID: 1979342157}
+  - 114: {fileID: 1979342159}
   m_Layer: 5
   m_Name: Image (3)
   m_TagString: Untagged
@@ -14889,6 +14906,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1979342155}
+--- !u!114 &1979342159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979342155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f8f54933226a64a84c68dc08ef7a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displacement: {x: 0, y: 40, z: 0}
+  clip: {fileID: 0}
+  duration: 0.6
+  PLAY_EFFECT_ON_START: 1
 --- !u!1 &2000337983
 GameObject:
   m_ObjectHideFlags: 0
