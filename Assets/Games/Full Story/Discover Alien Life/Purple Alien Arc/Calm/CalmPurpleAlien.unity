@@ -981,7 +981,7 @@ MonoBehaviour:
   delays:
   - 1
   - 0
-  - 20
+  - 0
   textDelay: 0.23
 --- !u!1 &183097554
 GameObject:
