@@ -116,7 +116,11 @@ public class CameraCapture : MonoBehaviour
 
     private void SetPicture(Texture2D picture, GameObject surface) 
     {
-        if(surface.GetComponent<RectTransform>()!=null)
+        if (Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            transform.Rotate(new Vector3(0, 0, 180));
+        }
+        if (surface.GetComponent<RectTransform>()!=null)
         {
             surface.GetComponent<RawImage>().texture = picture as Texture2D;
         }
