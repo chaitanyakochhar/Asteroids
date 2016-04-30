@@ -118,7 +118,7 @@ public class CameraCapture : MonoBehaviour
     {
         if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
-            transform.Rotate(new Vector3(0, 0, 180));
+            surface.transform.Rotate(new Vector3(0, 0, 180));
         }
         if (surface.GetComponent<RectTransform>()!=null)
         {
