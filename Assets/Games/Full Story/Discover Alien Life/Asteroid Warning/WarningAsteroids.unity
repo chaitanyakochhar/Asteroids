@@ -3494,51 +3494,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 19.67213
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 39.34426
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 67.17213
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 35.655735
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22432244, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_LocalScale.x
@@ -4238,7 +4238,6 @@ GameObject:
   - 114: {fileID: 557621414}
   - 114: {fileID: 557621413}
   - 114: {fileID: 557621416}
-  - 114: {fileID: 557621417}
   - 114: {fileID: 557621418}
   m_Layer: 5
   m_Name: Dodge Asteroids Button
@@ -4362,19 +4361,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
   sceneToLoad: WhyDodging
---- !u!114 &557621417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 557621411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Decision: Dodge Asteroids
-  PushOnStart: 0
 --- !u!114 &557621418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13840,7 +13826,6 @@ GameObject:
   - 114: {fileID: 1794870869}
   - 114: {fileID: 1794870868}
   - 114: {fileID: 1794870871}
-  - 114: {fileID: 1794870872}
   - 114: {fileID: 1794870873}
   m_Layer: 5
   m_Name: Shoot Asteroids Button
@@ -13964,19 +13949,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
   sceneToLoad: WhyShooting
---- !u!114 &1794870872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1794870866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Decision: Shoot Asteroids
-  PushOnStart: 0
 --- !u!114 &1794870873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14178,6 +14150,7 @@ GameObject:
   - 33: {fileID: 1840604934}
   - 64: {fileID: 1840604933}
   - 23: {fileID: 1840604932}
+  - 114: {fileID: 1840604936}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -14242,6 +14215,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1840604936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1840604931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decision: Warning Asteroids
+  PushOnStart: 1
 --- !u!1 &1841231387
 GameObject:
   m_ObjectHideFlags: 0

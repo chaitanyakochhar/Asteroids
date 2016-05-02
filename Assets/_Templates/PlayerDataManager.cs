@@ -12,10 +12,14 @@ public class PlayerDataManager : MonoBehaviour
     void Start()
     {
         print("Calling start "+Time.time);
+
         textCaptured = new Dictionary<string, string>();
         audioCaptured = new Dictionary<string, AudioClip>();
         imagesCaptured = new Dictionary<string, Texture2D>();
-        decisions = new List<string>();
+        if (decisions == null)
+        {
+            decisions = new List<string>();
+        }
         DontDestroyOnLoad(gameObject);
         DontDestroyOnLoad(this);
     }

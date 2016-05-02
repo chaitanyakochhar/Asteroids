@@ -619,7 +619,6 @@ GameObject:
   - 114: {fileID: 73788713}
   - 114: {fileID: 73788712}
   - 114: {fileID: 73788715}
-  - 114: {fileID: 73788716}
   - 114: {fileID: 73788717}
   m_Layer: 5
   m_Name: Repair Space Station Button
@@ -695,7 +694,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 73788716}
+      - m_Target: {fileID: 0}
         m_MethodName: OnClickHandler
         m_Mode: 1
         m_Arguments:
@@ -765,19 +764,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLoad: 2
   sceneToLoad: ISSIntro
---- !u!114 &73788716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 73788710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Decision: Repair Space Station
-  PushOnStart: 0
 --- !u!114 &73788717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9679,7 +9665,6 @@ GameObject:
   - 114: {fileID: 1225465968}
   - 114: {fileID: 1225465967}
   - 114: {fileID: 1225465970}
-  - 114: {fileID: 1225465971}
   - 114: {fileID: 1225465972}
   m_Layer: 5
   m_Name: Discover Alien Life Button
@@ -9755,8 +9740,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1225465971}
-        m_MethodName: OnClickHandler
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9765,7 +9750,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 165296885}
         m_MethodName: StartEffect
         m_Mode: 1
@@ -9825,19 +9810,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLoad: 2
   sceneToLoad: DiscoverAlienLife
---- !u!114 &1225465971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1225465965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Decision: Discover Alien Life
-  PushOnStart: 0
 --- !u!114 &1225465972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10461,6 +10433,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1286002337}
   - 114: {fileID: 1286002336}
+  - 114: {fileID: 1286002338}
   m_Layer: 0
   m_Name: Enabler
   m_TagString: Untagged
@@ -10498,6 +10471,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &1286002338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286002335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decision: Blast Off
+  PushOnStart: 1
 --- !u!1 &1291950894
 GameObject:
   m_ObjectHideFlags: 0
@@ -15247,51 +15233,51 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 19.67213
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 39.34426
       objectReference: {fileID: 0}
     - target: {fileID: 22465668, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 67.17213
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 35.655735
       objectReference: {fileID: 0}
     - target: {fileID: 22405644, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 22432244, guid: 7ca6d5a071cfa5041a34f5e05b7e7dbe, type: 2}
       propertyPath: m_LocalScale.x

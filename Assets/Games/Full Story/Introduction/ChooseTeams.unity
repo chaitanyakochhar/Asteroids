@@ -1774,19 +1774,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 143706, guid: a4b77d0091f18544a8fcde8209beade8, type: 2}
   m_PrefabInternal: {fileID: 1894734606}
---- !u!114 &1803602015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1803602014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Decision: Choose Teams
-  PushOnStart: 1
 --- !u!114 &1803602016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,6 +2322,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2117470470}
   - 114: {fileID: 2117470469}
+  - 114: {fileID: 2117470471}
   m_Layer: 0
   m_Name: Enabler
   m_TagString: Untagged
@@ -2374,3 +2362,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &2117470471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117470468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Decision: Choose Teams
+  PushOnStart: 1

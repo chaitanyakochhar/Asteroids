@@ -10447,7 +10447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Decision: Shoot Fail
+  Decision: ShootFail
   PushOnStart: 1
 --- !u!1 &1291950894
 GameObject:
