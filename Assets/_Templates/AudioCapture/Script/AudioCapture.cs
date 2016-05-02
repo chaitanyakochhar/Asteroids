@@ -52,6 +52,7 @@ public class AudioCapture : MonoBehaviour
             clip = Microphone.Start(device, false, lengthOfRecording, 44100);
             startRecording.SetActive(false);
             stopRecording.SetActive(true);
+            stopRecording.GetComponent<Effect>().StartEffect();
         }
     }
 
@@ -60,7 +61,7 @@ public class AudioCapture : MonoBehaviour
         if(device.Length>0 && Microphone.IsRecording(device))
         {
             Microphone.End(device);
-            playerDataManager.audioCaptured.Add(id, clip);
+            playerDataManager.AddData<AudioClip>(playerDataManager.audioCaptured, id, clip);
         }
     }
 
