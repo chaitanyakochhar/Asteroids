@@ -30,4 +30,9 @@ public class UILerp : Effect
         }
         yield return null;
     }
+
+    public override void StopEffect()
+    {
+        StopAllCoroutines();
+    }
 }

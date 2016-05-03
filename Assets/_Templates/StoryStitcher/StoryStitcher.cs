@@ -77,6 +77,15 @@ public class StoryStitcher : MonoBehaviour
             current.GetComponent<Canvas>().renderMode = RenderMode.ScreenSpaceCamera;
             current.GetComponent<Canvas>().worldCamera = Camera.main;
             current.GetComponent<Canvas>().sortingOrder = 0;
+            foreach(Transform child in current.transform)
+            {
+                if(child.GetComponent<AudioPlayer>()!=null)
+                {
+                    child.GetComponent<AudioPlayer>().StartEffect();
+                }
+            }
+        
+
         }
     }    
 }

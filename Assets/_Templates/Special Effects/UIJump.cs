@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
 
 public class UIJump : Effect
 {
@@ -52,5 +51,10 @@ public class UIJump : Effect
             }
             yield return null;
         }
+    }
+
+    public override void StopEffect()
+    {
+        StopAllCoroutines();
     }
 }

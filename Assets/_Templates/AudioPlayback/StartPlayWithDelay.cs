@@ -25,4 +25,9 @@ public class StartPlayWithDelay : Effect
     {
         StartCoroutine(EffectCoroutine());
     }
+
+    public override void StopEffect()
+    {
+        StopAllCoroutines();
+    }
 }

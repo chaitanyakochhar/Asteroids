@@ -25,4 +25,9 @@ public class StartPlayOnClick : Effect
     {
         StartCoroutine(EffectCoroutine());
     }
+
+    public override void StopEffect()
+    {
+        StopAllCoroutines();
+    }
 }

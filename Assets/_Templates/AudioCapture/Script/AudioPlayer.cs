@@ -29,4 +29,9 @@ public class AudioPlayer : Effect
     {
         yield return null;
     }
+
+    public override void StopEffect()
+    {
+        ;
+    }
 }

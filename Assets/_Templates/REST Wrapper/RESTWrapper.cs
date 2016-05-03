@@ -3,21 +3,22 @@ using System.Collections;
 using System.Net;
 using System.Text;
 using System.Collections.Generic;
+using UnityEngine.Experimental.Networking;
 
 public class RESTWrapper : MonoBehaviour
 {
 
     private string URL = "http://dev.smartypal.com";
     private string Method = "/parent_login";
-    private string email = "\"info+demo@smartypal.com\"";
-    private string password = "\"123\"";
+    private string email = "info+demo@smartypal.com";
+    private string password = "123";
     public string loginResult;
 
     // Use this for initialization
     void Start()
     {
-        //LogoutAsync();
-        LoginAsync(email, password);        
+        LoginAsync(email, password);
+
     }
 
     // Update is called once per frame
@@ -43,11 +44,21 @@ public class RESTWrapper : MonoBehaviour
         StartCoroutine(Logout());
     }
 
+    public void UploadAsync()
+    {
+        ;
+    }
+
+    private IEnumerator Upload<T>(T data)
+    {
+        yield return null;
+    }
+
     private IEnumerator Logout()
     {
-        WWW www = new WWW(URL + "/logout");
-        yield return www;
-        print(www.text);
+        UnityWebRequest r = UnityWebRequest.Delete(URL + "/logout");
+        yield return r.Send();
+        print(r.responseCode);
     }
 
     private IEnumerator Login(LoginData loginData) 

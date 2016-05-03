@@ -5,11 +5,12 @@ using UnityEngine.UI;
 public class CameraGetter : MonoBehaviour
 {
     public string key;
+    public bool isWebcamPicture = true;
     public void Start()
     {
         Texture2D t = null;
         bool test = false;
-        if(Application.platform == RuntimePlatform.IPhonePlayer)
+        if(Application.platform == RuntimePlatform.IPhonePlayer && isWebcamPicture)
         {
             transform.Rotate(new Vector3(0, 0, 180));
         }

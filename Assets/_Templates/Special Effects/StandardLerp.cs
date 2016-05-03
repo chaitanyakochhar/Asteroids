@@ -31,4 +31,9 @@ public class StandardLerp : Effect
     {
         StartCoroutine(EffectCoroutine());
     }
+
+    public override void StopEffect()
+    {
+        StopAllCoroutines();
+    }
 }

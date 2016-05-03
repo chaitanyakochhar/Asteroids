@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 public class AudioCapture : MonoBehaviour
@@ -61,7 +62,9 @@ public class AudioCapture : MonoBehaviour
         if(device.Length>0 && Microphone.IsRecording(device))
         {
             Microphone.End(device);
-            playerDataManager.AddData<AudioClip>(playerDataManager.audioCaptured, id, clip);
+            playerDataManager.AddData(playerDataManager.audioCaptured, id, clip);
+            stopRecording.GetComponent<Effect>().StopEffect();
+            stopRecording.GetComponent<Button>().interactable = false;
         }
     }
 

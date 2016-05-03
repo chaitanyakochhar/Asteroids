@@ -52,4 +52,9 @@ public class UIBlink : Effect
     {
         StartCoroutine(EffectCoroutine());
     }
+
+    public override void StopEffect()
+    {
+        StopAllCoroutines();
+    }
 }

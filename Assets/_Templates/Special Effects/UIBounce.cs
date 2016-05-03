@@ -42,7 +42,7 @@ public class UIBounce : Effect
     {
         StartCoroutine(EffectCoroutine());
     }
-    public void StopEffect()
+    public override void StopEffect()
     {
         StopAllCoroutines();
     }    
