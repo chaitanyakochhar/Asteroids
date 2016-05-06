@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 18
-  sceneToLoad: BlastOff
+  sceneToLoad: SolarSystem
 --- !u!114 &1803602018
 MonoBehaviour:
   m_ObjectHideFlags: 0

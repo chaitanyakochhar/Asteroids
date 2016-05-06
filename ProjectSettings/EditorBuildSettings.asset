@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Full Story/Introduction/ChooseTeams.unity
   - enabled: 1
+    path: Assets/Games/SolarSystem/SolarSystem.unity
+  - enabled: 1
     path: Assets/Games/Full Story/Introduction/BlastOff.unity
   - enabled: 1
     path: Assets/Games/Full Story/The International Space Station/ISSIntro.unity
