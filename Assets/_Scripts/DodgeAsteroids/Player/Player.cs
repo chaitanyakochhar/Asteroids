@@ -16,8 +16,14 @@ public class Player : MonoBehaviour
     public void Start()
     {
         isShielded = false;
-        checkpoint = GameObject.Find("Start");
-        uiUpdater = GameObject.Find("UI").GetComponent<UIUpdater>();
+        if (GameObject.Find("Start") != null)
+        {
+            checkpoint = GameObject.Find("Start");
+        }
+        if (GameObject.Find("UI")!=null)
+        {
+            uiUpdater = GameObject.Find("UI").GetComponent<UIUpdater>();
+        }
         spawnedMarker = Instantiate(positionMarker);
         spawnedMarker.GetComponent<PositionMarker>().ToggleMarker(false);
         audioSource = GetComponent<AudioSource>();
