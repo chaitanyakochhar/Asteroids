@@ -7,6 +7,7 @@ namespace FixingISSGame
     {
 
         public bool hasItem { get; set; }
+        public bool canTakeMultipleItems = false;
         public string type;
 
         public void Start()
@@ -41,7 +42,7 @@ namespace FixingISSGame
                             break;
                         }
                 }
-               
+
             }
         }
 
@@ -54,7 +55,8 @@ namespace FixingISSGame
                     other.transform.GetComponent<Screw>().ChangeState(newPosition);
                 else
                     other.transform.GetComponent<Panel>().ChangeState(newPosition);
-                GetComponent<BoxCollider>().enabled = false;
+                if (!canTakeMultipleItems)
+                    GetComponent<BoxCollider>().enabled = false;
             }
         }
     }

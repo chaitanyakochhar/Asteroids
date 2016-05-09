@@ -22,7 +22,11 @@ public class Highlighter : MonoBehaviour
 
     public void HighlightPhase(int phaseIndex)
     {
-        StartCoroutine(HighlightCoroutine(phaseIndex));
+        //StartCoroutine(HighlightCoroutine(phaseIndex));
+        StopAllCoroutines();
+        StartCoroutine(MakeItBlinkWrapper(phaseIndex));
+        
+        
     }
 
     private IEnumerator HighlightCoroutine(int phaseIndex)
@@ -51,5 +55,45 @@ public class Highlighter : MonoBehaviour
             yield return null;
         }
         yield return null;
+    }
+
+    private IEnumerator MakeItBlinkWrapper(int phaseIndex)
+    {
+        yield return new WaitForSeconds(1);
+        if (phaseIndex < phases.Length)
+        {
+            for (int i = 0; i < phases[phaseIndex].correctObjects.Length; i++)
+            {
+                StartCoroutine(MakeItBlink(spriteSurfaces[i], phases[phaseIndex].correctObjects[i].GetComponent<Image>().color));
+            }
+        }
+    }
+
+    private IEnumerator MakeItBlink(GameObject spriteSurface, Color c)
+    {
+        float startTime;
+        float duration;
+        print(c);
+        while (true)
+        {
+            startTime = Time.time;
+            duration = Time.time - startTime;
+            while (duration <= highlightDuration)
+            {
+                spriteSurface.GetComponent<Image>().color = Color.Lerp(offColor, c, duration / highlightDuration);
+                duration = Time.time - startTime;
+                yield return null;
+            }
+
+            startTime = Time.time;
+            duration = Time.time - startTime;
+            while (duration <= highlightDuration)
+            {
+                spriteSurface.GetComponent<Image>().color = Color.Lerp(c, offColor, duration / highlightDuration);
+                duration = Time.time - startTime;
+                yield return null;
+            }
+            yield return null;
+        }
     }
 }

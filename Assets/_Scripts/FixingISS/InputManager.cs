@@ -9,6 +9,9 @@ namespace FixingISSGame
         private GameObject[] ItemGOs;
         private List<Item> items;
 
+        private RaycastHit hit_mouse;
+        private Command c_mouse;
+
         #region MonoBehaviors
         public void Start()
         {
@@ -20,6 +23,10 @@ namespace FixingISSGame
         public void Update()
         {
             touchListener();
+            if (Application.isEditor)
+            {
+                mouseMover();
+            }
         }
         #endregion
 
@@ -81,6 +88,36 @@ namespace FixingISSGame
                     hit.transform.GetComponent<ColorMesh>().RaycastListener(hit.textureCoord, Color.black);
                 }
             }
+        }
+        public void mouseMover()
+        {
+
+
+            if(Input.GetMouseButtonDown(0))
+            {
+                c_mouse = Command.createCommandWithHitObjectReferenceIgnoreUI(Input.mousePosition, out hit_mouse);
+                if(c_mouse!=null)
+                {
+                    if(hit_mouse.transform.tag == "Instrument")
+                    {
+                        Touch t = new Touch();
+                        hit_mouse.transform.GetComponent<Item>().Activate(c_mouse, t);
+                    }
+                }
+            }
+            if (Input.GetMouseButton(0))
+            {
+                c_mouse = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit_mouse);
+                if(c_mouse!=null)
+                {
+                    if (hit_mouse.transform.tag == "Instrument")
+                    {
+                        Touch t = new Touch();
+                        hit_mouse.transform.GetComponent<Item>().Move(c_mouse, t);
+                    }
+                }
+            }
+
         }
         public List<Item> getItems(GameObject[] GOs)
         {

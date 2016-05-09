@@ -87,6 +87,7 @@ public class Listener : MonoBehaviour
             }
             if(correctObjs.Count==0)
             {
+                objectsPicked.Clear();
                 return true;
             }
             else
@@ -94,7 +95,7 @@ public class Listener : MonoBehaviour
                 return false;
             }
         }
+        objectsPicked.Clear();
         return true;
-
     }
 }
