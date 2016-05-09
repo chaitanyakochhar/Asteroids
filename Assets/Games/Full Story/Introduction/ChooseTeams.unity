@@ -1801,8 +1801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeLoad: 18
-  sceneToLoad: SolarSystem
+  delayBeforeLoad: 0
+  sceneToLoad: RocketLaunch
 --- !u!114 &1803602018
 MonoBehaviour:
   m_ObjectHideFlags: 0
