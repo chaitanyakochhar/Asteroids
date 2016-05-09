@@ -2315,7 +2315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
-  sceneToLoad: BlastOff
+  sceneToLoad: LevelSelect
 --- !u!114 &555737263
 MonoBehaviour:
   m_ObjectHideFlags: 0

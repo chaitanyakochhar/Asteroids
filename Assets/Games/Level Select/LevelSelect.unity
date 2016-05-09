@@ -94,7 +94,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 453956, guid: 8556a7df902f019468acc015d7b63d7c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 23.20123
+      value: 6707
       objectReference: {fileID: 0}
     - target: {fileID: 453956, guid: 8556a7df902f019468acc015d7b63d7c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -278,7 +278,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.66, y: 6.2900014, z: 0.20000044}
+  m_Size: {x: 6.66, y: 6.2900014, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &267253889
 SpriteRenderer:
@@ -856,7 +856,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 155.8, y: 136.34998, z: 1}
+  m_Size: {x: 155.8, y: 136.35004, z: 3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &917545315
 SpriteRenderer:
