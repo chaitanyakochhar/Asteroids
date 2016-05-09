@@ -9440,7 +9440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
-  sceneToLoad: Ending
+  sceneToLoad: LevelSelect
 --- !u!114 &1225465971
 MonoBehaviour:
   m_ObjectHideFlags: 0
