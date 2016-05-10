@@ -21,7 +21,7 @@ public class DecisionTracker : Effect
         {
             print("Data Manager null");
         }
-        if(PushOnStart)
+        if (PushOnStart)
         {
             OnClickHandler();
         }

@@ -101,11 +101,9 @@ public class Drawing
     public static Texture2D Paint(Vector2 pos, float rad, Color col, float hardness, Texture2D tex)
     {
         Vector2 start = new Vector2(Mathf.Clamp(pos.x - rad, 0, tex.width), Mathf.Clamp(pos.y - rad, 0, tex.height));
-        float width = rad * 2;
         Vector2 end = new Vector2(Mathf.Clamp(pos.x + rad, 0, tex.width), Mathf.Clamp(pos.y + rad, 0, tex.height));
         float widthX = Mathf.Round(end.x - start.x);
         float widthY = Mathf.Round(end.y - start.y);
-        float sqrRad = rad * rad;
         float sqrRad2 = (rad + 1) * (rad + 1);
         Color[] pixels = tex.GetPixels((int)start.x, (int)start.y, (int)widthX, (int)widthY, 0);
 
@@ -146,8 +144,6 @@ public class Drawing
 
     public static Texture2D PaintLine(Vector2 from, Vector2 to, float rad, Color col, float hardness, Texture2D tex)
     {
-        var width = rad * 2;
-
         var extent = rad;
         var stY = Mathf.Clamp(Mathf.Min(from.y, to.y) - extent, 0, tex.height);
         var stX = Mathf.Clamp(Mathf.Min(from.x, to.x) - extent, 0, tex.width);
@@ -157,7 +153,6 @@ public class Drawing
         var lengthX = endX - stX;
         var lengthY = endY - stY;
 
-        var sqrRad = rad * rad;
         var sqrRad2 = (rad + 1) * (rad + 1);
         Color[] pixels = tex.GetPixels((int)stX, (int)stY, (int)lengthX, (int)lengthY, 0);
         var start = new Vector2(stX, stY);
