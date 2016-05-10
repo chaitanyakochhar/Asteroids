@@ -60,11 +60,11 @@ public class Highlighter : MonoBehaviour
     private IEnumerator MakeItBlinkWrapper(int phaseIndex)
     {
         yield return new WaitForSeconds(1);
-        if (phaseIndex < phases.Length)
+        if (spriteSurfaces.Length>0 && phaseIndex < phases.Length)
         {
             for (int i = 0; i < phases[phaseIndex].correctObjects.Length; i++)
             {
-                StartCoroutine(MakeItBlink(spriteSurfaces[i], phases[phaseIndex].correctObjects[i].GetComponent<Image>().color));
+                StartCoroutine(MakeItBlink(spriteSurfaces[i], phases[phaseIndex].correctObjects[i].GetComponent<PickableObject>().iconColor));
             }
         }
     }

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 public class PlayerDataManager : MonoBehaviour
 {
+    //Used as distinct ID
+    public string MixpanelDistinctID;
+    private string Token = "729533d8e11764068581e40573913081";
+
     public Dictionary<string, string> textCaptured { get; private set; }
     public Dictionary<string, AudioClip> audioCaptured { get; private set; }
     public Dictionary<string, Texture2D> imagesCaptured { get; private set; }
@@ -11,7 +15,8 @@ public class PlayerDataManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        print("Calling start "+Time.time);
+
+        GUIDInit();
 
         textCaptured = new Dictionary<string, string>();
         audioCaptured = new Dictionary<string, AudioClip>();
@@ -24,6 +29,8 @@ public class PlayerDataManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+
+    #region Capturing PlayerData Information
     public void AddData<T>(Dictionary<string, T> dictionary, string key, T value)
     {
         T data;
@@ -55,15 +62,30 @@ public class PlayerDataManager : MonoBehaviour
     public void AddDecision(string decision)
     {
         decisions.Add(decision);
-        PrintAllDecisions();
+    }
+    #endregion
+
+    #region MixPanel Calls
+    private void GUIDInit()
+    {
+        if (PlayerPrefs.HasKey("GUID"))
+        {
+            MixpanelDistinctID = PlayerPrefs.GetString("GUID");
+        }
+        else
+        {
+            System.Guid guid = System.Guid.NewGuid();
+            MixpanelDistinctID = guid.ToString();
+            PlayerPrefs.SetString("GUID", MixpanelDistinctID);
+        }
+        Mixpanel.DistinctID = MixpanelDistinctID;
+        Mixpanel.Token = Token;
     }
 
-    private void PrintAllDecisions()
+    public void PushToMixPanel(string eventName)
     {
-        print(decisions.Count);
-        foreach(string d in decisions)
-        {
-            Debug.Log(d + ", ");
-        }
+        Mixpanel.SendEvent(eventName);
     }
+    #endregion
+
 }

@@ -36,7 +36,10 @@ public class Listener : MonoBehaviour
                 }
                 else
                 {
-                    GetComponent<AudioSource>().PlayOneShot(failSound);
+                    if (!GetComponent<AudioSource>().isPlaying)
+                    {
+                        GetComponent<AudioSource>().PlayOneShot(failSound);
+                    }
                 }
                 objectsPicked.Clear();
                 GetComponent<Highlighter>().HighlightPhase(currentPhase);

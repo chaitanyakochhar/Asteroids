@@ -9,7 +9,7 @@ public class RESTWrapper : MonoBehaviour
 {
 
     private string URL = "http://dev.smartypal.com";
-    private string Method = "/parent_login";
+    //private string Method = "/parent_login";
     private string email = "info+demo@smartypal.com";
     private string password = "123";
     public string loginResult;

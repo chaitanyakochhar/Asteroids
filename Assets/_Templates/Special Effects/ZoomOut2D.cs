@@ -12,14 +12,14 @@ public class ZoomOut2D : Effect
     public GameObject lerpDestination;
 
     private float startTime;
-    private Camera camera;
+    private Camera cam;
     private Vector3 startPosition;
 
     // Use this for initialization
     void Start()
     {
-        camera = Camera.main;
-        startPosition = camera.transform.position;
+        cam = Camera.main;
+        startPosition = cam.transform.position;
         if(START_EFFECT_ON_START)
         {
             StartEffect();
@@ -32,8 +32,8 @@ public class ZoomOut2D : Effect
         startTime = Time.time;
         while((Time.time - startTime)<=duration)
         {
-            camera.orthographicSize = Mathf.Lerp(viewPortStart, viewPortEnd, (Time.time - startTime) / duration);
-            camera.transform.position = Vector3.Lerp(startPosition, lerpDestination.transform.position, (Time.time - startTime) / duration);
+            cam.orthographicSize = Mathf.Lerp(viewPortStart, viewPortEnd, (Time.time - startTime) / duration);
+            cam.transform.position = Vector3.Lerp(startPosition, lerpDestination.transform.position, (Time.time - startTime) / duration);
             yield return null;
         }
         GetComponent<Authenticator>().isAuthenticated = true;

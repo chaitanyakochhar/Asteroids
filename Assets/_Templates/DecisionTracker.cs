@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class DecisionTracker : MonoBehaviour
+public class DecisionTracker : Effect
 {
 
     public string Decision;
     public bool PushOnStart = false;
+    public bool PushToMixpanel = false;
     private PlayerDataManager p;
     private bool ClickedOnce = false;
 
@@ -29,6 +31,7 @@ public class DecisionTracker : MonoBehaviour
         if (p != null && !ClickedOnce)
         {
             p.AddDecision(Decision);
+            p.PushToMixPanel(Decision);
             ClickedOnce = true;
         }
         else
@@ -39,5 +42,20 @@ public class DecisionTracker : MonoBehaviour
     public void AddDecision()
     {
         p.AddDecision(Decision);
+    }
+
+    public override void StartEffect()
+    {
+        OnClickHandler();
+    }
+
+    public override void StopEffect()
+    {
+        ;
+    }
+
+    public override IEnumerator EffectCoroutine()
+    {
+        yield return null;
     }
 }
