@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 69ce5338cb0624f26aa839c768bf6811
+timeCreated: 1462914357
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jupiter_spritesheet_0
+    21300002: Jupiter_spritesheet_1
+    21300004: Jupiter_spritesheet_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Jupiter_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 242
+        width: 574
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 142.0384, y: -53.804382}
+        - {x: 147.0384, y: -32.804382}
+        - {x: 147.0384, y: 28.195618}
+        - {x: 144.0384, y: 45.195618}
+        - {x: 126.03841, y: 84.19562}
+        - {x: 97.03841, y: 115.19562}
+        - {x: 58.038406, y: 139.19562}
+        - {x: 40.038406, y: 145.19562}
+        - {x: 33.038406, y: 146.19562}
+        - {x: -31.961594, y: 146.19562}
+        - {x: -45.961594, y: 143.19562}
+        - {x: -81.96159, y: 126.19562}
+        - {x: -110.96159, y: 100.19562}
+        - {x: -128.9616, y: 74.19562}
+        - {x: -140.9616, y: 48.195618}
+        - {x: -145.9616, y: 28.195618}
+        - {x: -145.9616, y: -35.804382}
+        - {x: -128.9616, y: -76.80438}
+        - {x: -113.96159, y: -95.80438}
+        - {x: -82.96159, y: -123.80438}
+        - {x: -67.96159, y: -132.80438}
+        - {x: -38.961594, y: -143.80438}
+        - {x: -30.961594, y: -145.80438}
+        - {x: 33.038406, y: -145.80438}
+        - {x: 44.038406, y: -144.80438}
+        - {x: 73.03841, y: -129.80438}
+        - {x: 92.03841, y: -117.80438}
+        - {x: 116.03841, y: -95.80438}
+    - name: Jupiter_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 0
+        width: 988
+        height: 923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 116.38953, y: 12}
+        - {x: 116.38953, y: 46}
+        - {x: 134.38953, y: 43}
+        - {x: 179.38953, y: 37}
+        - {x: 252.38953, y: 83}
+        - {x: 252.38953, y: 128}
+        - {x: 137.38953, y: 128}
+        - {x: 64.38953, y: 155}
+        - {x: -3.6104736, y: 193}
+        - {x: -88.61047, y: 197}
+        - {x: -117.61047, y: 235}
+        - {x: -160.61047, y: 235}
+        - {x: -171.61047, y: 185}
+        - {x: -126.61047, y: 157}
+        - {x: -165.61047, y: 120}
+        - {x: -209.61047, y: -3}
+        - {x: -251.61047, y: -11}
+        - {x: -251.61047, y: -53}
+        - {x: -218.61047, y: -70}
+        - {x: -114.61047, y: -99}
+        - {x: -150.61047, y: -104}
+        - {x: -162.61047, y: -228}
+        - {x: -147.61047, y: -235}
+        - {x: -141.61047, y: -235}
+        - {x: -100.61047, y: -206}
+        - {x: -110.61047, y: -190}
+        - {x: -93.61047, y: -117}
+        - {x: -12.610474, y: -115}
+        - {x: 44.389526, y: -153}
+        - {x: 83.38953, y: -235}
+        - {x: 126.38953, y: -235}
+        - {x: 161.38953, y: -199}
+        - {x: 161.38953, y: -168}
+        - {x: 94.38953, y: -130}
+    - name: Jupiter_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2681
+        y: 47
+        width: 1342
+        height: 1029
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 232.82434, y: -84.57358}
+        - {x: 315.82434, y: -127.57358}
+        - {x: 332.82434, y: -95.57358}
+        - {x: 342.82434, y: -35.573578}
+        - {x: 342.82434, y: -10.573578}
+        - {x: 328.82434, y: 9.426422}
+        - {x: 186.82434, y: -32.573578}
+        - {x: 146.82434, y: 58.426422}
+        - {x: 215.82434, y: 146.42642}
+        - {x: 211.82434, y: 198.42642}
+        - {x: 290.82434, y: 243.42642}
+        - {x: 294.82434, y: 263.42642}
+        - {x: 234.82434, y: 263.42642}
+        - {x: 230.82434, y: 262.42642}
+        - {x: 183.82434, y: 257.42642}
+        - {x: 140.82434, y: 195.42642}
+        - {x: 88.82434, y: 145.42642}
+        - {x: -15.175659, y: 147.42642}
+        - {x: -110.17566, y: 97.42642}
+        - {x: -159.17566, y: 81.42642}
+        - {x: -184.17566, y: 116.42642}
+        - {x: -256.17566, y: 77.42642}
+        - {x: -281.17566, y: 148.42642}
+        - {x: -341.17566, y: 122.42642}
+        - {x: -341.17566, y: 74.42642}
+        - {x: -272.17566, y: 29.426422}
+        - {x: -194.17566, y: 72.42642}
+        - {x: -197.17566, y: 26.426422}
+        - {x: -192.17566, y: 4.426422}
+        - {x: -150.17566, y: 7.426422}
+        - {x: -139.17566, y: -62.573578}
+        - {x: -112.17566, y: -119.57358}
+        - {x: -52.17566, y: -159.57358}
+        - {x: 15.824341, y: -261.57358}
+        - {x: 33.82434, y: -261.57358}
+        - {x: 38.82434, y: -255.57358}
+        - {x: 53.82434, y: -191.57358}
+        - {x: 139.82434, y: -91.57358}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

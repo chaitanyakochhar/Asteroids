@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: 517269f8d8e264f02b50cb913d25f47a
+timeCreated: 1462914401
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Neptune_spritesheet_0
+    21300002: Neptune_spritesheet_1
+    21300004: Neptune_spritesheet_2
+    21300006: Neptune_spritesheet_3
+    21300008: Neptune_spritesheet_4
+    21300010: Neptune_spritesheet_5
+    21300012: Neptune_spritesheet_6
+    21300014: Neptune_spritesheet_7
+    21300016: Neptune_spritesheet_8
+    21300018: Neptune_spritesheet_9
+    21300020: Neptune_spritesheet_10
+    21300022: Neptune_spritesheet_11
+    21300024: Neptune_spritesheet_12
+    21300026: Neptune_spritesheet_13
+    21300028: Neptune_spritesheet_14
+    21300030: Neptune_spritesheet_15
+    21300032: Neptune_spritesheet_16
+    21300034: Neptune_spritesheet_17
+    21300036: Neptune_spritesheet_18
+    21300038: Neptune_spritesheet_19
+    21300040: Neptune_spritesheet_20
+    21300042: Neptune_spritesheet_21
+    21300044: Neptune_spritesheet_22
+    21300046: Neptune_spritesheet_23
+    21300048: Neptune_spritesheet_24
+    21300050: Neptune_spritesheet_25
+    21300052: Neptune_spritesheet_26
+    21300054: Neptune_spritesheet_27
+    21300056: Neptune_spritesheet_28
+    21300058: Neptune_spritesheet_29
+    21300060: Neptune_spritesheet_30
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Neptune_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 82
+        width: 408
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 126.42465, y: -39.452057}
+        - {x: 126.42465, y: 43.547943}
+        - {x: 110.42465, y: 72.54794}
+        - {x: 77.42465, y: 107.54794}
+        - {x: 41.424652, y: 126.54794}
+        - {x: -28.575348, y: 126.54794}
+        - {x: -38.575348, y: 123.54794}
+        - {x: -62.575348, y: 114.54794}
+        - {x: -100.57535, y: 82.54794}
+        - {x: -111.57535, y: 64.54794}
+        - {x: -125.57535, y: 34.547943}
+        - {x: -125.57535, y: -36.452057}
+        - {x: -115.57535, y: -65.45206}
+        - {x: -69.57535, y: -113.45206}
+        - {x: -50.575348, y: -123.45206}
+        - {x: -35.575348, y: -125.45206}
+        - {x: 34.424652, y: -125.45206}
+        - {x: 41.424652, y: -122.45206}
+        - {x: 78.42465, y: -106.45206}
+        - {x: 110.42465, y: -71.45206}
+    - name: Neptune_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 487
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 82
+        width: 415
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 129.41779, y: 48.547943}
+        - {x: 96.417786, y: 98.54794}
+        - {x: 61.417786, y: 118.54794}
+        - {x: 29.417786, y: 126.54794}
+        - {x: -29.582214, y: 126.54794}
+        - {x: -73.582214, y: 107.54794}
+        - {x: -98.582214, y: 79.54794}
+        - {x: -109.582214, y: 63.547943}
+        - {x: -127.582214, y: 46.547943}
+        - {x: -127.582214, y: -26.452057}
+        - {x: -110.582214, y: -74.45206}
+        - {x: -58.582214, y: -125.45206}
+        - {x: 30.417786, y: -125.45206}
+        - {x: 68.417786, y: -115.45206}
+        - {x: 119.417786, y: -70.45206}
+        - {x: 129.41779, y: -50.452057}
+      - - {x: -115.582214, y: 78.54794}
+        - {x: -123.582214, y: 78.54794}
+        - {x: -126.582214, y: 77.54794}
+        - {x: -126.582214, y: 67.54794}
+        - {x: -124.582214, y: 66.54794}
+        - {x: -115.582214, y: 66.54794}
+        - {x: -114.582214, y: 67.54794}
+        - {x: -114.582214, y: 76.54794}
+      - - {x: -106.582214, y: 110.54794}
+        - {x: -108.582214, y: 106.54794}
+        - {x: -108.582214, y: 100.54794}
+        - {x: -106.582214, y: 98.54794}
+        - {x: -100.582214, y: 98.54794}
+        - {x: -96.582214, y: 100.54794}
+        - {x: -96.582214, y: 107.54794}
+        - {x: -99.582214, y: 110.54794}
+      - - {x: 104.417786, y: 120.54794}
+        - {x: 99.417786, y: 115.54794}
+        - {x: 99.417786, y: 110.54794}
+        - {x: 104.417786, y: 105.54794}
+        - {x: 110.417786, y: 105.54794}
+        - {x: 114.417786, y: 109.54794}
+        - {x: 114.417786, y: 116.54794}
+        - {x: 110.417786, y: 120.54794}
+      - - {x: -84.582214, y: 126.54794}
+        - {x: -84.582214, y: 124.54794}
+        - {x: -81.582214, y: 121.54794}
+        - {x: -75.582214, y: 121.54794}
+        - {x: -73.582214, y: 122.54794}
+        - {x: -72.582214, y: 126.54794}
+    - name: Neptune_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 484
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 82
+        width: 411
+        height: 415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 128.45886, y: 41.047943}
+        - {x: 127.45886, y: 53.047943}
+        - {x: 78.45886, y: 111.04794}
+        - {x: 35.458862, y: 129.04794}
+        - {x: -23.541138, y: 129.04794}
+        - {x: -47.541138, y: 122.04794}
+        - {x: -85.54114, y: 92.04794}
+        - {x: -124.54114, y: 74.04794}
+        - {x: -126.54114, y: 65.04794}
+        - {x: -126.54114, y: -27.952057}
+        - {x: -103.54114, y: -92.95206}
+        - {x: -71.54114, y: -112.95206}
+        - {x: -29.541138, y: -127.95206}
+        - {x: 34.458862, y: -127.95206}
+        - {x: 58.458862, y: -124.95206}
+        - {x: 116.45886, y: -76.95206}
+        - {x: 128.45886, y: -39.952057}
+      - - {x: 103.45886, y: 101.04794}
+        - {x: 100.45886, y: 97.04794}
+        - {x: 100.45886, y: 89.04794}
+        - {x: 104.45886, y: 85.04794}
+        - {x: 110.45886, y: 85.04794}
+        - {x: 115.45886, y: 89.04794}
+        - {x: 115.45886, y: 99.04794}
+        - {x: 110.45886, y: 101.04794}
+      - - {x: -99.54114, y: 100.04794}
+        - {x: -104.54114, y: 98.04794}
+        - {x: -104.54114, y: 91.04794}
+        - {x: -103.54114, y: 87.04794}
+        - {x: -95.54114, y: 87.04794}
+        - {x: -92.54114, y: 90.04794}
+        - {x: -92.54114, y: 95.04794}
+        - {x: -94.54114, y: 100.04794}
+      - - {x: -83.54114, y: 120.04794}
+        - {x: -85.54114, y: 115.04794}
+        - {x: -85.54114, y: 109.04794}
+        - {x: -84.54114, y: 108.04794}
+        - {x: -75.54114, y: 108.04794}
+        - {x: -73.54114, y: 109.04794}
+        - {x: -73.54114, y: 118.04794}
+        - {x: -76.54114, y: 120.04794}
+    - name: Neptune_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 82
+        width: 408
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 127.116394, y: -39.452057}
+        - {x: 127.116394, y: 36.547943}
+        - {x: 115.116394, y: 61.547943}
+        - {x: 110.116394, y: 90.54794}
+        - {x: 33.116394, y: 128.54794}
+        - {x: 26.116394, y: 130.54794}
+        - {x: -36.883606, y: 130.54794}
+        - {x: -53.883606, y: 129.54794}
+        - {x: -82.883606, y: 106.54794}
+        - {x: -119.883606, y: 47.547943}
+        - {x: -125.883606, y: 21.547943}
+        - {x: -125.883606, y: -28.452057}
+        - {x: -118.883606, y: -53.452057}
+        - {x: -92.883606, y: -103.45206}
+        - {x: -85.883606, y: -107.45206}
+        - {x: -43.883606, y: -129.45206}
+        - {x: 54.116394, y: -129.45206}
+        - {x: 81.116394, y: -104.45206}
+        - {x: 111.116394, y: -80.45206}
+        - {x: 126.116394, y: -51.452057}
+      - - {x: -111.883606, y: 78.54794}
+        - {x: -107.883606, y: 74.54794}
+        - {x: -101.883606, y: 74.54794}
+        - {x: -99.883606, y: 75.54794}
+        - {x: -99.883606, y: 83.54794}
+        - {x: -100.883606, y: 87.54794}
+        - {x: -106.883606, y: 87.54794}
+        - {x: -111.883606, y: 83.54794}
+      - - {x: 56.116394, y: 126.54794}
+        - {x: 51.116394, y: 121.54794}
+        - {x: 51.116394, y: 118.54794}
+        - {x: 55.116394, y: 114.54794}
+        - {x: 61.116394, y: 114.54794}
+        - {x: 64.116394, y: 118.54794}
+        - {x: 64.116394, y: 121.54794}
+        - {x: 60.116394, y: 126.54794}
+    - name: Neptune_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1925
+        y: 64
+        width: 425
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 132.1438, y: -52.047943}
+        - {x: 132.1438, y: 40.952057}
+        - {x: 107.1438, y: 85.95206}
+        - {x: 75.1438, y: 118.95206}
+        - {x: 65.1438, y: 122.95206}
+        - {x: 62.1438, y: 117.95206}
+        - {x: 54.1438, y: 124.95206}
+        - {x: 38.1438, y: 136.95206}
+        - {x: 27.143799, y: 137.95206}
+        - {x: -38.8562, y: 137.95206}
+        - {x: -40.8562, y: 136.95206}
+        - {x: -62.8562, y: 124.95206}
+        - {x: -106.8562, y: 80.95206}
+        - {x: -130.8562, y: 25.952057}
+        - {x: -130.8562, y: -35.047943}
+        - {x: -76.8562, y: -117.04794}
+        - {x: -10.856201, y: -137.04794}
+        - {x: 53.1438, y: -137.04794}
+        - {x: 99.1438, y: -106.04794}
+        - {x: 108.1438, y: -88.04794}
+      - - {x: -128.8562, y: 97.95206}
+        - {x: -130.8562, y: 95.95206}
+        - {x: -130.8562, y: 81.95206}
+        - {x: -125.8562, y: 78.95206}
+        - {x: -117.8562, y: 78.95206}
+        - {x: -113.8562, y: 85.95206}
+        - {x: -113.8562, y: 95.95206}
+        - {x: -118.8562, y: 97.95206}
+    - name: Neptune_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 82
+        width: 409
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 124.883545, y: -56.952057}
+        - {x: 126.883545, y: -44.952057}
+        - {x: 126.883545, y: 31.047943}
+        - {x: 113.883545, y: 60.047943}
+        - {x: 98.883545, y: 82.04794}
+        - {x: 54.883545, y: 121.04794}
+        - {x: 37.883545, y: 130.04794}
+        - {x: 16.883545, y: 133.04794}
+        - {x: -40.116455, y: 133.04794}
+        - {x: -62.116455, y: 122.04794}
+        - {x: -106.116455, y: 67.04794}
+        - {x: -124.116455, y: 26.047943}
+        - {x: -126.116455, y: 12.047943}
+        - {x: -126.116455, y: -47.952057}
+        - {x: -88.116455, y: -102.95206}
+        - {x: -72.116455, y: -131.95206}
+        - {x: 33.883545, y: -131.95206}
+        - {x: 61.883545, y: -120.95206}
+        - {x: 93.883545, y: -116.95206}
+        - {x: 95.883545, y: -100.95206}
+      - - {x: 121.883545, y: -57.952057}
+        - {x: 121.883545, y: -66.95206}
+        - {x: 123.883545, y: -72.95206}
+        - {x: 126.883545, y: -72.95206}
+        - {x: 126.883545, y: -54.952057}
+        - {x: 123.883545, y: -55.952057}
+    - name: Neptune_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 2877
+        y: 82
+        width: 413
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -76.50696, y: -126.95206}
+        - {x: -76.50696, y: -131.95206}
+        - {x: -61.506958, y: -131.95206}
+        - {x: -61.506958, y: -126.95206}
+        - {x: -66.50696, y: -121.95206}
+        - {x: -71.50696, y: -121.95206}
+      - - {x: 128.49304, y: 35.047943}
+        - {x: 110.49304, y: 73.04794}
+        - {x: 55.493042, y: 123.04794}
+        - {x: 40.493042, y: 128.04794}
+        - {x: 18.493042, y: 133.04794}
+        - {x: -39.506958, y: 133.04794}
+        - {x: -55.506958, y: 123.04794}
+        - {x: -95.50696, y: 77.04794}
+        - {x: -117.50696, y: 42.047943}
+        - {x: -126.50696, y: 4.047943}
+        - {x: -126.50696, y: -63.952057}
+        - {x: -59.506958, y: -119.95206}
+        - {x: -25.506958, y: -131.95206}
+        - {x: 34.493042, y: -131.95206}
+        - {x: 50.493042, y: -128.95206}
+        - {x: 87.49304, y: -106.95206}
+        - {x: 128.49304, y: -90.95206}
+      - - {x: 90.49304, y: -110.95206}
+        - {x: 88.49304, y: -114.95206}
+        - {x: 88.49304, y: -127.95206}
+        - {x: 90.49304, y: -128.95206}
+        - {x: 100.49304, y: -128.95206}
+        - {x: 106.49304, y: -126.95206}
+        - {x: 106.49304, y: -114.95206}
+        - {x: 102.49304, y: -110.95206}
+      - - {x: -118.50696, y: 65.04794}
+        - {x: -127.50696, y: 65.04794}
+        - {x: -127.50696, y: 47.047943}
+        - {x: -126.50696, y: 46.047943}
+        - {x: -122.50696, y: 46.047943}
+        - {x: -115.50696, y: 50.047943}
+        - {x: -115.50696, y: 56.047943}
+        - {x: -116.50696, y: 62.047943}
+    - name: Neptune_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 459
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 433
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 417
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 397
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 2864
+        y: 373
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 322
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 307
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 283
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2391
+        y: 278
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 174
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 3257
+        y: 148
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 72
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 56
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 2958
+        y: 75
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 42
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 2011
+        y: 30
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 2610
+        y: 43
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 2650
+        y: 48
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 3137
+        y: 32
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 2472
+        y: 16
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 0
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Neptune_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 3066
+        y: 17
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
