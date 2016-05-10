@@ -31,7 +31,8 @@ public class DecisionTracker : Effect
         if (p != null && !ClickedOnce)
         {
             p.AddDecision(Decision);
-            p.PushToMixPanel(Decision);
+            if (PushToMixpanel)
+                p.PushToMixPanel(Decision);
             ClickedOnce = true;
         }
         else

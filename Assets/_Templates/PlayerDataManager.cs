@@ -84,6 +84,7 @@ public class PlayerDataManager : MonoBehaviour
 
     public void PushToMixPanel(string eventName)
     {
+        if()
         Mixpanel.SendEvent(eventName);
     }
     #endregion
