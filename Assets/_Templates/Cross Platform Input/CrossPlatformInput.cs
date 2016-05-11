@@ -40,6 +40,14 @@ public class CrossPlatformInput : MonoBehaviour
                     {
                         RaycastHit hit;
                         Command c = Command.createCommandWithHitObjectReferenceIgnoreUI(t.position, out hit);
+                        if (c != null)
+                        {
+                            if (hit.transform.GetComponent<AnimateOnClick>() != null)
+                            {
+                                print(hit.transform.name);
+                                hit.transform.GetComponent<AnimateOnClick>().StartEffect();
+                            }
+                        }
                         break;
                     }
             }
