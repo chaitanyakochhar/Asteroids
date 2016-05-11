@@ -11,9 +11,12 @@ namespace FixingISSGame
         {
             
             if (fingerID == -1)
+            {                
+                fingerID = t.fingerId;
+            }
+            if(fingerID == t.fingerId)
             {
                 StopEffects();
-                fingerID = t.fingerId;
             }
         }
         public override void Move(Command c, Touch t)
@@ -33,11 +36,12 @@ namespace FixingISSGame
             if (fingerID == t.fingerId)
             {
                 fingerID = -1;
+                if (itemState == ItemState.LOOSE)
+                {
+                    StartEffects();
+                }
             }
-            if(itemState == ItemState.LOOSE)
-            {
-                StartEffects();
-            }
+
         }
         public override void ActivateTheseObjectsOnCompletion()
         {
