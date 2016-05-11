@@ -22,6 +22,7 @@ public class CrossPlatformInput : MonoBehaviour
             {
                 if(hit.transform.GetComponent<AnimateOnClick>()!= null)
                 {
+                    print(hit.transform.name);
                     hit.transform.GetComponent<AnimateOnClick>().StartEffect();
                 }
             }
