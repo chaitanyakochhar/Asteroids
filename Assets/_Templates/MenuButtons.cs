@@ -6,6 +6,8 @@ public class MenuButtons : MonoBehaviour
 {
     public GameObject PauseButton;
     public GameObject PlayButton;
+    public GameObject DialogueOnButton;
+    public GameObject DialogueOffButton;
 
     private bool collapsed = false;
     private AudioSource[] sources;
@@ -22,14 +24,14 @@ public class MenuButtons : MonoBehaviour
         {
             Time.timeScale = 0f;
             caller.GetComponent<Image>().sprite = PlayButton.GetComponent<SpriteRenderer>().sprite;
-            Mute();
+            AudioPause();
         }
 
         else
         {
             Time.timeScale = 1f;
             caller.GetComponent<Image>().sprite = PauseButton.GetComponent<SpriteRenderer>().sprite;
-            UnMute();
+            AudioUnpause();
         }
     }
 
@@ -51,14 +53,14 @@ public class MenuButtons : MonoBehaviour
         transform.GetChild(0).gameObject.SetActive(!collapsed);
     }
 
-    public void Mute()
+    public void AudioPause()
     {
         foreach(AudioSource source in sources)
         {
             source.Pause();
         }
     }
-    public void UnMute()
+    public void AudioUnpause()
     {
         foreach (AudioSource source in sources)
         {
@@ -66,4 +68,19 @@ public class MenuButtons : MonoBehaviour
         }
     }
 
+    public void Mute(GameObject caller)
+    {
+        foreach(AudioSource source in sources)
+        {
+            source.mute = !source.mute;
+            if(source.mute)
+            {
+                caller.GetComponent<Image>().sprite = DialogueOnButton.GetComponent<SpriteRenderer>().sprite;
+            }
+            else
+            {
+                caller.GetComponent<Image>().sprite = DialogueOffButton.GetComponent<SpriteRenderer>().sprite;
+            }
+        }
+    }
 }

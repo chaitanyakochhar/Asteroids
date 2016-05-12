@@ -172,7 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToCheck:
   - {fileID: 555030351}
-  objectsToEnable: []
+  objectsToEnable:
+  - {fileID: 917052186}
   disableObjectsToEnable: 1
   PlayEffects: 1
 --- !u!4 &98086200
@@ -569,6 +570,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAuthenticated: 0
+--- !u!1 &917052186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 917052188}
+  - 114: {fileID: 917052187}
+  m_Layer: 0
+  m_Name: Delay Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &917052187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 917052186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c115e8e3f2316a94ea0e5cfc535f4165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delaySeconds: 5
+  sceneToLoad: Astronaut2
+--- !u!4 &917052188
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 917052186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.0364585, y: 1.4322917, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1068313432
 GameObject:
   m_ObjectHideFlags: 0

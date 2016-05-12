@@ -173,7 +173,7 @@ MonoBehaviour:
   objectsToCheck:
   - {fileID: 555030351}
   objectsToEnable:
-  - {fileID: 0}
+  - {fileID: 1427465143}
   disableObjectsToEnable: 1
   PlayEffects: 1
 --- !u!4 &98086200
@@ -502,7 +502,7 @@ GameObject:
   - 114: {fileID: 555030353}
   - 114: {fileID: 555030355}
   m_Layer: 5
-  m_Name: Pilot Picture
+  m_Name: Scientist Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delaySeconds: 5
-  sceneToLoad: Astronaut2
+  sceneToLoad: RocketLaunch
 --- !u!4 &1427465145
 Transform:
   m_ObjectHideFlags: 0
