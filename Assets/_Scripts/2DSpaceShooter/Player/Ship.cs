@@ -10,13 +10,14 @@ namespace SpaceShooterGame
         public float projectileSpeed = 5f;
         public int projectileLimit = 10;
         public int HP = 5;
+        public Vector3 offsetVector;
 
         
         public void FireProjectile(Command c)
         {
             if (c != null && projectileLimit>=0)
             {
-                Vector3 spawnPoint = offset(transform.position, 3f);
+                Vector3 spawnPoint = offset(transform.position, offsetVector.x,offsetVector.y,offsetVector.z);
                 Vector3 directionOfShot = c.worldPoint - spawnPoint;
                 directionOfShot.Normalize();
                 GameObject GO = Instantiate(projectile, spawnPoint, Quaternion.identity) as GameObject;
