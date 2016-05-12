@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Authenticator))]
 [RequireComponent(typeof(AudioSource))]
@@ -69,9 +70,12 @@ public class Listener : MonoBehaviour
             {
                 if (objectsPicked[i].gameObject != phases[phaseIndex].correctObjects[i])
                 {
+                    ResetSelectedUIElements(false);
                     return false;
                 }
             }
+            ResetSelectedUIElements(true);
+            return true;
         }
         else
         {
@@ -81,6 +85,7 @@ public class Listener : MonoBehaviour
             {
                 if (!correctObjs.Contains(objectsPicked[i].gameObject))
                 {
+                    ResetSelectedUIElements(false);
                     return false;
                 }
                 else
@@ -90,15 +95,24 @@ public class Listener : MonoBehaviour
             }
             if(correctObjs.Count==0)
             {
-                objectsPicked.Clear();
+                ResetSelectedUIElements(true);
                 return true;
             }
             else
             {
+                ResetSelectedUIElements(false);
                 return false;
             }
         }
+    }
+
+    private void ResetSelectedUIElements(bool answer)
+    {
+        if(!answer)
+        foreach (PickableObject pickedObj in objectsPicked)
+        {
+            pickedObj.Reset();
+        }
         objectsPicked.Clear();
-        return true;
     }
 }

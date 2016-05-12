@@ -19,7 +19,12 @@ public class PickableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (pickObjectButtonSetting == PickObjectButtonSetting.CLICK)
+        {
+            GetComponent<Button>().interactable = false;
+        }
         listener.RegisterObject(gameObject);
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -28,5 +33,10 @@ public class PickableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         {
             listener.DeregisterObject(gameObject);
         }
+    }
+
+    public void Reset()
+    {
+        GetComponent<Button>().interactable = true;
     }
 }
