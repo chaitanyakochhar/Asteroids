@@ -47,7 +47,7 @@ public class DrawableSurface : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit);
+            Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit, false);
             if (c == null)
             {
                 print("Fail");

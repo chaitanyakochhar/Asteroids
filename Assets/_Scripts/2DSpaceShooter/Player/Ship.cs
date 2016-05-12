@@ -17,7 +17,7 @@ namespace SpaceShooterGame
         {
             if (c != null && projectileLimit>=0)
             {
-                Vector3 spawnPoint = offset(transform.position, offsetVector.x,offsetVector.y,offsetVector.z);
+                Vector3 spawnPoint = offset(transform.position, offsetVector.x,offsetVector.y,offsetVector.z );
                 Vector3 directionOfShot = c.worldPoint - spawnPoint;
                 directionOfShot.Normalize();
                 GameObject GO = Instantiate(projectile, spawnPoint, Quaternion.identity) as GameObject;
