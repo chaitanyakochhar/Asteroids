@@ -18,8 +18,21 @@ namespace SpaceShooterGame
         {
             if (collision.tag != "Projectile")
             {
-                GameObject.Find("Player").GetComponent<Ship>().projectileLimit++;
-                Destroy(gameObject);
+                if(collision.transform.GetComponent<OnTriggerStartEffect>()!=null)
+                {
+                    if (collision.transform.GetComponent<OnTriggerStartEffect>().BlockProjectiles)
+                    {
+                        GameObject.Find("Player").GetComponent<Ship>().projectileLimit++;
+                        Destroy(gameObject);
+                    }
+                }
+
+                else
+                {
+                    GameObject.Find("Player").GetComponent<Ship>().projectileLimit++;
+                    Destroy(gameObject);
+                }
+
             }
         }
     }

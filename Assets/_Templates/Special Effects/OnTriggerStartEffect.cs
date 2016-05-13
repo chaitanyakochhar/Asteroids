@@ -5,6 +5,7 @@ using System.Collections;
 public class OnTriggerStartEffect : MonoBehaviour
 {
     public GameObject[] triggerThese;
+    public bool BlockProjectiles = false;
 
     public void OnTriggerEnter(Collider other)
     {

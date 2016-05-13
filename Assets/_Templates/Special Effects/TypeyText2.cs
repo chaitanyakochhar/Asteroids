@@ -7,11 +7,13 @@ using UnityEngine.UI;
 public class TypeyText2 : MonoBehaviour
 {
     public GameObject imagePlaceholder;
+    public bool showFullText = true;
     public string[] textToTypeOut;
     public Sprite[] images;
     public float[] delays;
     public float textDelay = 0.1f;
     private Text body;
+
 
     public void Start()
     {
