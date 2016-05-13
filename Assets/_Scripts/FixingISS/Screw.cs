@@ -193,6 +193,11 @@ namespace FixingISSGame
             itemState = ItemState.IN_PROGRESS;
             GetComponent<SpriteRenderer>().sprite = screwInsertedImage.GetComponent<SpriteRenderer>().sprite;
             GetComponent<SpriteRenderer>().color = ColorLerp(startColor, Color.yellow, endColor, 0f);
+            if(numberOfTapsNeeded==0)
+            {
+                GetComponent<SpriteRenderer>().color = endColor;
+                itemState = ItemState.DONE;
+            }
             GetComponent<SpriteRenderer>().sortingOrder = 1;
         }
         protected override IEnumerator bouncyEnable()

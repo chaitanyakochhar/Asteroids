@@ -4,8 +4,7 @@ using System;
 
 public class Carrier : MonoBehaviour
 {
-
-    public float oneWayDuration = 1f;
+    public float oneWaySpeed = 1f;
     public bool isGiving { get; set; }
     public bool Going { get; set; }
     public bool Done { get; set; }
@@ -14,10 +13,12 @@ public class Carrier : MonoBehaviour
     public Vector3 startPoint { get; set; }
     private Vector3 destination;
     private GameObject instancedObject;
+    private float oneWayDuration;
 
     private void GiveObject(GameObject receiver)
     {
         instancedObject.transform.SetParent(receiver.transform);
+
     }
 
     private void CollectObject(GameObject takingThis)
@@ -45,6 +46,10 @@ public class Carrier : MonoBehaviour
             {
                 Done = true;
                 GiveObject(collision.gameObject);
+                if(collision.GetComponent<Effect>()!=null)
+                {
+                    collision.GetComponent<Effect>().StartEffect();
+                }
             }
             else
             {
@@ -70,12 +75,22 @@ public class Carrier : MonoBehaviour
     {
         float startTime = Time.time;
         float elapsed = Time.time - startTime;
+        float distance;
+        Vector3 dis = (to - from);
+        distance = dis.magnitude;
+        oneWayDuration = distance / oneWaySpeed;
+
         while(elapsed<=oneWayDuration)
         {
             transform.position = Vector3.Lerp(from, to, elapsed / oneWayDuration);
             elapsed = Time.time - startTime;
+            if(Done)
+            {
+                break;
+            }
             yield return null;
         }
+        to = transform.position;
         startTime = Time.time;
         elapsed = Time.time - startTime;
         Going = false;

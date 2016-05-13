@@ -58,13 +58,21 @@ public class Command
         return null;
     }
 
-    public static Command createCommandWithoutRaycast(Vector2 destination)
+    public static Command createCommandWithoutRaycast(Vector2 destination, bool ignoreUI = false)
     {
         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(destination);
-        if (!EventSystem.current.IsPointerOverGameObject())
+        if (!ignoreUI)
+        {
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                return new Command(destination, worldPoint);
+            }
+        }
+        else
         {
             return new Command(destination, worldPoint);
         }
+
         return null;
     }
 

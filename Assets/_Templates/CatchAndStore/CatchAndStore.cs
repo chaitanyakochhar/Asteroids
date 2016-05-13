@@ -24,7 +24,7 @@ public class CatchAndStore : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Command c = Command.createCommandWithoutRaycast(Input.mousePosition);
+            Command c = Command.createCommandWithoutRaycast(Input.mousePosition, true);
             if (c != null)
             {
                 CharacterPingPong(c);
