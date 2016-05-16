@@ -66,10 +66,13 @@ public class Enabler : MonoBehaviour
                     {
                         GO.SetActive(true);
                     }
-                    Effect e = GO.GetComponent<Effect>();
-                    if (e != null && PlayEffects)
+                    Effect[] effects = GO.GetComponents<Effect>();
+                    if (PlayEffects)
                     {
-                        e.StartEffect();
+                        foreach(Effect e in effects)
+                        {
+                            e.StartEffect();
+                        }
                     }
                     yield return null;
                 }
