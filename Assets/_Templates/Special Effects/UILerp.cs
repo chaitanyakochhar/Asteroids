@@ -8,6 +8,15 @@ public class UILerp : Effect
     public GameObject finalLocation;
     public AudioClip clip;
     public float duration = 1f;
+    public bool START_EFFECT_ON_PLAY = false;
+
+    public void Start()
+    {
+        if(START_EFFECT_ON_PLAY)
+        {
+            StartEffect();
+        }
+    }
 
     public override void StartEffect()
     {
@@ -19,7 +28,7 @@ public class UILerp : Effect
     {
         float startTime = Time.time;
         Vector3 startPos = GetComponent<RectTransform>().anchoredPosition3D;
-        if(clip!=null)
+        if (clip != null)
         {
             Camera.main.GetComponent<AudioSource>().PlayOneShot(clip);
         }
