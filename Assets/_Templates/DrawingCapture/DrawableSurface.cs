@@ -7,6 +7,7 @@ public class DrawableSurface : MonoBehaviour
     public Samples NumSamples = Samples.Samples4;
     public float brushRadius = 10f;
     public Color colorBeingUsed = Color.black;
+    public bool clearSurface = true;
 
     private Texture2D tNew;
     private Vector2 lastPoint;
@@ -30,7 +31,8 @@ public class DrawableSurface : MonoBehaviour
         Texture2D t = GetComponent<Renderer>().material.mainTexture as Texture2D;
         tNew = Instantiate(t) as Texture2D;
         transform.GetComponent<Renderer>().material.mainTexture = tNew;
-        ClearOut();
+        if (clearSurface)
+            ClearOut();
     }
 
     public void Update()
@@ -50,7 +52,7 @@ public class DrawableSurface : MonoBehaviour
             Command c = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit, false);
             if (c == null)
             {
-                print("Fail");
+                //print("Fail");
             }
             else
             {
