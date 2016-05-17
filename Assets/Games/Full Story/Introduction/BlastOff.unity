@@ -3368,6 +3368,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.6000004
       objectReference: {fileID: 0}
+    - target: {fileID: 11418748, guid: 3f59e483222cbf043a97cd17958e03df, type: 2}
+      propertyPath: DialogueButtonReference
+      value: 
+      objectReference: {fileID: 423374109}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f59e483222cbf043a97cd17958e03df, type: 2}
   m_IsPrefabParent: 0
@@ -3375,6 +3379,10 @@ Prefab:
 RectTransform:
   m_PrefabParentObject: {fileID: 22471586, guid: 3f59e483222cbf043a97cd17958e03df,
     type: 2}
+  m_PrefabInternal: {fileID: 423374107}
+--- !u!1 &423374109 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 113664, guid: 3f59e483222cbf043a97cd17958e03df, type: 2}
   m_PrefabInternal: {fileID: 423374107}
 --- !u!1 &432182368
 GameObject:

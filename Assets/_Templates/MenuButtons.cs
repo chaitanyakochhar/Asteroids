@@ -8,6 +8,7 @@ public class MenuButtons : MonoBehaviour
     public GameObject PlayButton;
     public GameObject DialogueOnButton;
     public GameObject DialogueOffButton;
+    public GameObject DialogueButtonReference;
 
     private bool collapsed = false;
     private AudioSource[] sources;
@@ -16,6 +17,21 @@ public class MenuButtons : MonoBehaviour
     {
         ToggleCollapse();
         sources = Object.FindObjectsOfType<AudioSource>();
+        if(DialogueButtonReference!=null)
+        {
+            if(GameObject.Find("Data Manager")!=null)
+            {
+                PlayerDataManager p = GameObject.Find("Data Manager").GetComponent<PlayerDataManager>();
+                if(p.readByYourself)
+                {
+                    foreach (AudioSource source in sources)
+                    {
+                        source.mute = true;
+                        DialogueButtonReference.GetComponent<Image>().sprite = DialogueOffButton.GetComponent<SpriteRenderer>().sprite;
+                    }
+                }
+            }
+        }
     }
 
     public void Pause(GameObject caller)
@@ -73,6 +89,14 @@ public class MenuButtons : MonoBehaviour
 
     public void Mute(GameObject caller)
     {
+        GameObject playerDataManager = GameObject.Find("Data Manager");
+        if(playerDataManager!=null)
+        {
+            if(playerDataManager.GetComponent<PlayerDataManager>()!=null)
+            {
+                playerDataManager.GetComponent<PlayerDataManager>().ToggleReadByYourself(true);
+            }
+        }
         foreach(AudioSource source in sources)
         {
             source.mute = !source.mute;

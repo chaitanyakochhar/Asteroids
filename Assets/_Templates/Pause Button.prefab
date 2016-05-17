@@ -363,6 +363,7 @@ MonoBehaviour:
   PlayButton: {fileID: 118418, guid: 61a24b1b248af7740958ceec7463a0ad, type: 2}
   DialogueOnButton: {fileID: 118418, guid: 9ce7299ee6ebd69478dbd49f37b64879, type: 2}
   DialogueOffButton: {fileID: 118418, guid: 8ea523afd54ab9248afb1be745100291, type: 2}
+  DialogueButtonReference: {fileID: 113664}
 --- !u!114 &11421410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -826,14 +827,14 @@ RectTransform:
   m_GameObject: {fileID: 124812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6000003, y: 1.6000003, z: 1}
+  m_LocalScale: {x: 1.6000004, y: 1.6000004, z: 1}
   m_Children:
   - {fileID: 22409578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 334.99997, y: -74.00015}
+  m_AnchoredPosition: {x: 423, y: -74.00015}
   m_SizeDelta: {x: -984, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22485506

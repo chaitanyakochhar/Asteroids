@@ -11,6 +11,7 @@ public class PlayerDataManager : MonoBehaviour
     public Dictionary<string, AudioClip> audioCaptured { get; private set; }
     public Dictionary<string, Texture2D> imagesCaptured { get; private set; }
     public List<string> decisions;
+    public bool readByYourself = false;
 
     // Use this for initialization
     void Start()
@@ -29,7 +30,13 @@ public class PlayerDataManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-
+    #region Read By Yourself
+    public void ToggleReadByYourself(bool value)
+    {
+        readByYourself = !readByYourself;
+    }
+    #endregion
+    
     #region Capturing PlayerData Information
     public void AddData<T>(Dictionary<string, T> dictionary, string key, T value)
     {
