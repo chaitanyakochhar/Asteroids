@@ -984,10 +984,8 @@ MonoBehaviour:
   imagePlaceholder: {fileID: 1929991066}
   showFullText: 1
   textToTypeOut:
-  - "After spending some time playing with the tribe of aliens we\u2019ve met, and
-    accomplishing our mission of finding life on planet, Bleep-Blop, it\u2019s about
-    time to head back home. Look at our new aliens gathering to see us off on our
-    journey home! "
+  - "We sure made a lot of new friends today. We had a lot of fun playing with the
+    aliens, but I think it\u2019s about time we head back home."
   - Goodbye friends! Come back and visit us soon!
   images:
   - {fileID: 21300000, guid: bc0cdbd9e92ca564c848203a7eb07a31, type: 3}
@@ -13635,7 +13633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 725ac4473cf944a79817f1798c152f8b, type: 3}
+  clip: {fileID: 8300000, guid: e685132838b1c40fb9b6bfbe4b9f3fe1, type: 3}
   waitTime: 0
 --- !u!82 &1793661672
 AudioSource:
