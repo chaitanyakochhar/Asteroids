@@ -1040,17 +1040,17 @@ MonoBehaviour:
   imagePlaceholder: {fileID: 2031078294}
   showFullText: 1
   textToTypeOut:
-  - 'Look at that herd of little aliens! They seem excited to see us! '
-  - Thank you humans! Because of the asteroids, no one has been able to come to our
-    planet or leave from here. But you two cleared the path for us so we can finally
-    go out and explore the universe and meet more life-forms like you!
+  - Nice landing astronauts! And look, more little green aliens are waiting to greet
+    us!
+  - "Thank you! Thank you for clearing a path through the asteroids! Now it\u2019s
+    finally safe for us to go out and explore the universe!"
   images:
   - {fileID: 21300000, guid: bc0cdbd9e92ca564c848203a7eb07a31, type: 3}
   - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
   delays:
-  - 1
+  - 2
   - 0
-  textDelay: 0.21
+  textDelay: 0.26
 --- !u!114 &173797781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8606,7 +8606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 7e6565c37e3a049718562db1c3c5f22f, type: 3}
+  clip: {fileID: 8300000, guid: e2e2c282b2a374fc889607b821c67af8, type: 3}
   waitTime: 0
 --- !u!82 &1044089010
 AudioSource:

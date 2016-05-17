@@ -951,14 +951,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 173797776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 696435c216876784e8926a9c67fcc02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: You did it! Thanks to your great teamwork, you were able to fix the
-    Space Station. The crew of the International Space Station thanks you for your
-    help. Perhaps they'll need your help again someday, but for now let's head back
-    to Earth as heroes!
-  DataManagerKey: 
+  imagePlaceholder: {fileID: 1870033065}
+  showFullText: 1
+  textToTypeOut:
+  - We did it! Thanks to your great teamwork, we were able to fix the Space Station!
+  - Oh thank you for all your help! Now that the power is back on, I can continue
+    my research
+  - "Yeah! We did it team! Let\u2019s head back to Earth as heroes!"
+  images:
+  - {fileID: 21300000, guid: bc0cdbd9e92ca564c848203a7eb07a31, type: 3}
+  - {fileID: 21300000, guid: 5834ae6634a63cd4abd03a8d7f89e5bd, type: 3}
+  - {fileID: 21300000, guid: bc0cdbd9e92ca564c848203a7eb07a31, type: 3}
+  delays:
+  - 1
+  - 1
+  - 1
   textDelay: 0.24
 --- !u!114 &173797781
 MonoBehaviour:
@@ -13552,7 +13562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 1ac4ad0eb32394a488fb0629f5d32c88, type: 3}
+  clip: {fileID: 8300000, guid: 24219e40f9fc44d6b99450811c27ce06, type: 3}
   waitTime: 0
 --- !u!82 &1804764632
 AudioSource:

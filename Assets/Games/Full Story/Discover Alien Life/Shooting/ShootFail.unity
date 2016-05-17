@@ -968,8 +968,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.026367188, y: 0}
   m_AnchorMax: {x: 0.9795547, y: 1}
-  m_AnchoredPosition: {x: -2.75, y: 0}
-  m_SizeDelta: {x: 48, y: 0}
+  m_AnchoredPosition: {x: 48, y: 0}
+  m_SizeDelta: {x: -145, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173797778
 MonoBehaviour:
@@ -1003,7 +1003,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "Oh no! We took too many hits! Quick! Let\u2019s make an emergency landing
+    on that nearby planet! The repairs to the ship will take some time\u2026 Why don\u2019t
+    we go out and explore to pass the time?"
 --- !u!222 &173797779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1021,10 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: Oh no! We're running low on fuel so we'll need to make an emergency
-    landing! There's a nearby planet that'll be safe enough for us to land on and
-    wait for another ship to come get us. Well... while we're stuck here... might
-    as well explore, right?
+  textToTypeOut: 
   DataManagerKey: 
   textDelay: 0.25
 --- !u!114 &173797781
@@ -3046,7 +3045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: f2c814e5360aa4ea491677faf3544011, type: 3}
+  clip: {fileID: 8300000, guid: 079dccd2058c04dfa8843e34466bd1b1, type: 3}
   waitTime: 0
 --- !u!82 &425747412
 AudioSource:
@@ -7561,10 +7560,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 222845378}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 0.26900002}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 104, y: 55}
-  m_SizeDelta: {x: -230, y: -335}
+  m_AnchorMin: {x: 0, y: 0.4374854}
+  m_AnchorMax: {x: 0.6415469, y: 1}
+  m_AnchoredPosition: {x: 31.5, y: 6.5}
+  m_SizeDelta: {x: -375, y: -238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853472597
 MonoBehaviour:
