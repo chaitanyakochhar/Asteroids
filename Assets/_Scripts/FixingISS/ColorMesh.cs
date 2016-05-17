@@ -108,7 +108,6 @@ namespace FixingISSGame
                 GO.SetActive(true);
             }
         }
-
         #region not used
         public override void StartEffects()
         {

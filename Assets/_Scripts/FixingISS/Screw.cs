@@ -33,6 +33,7 @@ namespace FixingISSGame
                     {
                         if (fingerID == -1)
                         {
+                            print("Loose screw");
                             StopEffects();
                             PlaySound(itemState);
                             fingerID = t.fingerId;
@@ -61,7 +62,8 @@ namespace FixingISSGame
             Vector3 location;
             if (fingerID == t.fingerId && itemState == ItemState.LOOSE)
             {
-                print("FingerID match for " + name);
+                //print("FingerID match for " + name);
+                print("Screw moving");
                 location = c.worldPoint;
                 location.z = transform.position.z;
                 transform.position = location;
@@ -71,6 +73,7 @@ namespace FixingISSGame
         {
             if (fingerID == t.fingerId)
             {
+                print("Screw deactivated");
                 fingerID = -1;
                 if (itemState == ItemState.LOOSE)
                 {

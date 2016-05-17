@@ -9,6 +9,9 @@ namespace FixingISSGame
         private GameObject[] ItemGOs;
         private List<Item> items;
 
+        private RaycastHit hit_touch;
+        private Command c_touch;
+
         private RaycastHit hit_mouse;
         private Command c_mouse;
 
@@ -22,10 +25,26 @@ namespace FixingISSGame
         }
         public void Update()
         {
-            touchListener();
-            if (Application.isEditor)
+            switch (Application.platform)
             {
-                mouseMover();
+                case RuntimePlatform.WindowsPlayer:
+                case RuntimePlatform.OSXPlayer:
+                case RuntimePlatform.OSXWebPlayer:
+                case RuntimePlatform.WebGLPlayer:
+                case RuntimePlatform.WindowsEditor:
+                case RuntimePlatform.OSXEditor:
+                case RuntimePlatform.LinuxPlayer:
+                    {
+                        mouseMover();
+                        break;
+                    }
+                case RuntimePlatform.Android:
+                case RuntimePlatform.IPhonePlayer:
+                    {
+                        touchListener();
+                        break;
+                    }
+
             }
         }
         #endregion
@@ -41,41 +60,44 @@ namespace FixingISSGame
                         case TouchPhase.Began:
                             {
                                 RaycastHit hit;
-                                Command c = Command.createCommandWithHitObjectReferenceIgnoreUI(t.position, out hit);
-                                if (c == null)
-                                {
-                                    print("Command is null. Dammit.");
-                                }
+                                Command c;
+                                c = Command.createCommandWithHitObjectReferenceIgnoreUI(t.position, out hit);
                                 if (c != null)
                                 {
-                                    if (hit.transform.tag == "Instrument")
-                                    {
+                                    if (hit.transform.GetComponent<Item>() != null)
                                         hit.transform.GetComponent<Item>().Activate(c, t);
-                                    }
                                 }
-
                                 break;
                             }
                         case TouchPhase.Moved:
                             {
-                                foreach (Item item in items)
+                                //RaycastHit hit;
+                                Command c = Command.createCommandWithoutRaycast(t.position);
+                                if (c != null)
                                 {
-                                    item.Move(Command.createCommandWithoutRaycast(t.position), t);
+                                    foreach (Item item in items)
+                                    {
+                                        item.Move(c, t);
+                                    }
                                 }
                                 break;
                             }
                         case TouchPhase.Ended:
                             {
-                                foreach (Item item in items)
+                                //RaycastHit hit;
+                                Command c = Command.createCommandWithoutRaycast(t.position);
+                                if (c != null)
                                 {
-                                    item.Deactivate(Command.createCommandWithoutRaycast(t.position), t);
+                                    foreach (Item item in items)
+                                    {
+                                        item.Deactivate(c, t);
+                                    }
                                 }
                                 break;
                             }
                     }
                 }
             }
-
         }
         public void mouseRaycaster()
         {
@@ -93,12 +115,12 @@ namespace FixingISSGame
         {
 
 
-            if(Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 c_mouse = Command.createCommandWithHitObjectReferenceIgnoreUI(Input.mousePosition, out hit_mouse);
-                if(c_mouse!=null)
+                if (c_mouse != null)
                 {
-                    if(hit_mouse.transform.tag == "Instrument")
+                    if (hit_mouse.transform.tag == "Instrument")
                     {
                         Touch t = new Touch();
                         hit_mouse.transform.GetComponent<Item>().Activate(c_mouse, t);
@@ -107,14 +129,22 @@ namespace FixingISSGame
             }
             if (Input.GetMouseButton(0))
             {
-                c_mouse = Command.createCommandWithHitObjectReference(Input.mousePosition, out hit_mouse);
-                if(c_mouse!=null)
+                if (c_mouse != null)
                 {
                     if (hit_mouse.transform.tag == "Instrument")
                     {
                         Touch t = new Touch();
-                        hit_mouse.transform.GetComponent<Item>().Move(c_mouse, t);
+                        hit_mouse.transform.GetComponent<Item>().Move(Command.createCommandWithoutRaycast(Input.mousePosition), t);
                     }
+                }
+            }
+            if (Input.GetMouseButtonUp(0))
+            {
+                c_mouse = Command.createCommandWithHitObjectReferenceIgnoreUI(Input.mousePosition, out hit_mouse);
+                if (c_mouse != null)
+                {
+                    Touch t = new Touch();
+                    hit_mouse.transform.GetComponent<Item>().Deactivate(c_mouse, t);
                 }
             }
 

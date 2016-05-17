@@ -9,30 +9,28 @@ namespace FixingISSGame
 
         public override void Activate(Command c, Touch t)
         {
-            
+            print("Activating Panel");
             if (fingerID == -1)
-            {                
-                fingerID = t.fingerId;
-            }
-            if(fingerID == t.fingerId)
             {
+                fingerID = t.fingerId;
                 StopEffects();
             }
         }
         public override void Move(Command c, Touch t)
         {
-            
+            print("Moving panel");
             Vector3 location;
             if (fingerID == t.fingerId && itemState == ItemState.LOOSE)
             {
-                StopEffects();
                 location = c.worldPoint;
                 location.z = transform.position.z;
+                print("Move location: " + location);
                 transform.position = location;
             }
         }
         public override void Deactivate(Command c, Touch t)
         {
+            print("Deactivating Panel");
             if (fingerID == t.fingerId)
             {
                 fingerID = -1;
@@ -84,7 +82,7 @@ namespace FixingISSGame
                     {
                         if (inProgressSound != null && inProgressSound.Length > 0)
                         {
-                            source.PlayOneShot(inProgressSound[UnityEngine.Random.Range(0, inProgressSound.Length - 1)]);
+                            source.PlayOneShot(inProgressSound[Random.Range(0, inProgressSound.Length - 1)]);
                         }
                         break;
                     }
