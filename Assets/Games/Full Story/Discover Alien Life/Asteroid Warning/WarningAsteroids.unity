@@ -1863,15 +1863,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 173797776}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 696435c216876784e8926a9c67fcc02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: Warning! A field of asteroids blocks our path! We could use the lasers
-    to break them, but this uses up fuel so we may not have enough to continue. Or
-    we could try dodging around the asteroids. But if we get hit, it could seriously
-    damage the ship. Both have risks. Pilot, discuss with your crew and decide.
-  DataManagerKey: 
-  textDelay: 0.23
+  imagePlaceholder: {fileID: 584100915}
+  showFullText: 1
+  textToTypeOut:
+  - "There\u2019s a strange little object flying towards us!"
+  - "Careful! Don\u2019t come any closer!"
+  - Whoa! An alien!
+  - Planet Bleep-Blop is surrounded by asteroids! Help us!
+  - "Yikes! Sounds dangerous! We\u2019ve come this far, it would be a shame to turn
+    back now\u2026 We can try carefully dodging through the asteroids, or we could
+    use our lasers to break them up. What do you think team?"
+  images:
+  - {fileID: 21300000, guid: ffdc45b0fafff27438ead71081b54573, type: 3}
+  - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
+  - {fileID: 21300000, guid: ffdc45b0fafff27438ead71081b54573, type: 3}
+  - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
+  - {fileID: 21300000, guid: 261da0c78318eb740854535c8902c55c, type: 3}
+  - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
+  delays:
+  - 2
+  - 1
+  - 2
+  - 2
+  - 2
+  - 1
+  textDelay: 0.25
 --- !u!114 &173797781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7537,6 +7556,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 906512724}
+        m_MethodName: StartEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &557621414
@@ -7583,8 +7613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeLoad: 1
-  sceneToLoad: WhyDodging
+  delayBeforeLoad: 6.5
+  sceneToLoad: DodgingAsteroid_Game
 --- !u!114 &557621418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8068,7 +8098,7 @@ MonoBehaviour:
   OscillationCount: 3
   intervalBetweenOscillations: 1
   helpSound: {fileID: 8300000, guid: 467cbd9358f9448b285981cc3f29faf1, type: 3}
-  audioInterval: 4
+  audioInterval: 10
 --- !u!212 &568559752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8793,7 +8823,7 @@ MonoBehaviour:
   OscillationCount: 3
   intervalBetweenOscillations: 1
   helpSound: {fileID: 8300000, guid: 467cbd9358f9448b285981cc3f29faf1, type: 3}
-  audioInterval: 4
+  audioInterval: 10
 --- !u!212 &605737324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13325,6 +13355,122 @@ Transform:
   m_Children: []
   m_Father: {fileID: 389006959}
   m_RootOrder: 16
+--- !u!1 &836008585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 836008586}
+  - 82: {fileID: 836008588}
+  - 114: {fileID: 836008587}
+  m_Layer: 0
+  m_Name: Shoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &836008586
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836008585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7314453, y: 1.4628906, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+--- !u!114 &836008587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836008585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533c5a417f1f8054cb8577b373d936bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  clip: {fileID: 8300000, guid: fd672b8ce42e742f3939e9115aad6a54, type: 3}
+--- !u!82 &836008588
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836008585}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &839580639
 GameObject:
   m_ObjectHideFlags: 0
@@ -14390,6 +14536,122 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   center: {fileID: 0}
+--- !u!1 &906512723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 906512726}
+  - 82: {fileID: 906512725}
+  - 114: {fileID: 906512724}
+  m_Layer: 0
+  m_Name: Dodge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &906512724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906512723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533c5a417f1f8054cb8577b373d936bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  clip: {fileID: 8300000, guid: 174f645542af14fddb2afab9e436a1e6, type: 3}
+--- !u!82 &906512725
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906512723}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 174f645542af14fddb2afab9e436a1e6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &906512726
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 906512723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.7314453, y: 1.4628906, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &907954363
 GameObject:
   m_ObjectHideFlags: 0
@@ -16023,7 +16285,7 @@ MonoBehaviour:
   OscillationCount: 3
   intervalBetweenOscillations: 1
   helpSound: {fileID: 8300000, guid: 467cbd9358f9448b285981cc3f29faf1, type: 3}
-  audioInterval: 4
+  audioInterval: 10
 --- !u!212 &1017668986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16181,7 +16443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 983a5e25cf7bb4e0cb5be9b9a7aee637, type: 3}
+  clip: {fileID: 8300000, guid: 058b7d71a42824578bad6504093a41b9, type: 3}
   waitTime: 0
 --- !u!82 &1037651125
 AudioSource:
@@ -26953,6 +27215,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 836008587}
+        m_MethodName: StartEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1794870869
@@ -26999,8 +27272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeLoad: 1
-  sceneToLoad: WhyShooting
+  delayBeforeLoad: 5.6
+  sceneToLoad: ShootingAsteroid_Game
 --- !u!114 &1794870873
 MonoBehaviour:
   m_ObjectHideFlags: 0

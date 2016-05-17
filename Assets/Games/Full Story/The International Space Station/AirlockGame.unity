@@ -185,8 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EvaluateInSequence: 0
-  passSound: {fileID: 8300000, guid: 7d0324a1915514feb9ef5d00e5a55880, type: 3}
-  failSound: {fileID: 8300000, guid: 0603a1ca8ed6dc4459cd8e1e6188a5d4, type: 3}
+  passSound: {fileID: 8300000, guid: 589f1ff04f8b44f679718df6f9d1a9f4, type: 3}
+  failSound: {fileID: 8300000, guid: 00c75978c1d084cfe8acd484e70fea68, type: 3}
   phases:
   - correctObjects:
     - {fileID: 1758583282}
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 7634a5ad4e0574d6898dcc1dcec77b90, type: 3}
+  clip: {fileID: 8300000, guid: 923312a46150c4c32b296e761d3bec84, type: 3}
   waitTime: 1
 --- !u!82 &979111831
 AudioSource:
@@ -1943,7 +1943,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1965,7 +1965,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &1535594522
 GameObject:
   m_ObjectHideFlags: 0
