@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 04d637cf3cbb44f1c9fcb840705494ba, type: 3}
+  clip: {fileID: 8300000, guid: b52f9d6e78415439092fa1ffc65babc7, type: 3}
   waitTime: 1
 --- !u!82 &76853910
 AudioSource:
@@ -296,6 +296,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MixpanelDistinctID: 
   decisions: []
+  readByYourself: 0
 --- !u!4 &261049509
 Transform:
   m_ObjectHideFlags: 0
@@ -767,6 +768,10 @@ Prefab:
       propertyPath: captureSurfaces.Array.data[0]
       value: 
       objectReference: {fileID: 228332970}
+    - target: {fileID: 11406626, guid: 0f355e4548ea2fb4b830a5eaa24fe12c, type: 2}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d8a37674f24024c8ea2d58b7b87780d5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f355e4548ea2fb4b830a5eaa24fe12c, type: 2}
   m_IsPrefabParent: 0

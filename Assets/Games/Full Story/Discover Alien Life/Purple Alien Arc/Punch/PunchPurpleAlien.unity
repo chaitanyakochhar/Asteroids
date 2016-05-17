@@ -1036,9 +1036,8 @@ MonoBehaviour:
   imagePlaceholder: {fileID: 673324221}
   showFullText: 1
   textToTypeOut:
-  - '"Owww! That hurt you big meanie! I''m gonna tell my mommy!"'
-  - "Well, that didn\u2019t go so well\u2026 You didn\u2019t get any evidence, but
-    maybe you can draw a picture of him to show the people back on Earth?"
+  - "Owww! That really hurt! You humans are MEAN!  I\u2019m outta here!"
+  - "Well...that didn\u2019t go so well... He ran away before we could get any evidence\u2026"
   images:
   - {fileID: 21300000, guid: fbd69fc008bf81e4ba2f99c267210e3e, type: 3}
   - {fileID: 21300000, guid: 261da0c78318eb740854535c8902c55c, type: 3}
@@ -14221,7 +14220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 39c829378698f4118852e8ebab6e0ba2, type: 3}
+  clip: {fileID: 8300000, guid: 5a7aab1a82fc5486bbb592ff52f53c10, type: 3}
   waitTime: 0
 --- !u!82 &1865463586
 AudioSource:

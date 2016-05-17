@@ -954,9 +954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: Do you see that funny looking alien walking towards us? Whoever thought
-    we'd discover life on a strange new planet that we had to make an emergency landing
-    on! Science Officer, quick, what do you say to the alien?
+  textToTypeOut: "Huh? What\u2019s that purple thing? W-what! I can\u2019t believe
+    it! It\u2019s an alien! Quick! Say something to it!"
   DataManagerKey: 
   textDelay: 0.25
 --- !u!114 &173797781
@@ -10136,7 +10135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 4d02c2a1c703d4c5b96661f30e9de2ea, type: 3}
+  clip: {fileID: 8300000, guid: 9659b3e1508df4ffab9f11aef0eb6da6, type: 3}
   waitTime: 0
 --- !u!82 &1313828569
 AudioSource:

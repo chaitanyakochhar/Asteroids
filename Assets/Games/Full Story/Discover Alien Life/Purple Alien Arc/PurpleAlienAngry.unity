@@ -1063,16 +1063,16 @@ MonoBehaviour:
   imagePlaceholder: {fileID: 1959099497}
   showFullText: 1
   textToTypeOut:
-  - Are you making fun of my eye? ARE YOU MAKING FUN OF MY EYE?!"
-  - Oh no! The alien thought you were insulting him so he wants to fight you. Do you
-    fight the alien or try and calm him down?
+  - What was that?! Are you making fun of me?!
+  - "Yiiiikes! Now you\u2019ve done it! You made him mad! I think he wants to fight
+    us. What should we do? Fight back or try making peace?"
   images:
   - {fileID: 21300000, guid: b3132271a573d454badb9de0985c466c, type: 3}
   - {fileID: 21300000, guid: ffdc45b0fafff27438ead71081b54573, type: 3}
   delays:
-  - 1
-  - 1
-  textDelay: 0.24
+  - 3
+  - 3.5
+  textDelay: 0.25
 --- !u!1 &183097554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7513,7 +7513,7 @@ Animator:
   m_GameObject: {fileID: 853472595}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f88c99b9f7934843884516449e224f0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 01397c7e405ba4c66872522835806007, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11834,7 +11834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 82b698b1e630040e1970627726ea04df, type: 3}
+  clip: {fileID: 8300000, guid: ae7f9bde4e87d4103a019a01e647becd, type: 3}
   waitTime: 0
 --- !u!82 &1581097235
 AudioSource:

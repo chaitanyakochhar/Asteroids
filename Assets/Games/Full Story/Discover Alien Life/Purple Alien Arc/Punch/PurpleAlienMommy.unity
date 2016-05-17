@@ -936,7 +936,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "Looks like anger got the best of you\u2026 or were you just trying to see
+    what would happen? Either way, we\u2019re heading back with just a drawing. I
+    wonder if there was something we could\u2019ve done better\u2026"
 --- !u!222 &173797779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -954,10 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: "Looks like anger got the best of you\u2026 or were you just trying
-    to see what would happen? Either way, we head home with just a drawing\u2026 But
-    don\u2019t worry, more adventures await us\u2026 Maybe next time we can try being
-    a bit more patient and open-minded when meeting new creatures\u2026"
+  textToTypeOut: 
   DataManagerKey: 
   textDelay: 0.21
 --- !u!114 &173797781
@@ -5997,7 +5996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: c693ff41325d041b1bee45b5d326afda, type: 3}
+  clip: {fileID: 8300000, guid: 46bbae32137fe4287b03ccf3b6d5bfb9, type: 3}
   waitTime: 0
 --- !u!82 &732902653
 AudioSource:
