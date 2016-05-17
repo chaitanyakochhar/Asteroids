@@ -1006,7 +1006,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: "Super! We\u2019re heading to the The International Space Station-- a huge
+    research laboratory in space where astronauts like you do science experiments
+    ! But right now, the astronauts there need our help."
 --- !u!222 &173797779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1024,9 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: Great, our mission is to head to the International Space Station,
-    a huge space laboratory that orbits around the Earth 15 times a day. We need to
-    locate the space station as it circles around the Earth, and fix a solar panel.
+  textToTypeOut: 
   DataManagerKey: 
   textDelay: 0.24
 --- !u!114 &173797781
@@ -1386,11 +1386,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 2032435145}
   - {fileID: 1363725142}
   - {fileID: 2030109892}
   - {fileID: 1225465966}
   - {fileID: 1151281548}
+  - {fileID: 2032435145}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -8956,7 +8956,7 @@ RectTransform:
   - {fileID: 173797777}
   - {fileID: 84014875}
   m_Father: {fileID: 222845378}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.2742072}
   m_AnchoredPosition: {x: 0, y: -0.5}
@@ -9286,7 +9286,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -67, y: -72}
@@ -10272,7 +10272,7 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 0.116000004, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 155, y: 97}
@@ -13537,7 +13537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: 4853374f29b814f9da5aea9e280a80f9, type: 3}
+  clip: {fileID: 8300000, guid: 2fc54645489c941079847b1e85c7a1c0, type: 3}
   waitTime: 0
 --- !u!82 &1804764632
 AudioSource:
@@ -14685,7 +14685,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.116000004, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -383, y: -9}
@@ -14761,7 +14761,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22471586, guid: 3f59e483222cbf043a97cd17958e03df, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22471586, guid: 3f59e483222cbf043a97cd17958e03df, type: 2}
       propertyPath: m_AnchoredPosition.x
