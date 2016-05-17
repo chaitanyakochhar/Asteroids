@@ -9,6 +9,11 @@ public class Rotator : MonoBehaviour
 
     public void Update()
     {
+        if(center==null)
+        {
+            center = gameObject;
+        }
+
         if (center != null)
         {
             transform.RotateAround(center.transform.position, Vector3.up, speed * Time.deltaTime);

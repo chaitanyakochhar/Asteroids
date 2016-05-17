@@ -23,7 +23,10 @@ public class MenuButtons : MonoBehaviour
         if (Time.timeScale == 1f)
         {
             Time.timeScale = 0f;
-            caller.GetComponent<Image>().sprite = PlayButton.GetComponent<SpriteRenderer>().sprite;
+            if (caller != null)
+            {
+                caller.GetComponent<Image>().sprite = PlayButton.GetComponent<SpriteRenderer>().sprite;
+            }
             AudioPause();
         }
 

@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 public class UIUpdater : MonoBehaviour
 {
     public GameObject Goal;
-    public GameObject Arrow;
+    public GameObject Arrow1;
+    public GameObject Arrow2;
     public string gameOverLevel = GameNames.ExitPage;
 
     private GameObject lifeHolder;
@@ -27,7 +28,7 @@ public class UIUpdater : MonoBehaviour
         lifeHolder = GameObject.Find("Lives");
         alienHolder = GameObject.Find("Aliens Collected");
 
-        if(lifeHolder!=null)
+        if (lifeHolder != null)
         {
             lives = getImageComponentsOfObject(lifeHolder);
             lifeCount = lives.Length;
@@ -38,11 +39,16 @@ public class UIUpdater : MonoBehaviour
             aliens = getImageComponentsOfObject(alienHolder);
             alienCount = aliens.Length;
         }
-        
-        if (Arrow != null)
+
+        if (Arrow1 != null)
         {
-            Arrow.GetComponent<SpriteRenderer>().enabled = false;
-            Arrow.GetComponent<BoxCollider>().enabled = false;
+            Arrow1.GetComponent<SpriteRenderer>().enabled = false;
+            Arrow1.GetComponent<BoxCollider>().enabled = false;
+        }
+        if(Arrow2 != null)
+        {
+            Arrow2.GetComponent<SpriteRenderer>().enabled = false;
+            Arrow2.GetComponent<BoxCollider>().enabled = false;
         }
     }
 
@@ -75,7 +81,7 @@ public class UIUpdater : MonoBehaviour
             {
                 GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;
                 //InterAppCommunicationManager.result = true;
-                
+
             }
             SceneManager.LoadScene(gameOverLevel);
         }
@@ -91,9 +97,22 @@ public class UIUpdater : MonoBehaviour
 
         if (alienStart == 1)
         {
-            Arrow.GetComponent<SpriteRenderer>().enabled = true;
-            Arrow.GetComponent<BoxCollider>().enabled = true;
-            Arrow.GetComponent<Bouncy>().StartBouncy();
+            if (Arrow1 != null)
+            {
+                Arrow1.GetComponent<SpriteRenderer>().enabled = true;
+                Arrow1.GetComponent<BoxCollider>().enabled = true;
+                Arrow1.GetComponent<Bouncy>().StartBouncy();
+            }
+        }
+
+        if (alienStart == 2)
+        {
+            if (Arrow2 != null)
+            {
+                Arrow2.GetComponent<SpriteRenderer>().enabled = true;
+                Arrow2.GetComponent<BoxCollider>().enabled = true;
+                Arrow2.GetComponent<Bouncy>().StartBouncy();
+            }
         }
         if (alienStart == alienCount)
         {
