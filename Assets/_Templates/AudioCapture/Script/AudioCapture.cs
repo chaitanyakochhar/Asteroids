@@ -32,12 +32,13 @@ public class AudioCapture : MonoBehaviour
         devices = Microphone.devices;
         print(devices[0]);
         source = GetComponent<AudioSource>();
-        playerDataManager = GameObject.Find("Data Manager").GetComponent<PlayerDataManager>();
+        if (GameObject.Find("Data Manager") != null)
+            playerDataManager = GameObject.Find("Data Manager").GetComponent<PlayerDataManager>();
         startRecording = transform.GetChild(0).gameObject;
         stopRecording = transform.GetChild(1).gameObject;
         stopRecording.SetActive(false);
         StartCoroutine(getPermission());
-        if (devices.Length>0)
+        if (devices.Length > 0)
         {
             device = devices[0];
         }
@@ -59,10 +60,11 @@ public class AudioCapture : MonoBehaviour
 
     public void StopRecording()
     {
-        if(device.Length>0 && Microphone.IsRecording(device))
+        if (device.Length > 0 && Microphone.IsRecording(device))
         {
             Microphone.End(device);
-            playerDataManager.AddData(playerDataManager.audioCaptured, id, clip);
+            if (playerDataManager != null)
+                playerDataManager.AddData(playerDataManager.audioCaptured, id, clip);
             stopRecording.GetComponent<Effect>().StopEffect();
             stopRecording.GetComponent<Button>().interactable = false;
         }
@@ -70,7 +72,7 @@ public class AudioCapture : MonoBehaviour
 
     public void PlayRecording(string key)
     {
-        if(playerDataManager.audioCaptured.TryGetValue(key, out clip))
+        if (playerDataManager.audioCaptured.TryGetValue(key, out clip))
         {
             source.PlayOneShot(clip);
         }

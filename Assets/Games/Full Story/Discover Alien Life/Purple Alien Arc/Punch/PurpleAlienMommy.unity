@@ -10445,6 +10445,7 @@ GameObject:
   - 114: {fileID: 1354627738}
   - 114: {fileID: 1354627737}
   - 114: {fileID: 1354627736}
+  - 114: {fileID: 1354627734}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -10470,6 +10471,22 @@ RectTransform:
   m_AnchoredPosition: {x: -67, y: -72}
   m_SizeDelta: {x: 252.62799, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1354627734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354627732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca8d0a0684730d48850672c7156b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  START_EFFECT_ON_PLAY: 0
+  waitTime: 2
+  bounceDuration: 0.3
+  bounceCount: 5
+  bounceAmount: {x: 1.2, y: 1.2, z: 1}
 --- !u!114 &1354627736
 MonoBehaviour:
   m_ObjectHideFlags: 0

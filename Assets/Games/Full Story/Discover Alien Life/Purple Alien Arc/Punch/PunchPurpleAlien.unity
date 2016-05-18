@@ -6123,8 +6123,8 @@ GameObject:
   - 114: {fileID: 698317785}
   - 114: {fileID: 698317784}
   - 82: {fileID: 698317782}
-  - 114: {fileID: 698317781}
   - 114: {fileID: 698317787}
+  - 114: {fileID: 698317781}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6158,11 +6158,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 698317779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f23a3a5fbcc1adb44bcdd02156e20a0f, type: 3}
+  m_Script: {fileID: 11500000, guid: fca8d0a0684730d48850672c7156b376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  waitTime: 1
+  START_EFFECT_ON_PLAY: 0
+  waitTime: 2
+  bounceDuration: 0.3
+  bounceCount: 5
+  bounceAmount: {x: 1.2, y: 1.2, z: 1}
 --- !u!82 &698317782
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10376,7 +10379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Decision: Punch Purple Alien
   PushOnStart: 1
-  PushToMixpanel: 0
+  PushToMixpanel: 1
 --- !u!1 &1291950894
 GameObject:
   m_ObjectHideFlags: 0

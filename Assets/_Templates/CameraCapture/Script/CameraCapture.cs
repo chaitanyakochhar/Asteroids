@@ -25,8 +25,8 @@ public class CameraCapture : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-        playerDataManager = GameObject.Find("Data Manager").GetComponent<PlayerDataManager>();
+        if (GameObject.Find("Data Manager") != null)
+            playerDataManager = GameObject.Find("Data Manager").GetComponent<PlayerDataManager>();
         foreach (WebCamDevice d in WebCamTexture.devices)
         {
             if (d.isFrontFacing)
@@ -34,9 +34,9 @@ public class CameraCapture : MonoBehaviour
                 device = d;
             }
         }
-        foreach(GameObject surface in captureSurfaces)
+        foreach (GameObject surface in captureSurfaces)
         {
-            if(surface.GetComponent<Authenticator>()==null)
+            if (surface.GetComponent<Authenticator>() == null)
             {
                 surface.AddComponent<Authenticator>();
             }
@@ -70,8 +70,9 @@ public class CameraCapture : MonoBehaviour
                 }
             case CameraState2.CHOOSE_NEXT_OBJECT:
                 {
-                    playerDataManager.AddData<Texture2D>(playerDataManager.imagesCaptured, captureSurfaces[i-1].name, capturedTexture);
-                    captureSurfaces[i-1].GetComponent<Authenticator>().isAuthenticated = true;
+                    if (playerDataManager != null)
+                        playerDataManager.AddData<Texture2D>(playerDataManager.imagesCaptured, captureSurfaces[i - 1].name, capturedTexture);
+                    captureSurfaces[i - 1].GetComponent<Authenticator>().isAuthenticated = true;
                     state = CameraState2.START_CAMERA;
                     break;
                 }
@@ -86,7 +87,7 @@ public class CameraCapture : MonoBehaviour
     private WebCamTexture GetWebcamStream(GameObject renderTarget)
     {
         WebCamTexture t = new WebCamTexture(device.name);
-        if(renderTarget.GetComponent<RectTransform>()!=null)
+        if (renderTarget.GetComponent<RectTransform>() != null)
         {
             RawImage r = renderTarget.GetComponent<RawImage>();
             r.texture = t;
@@ -109,18 +110,18 @@ public class CameraCapture : MonoBehaviour
             capturedTexture.Apply();
             webcamTexture.Stop();
             SetPicture(capturedTexture, captureSurfaces[i]);
-            
+
             i++;
         }
     }
 
-    private void SetPicture(Texture2D picture, GameObject surface) 
+    private void SetPicture(Texture2D picture, GameObject surface)
     {
         if (Application.platform == RuntimePlatform.IPhonePlayer)
         {
             surface.transform.Rotate(new Vector3(0, 0, 180));
         }
-        if (surface.GetComponent<RectTransform>()!=null)
+        if (surface.GetComponent<RectTransform>() != null)
         {
             surface.GetComponent<RawImage>().texture = picture as Texture2D;
         }
