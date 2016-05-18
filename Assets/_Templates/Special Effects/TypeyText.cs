@@ -9,10 +9,19 @@ public class TypeyText : MonoBehaviour
     public string textToTypeOut;
     public string DataManagerKey;
     public float textDelay = 0.1f;
+
     private Text body;
+    private GameObject playerDataManager;
+    private PlayerDataManager p;
 
     public void Start()
     {
+        playerDataManager = GameObject.Find("Data Manager");
+        if(playerDataManager!=null)
+        {
+            p = playerDataManager.GetComponent<PlayerDataManager>();
+        }
+
         body = GetComponent<Text>();
         if(textToTypeOut.Length>0)
         {
@@ -38,12 +47,14 @@ public class TypeyText : MonoBehaviour
         body.text = "";
         char[] separators = { ' ' };
         string[] splitText = text.Split(separators);
-        foreach (string x in splitText)
-        {
-            body.text += x+" ";
-            yield return new WaitForSeconds(textDelay);
-            yield return null;
-        }
+        body.text = text;
+        yield return new WaitForSeconds(textDelay * splitText.Length);
+        //foreach (string x in splitText)
+        //{
+        //    body.text += x+" ";
+        //    yield return new WaitForSeconds(textDelay);
+        //    yield return null;
+        //}
 
         GetComponent<Authenticator>().isAuthenticated = true;
         yield return null;

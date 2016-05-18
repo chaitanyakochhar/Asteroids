@@ -39,12 +39,14 @@ public class TypeyText2 : MonoBehaviour
             
             splitText = textToTypeOut[i].Split(separators);
             imagePlaceholder.GetComponent<Image>().sprite = images[i];
-            foreach (string x in splitText)
-            {
-                body.text += x + " ";
-                yield return new WaitForSeconds(textDelay);
-                yield return null;
-            }
+            body.text = textToTypeOut[i];
+            yield return new WaitForSeconds(textDelay * splitText.Length);
+            //foreach (string x in splitText)
+            //{
+            //    body.text += x + " ";
+            //    yield return new WaitForSeconds(textDelay);
+            //    yield return null;
+            //}
             yield return new WaitForSeconds(delays[i]);
         }
         GetComponent<Authenticator>().isAuthenticated = true;

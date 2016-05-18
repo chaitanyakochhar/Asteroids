@@ -10,6 +10,8 @@ public class AnimateOnClick : Effect
     public int animationCount = 1;
     public float animationMultiplier = 1;
     public AudioClip soundToPlay;
+    public AudioClip planetDescription;
+    public float delayBetween = 0f;
 
     private AnimatorStateInfo stateInfo;
     private float animationLength;
@@ -24,7 +26,8 @@ public class AnimateOnClick : Effect
             animator.speed = animationMultiplier;
             if (soundToPlay != null)
             {
-                GetComponent<AudioSource>().PlayOneShot(soundToPlay);
+                AudioClip[] clips = { soundToPlay, planetDescription };
+                StartCoroutine(PlaySoundsInSequenceWithDelay(clips, delayBetween));
             }
             print(animationLength);
             yield return new WaitForSeconds(animationLength * animationCount);
@@ -61,5 +64,17 @@ public class AnimateOnClick : Effect
     public void OnCollisionEnter(Collision collision)
     {
         print("Boom!");
+    }
+
+    private IEnumerator PlaySoundsInSequenceWithDelay(AudioClip[] clips, float interClipDelay)
+    {
+        foreach (AudioClip clip in clips)
+        {
+            if (clip != null)
+            {
+                GetComponent<AudioSource>().PlayOneShot(clip);
+                yield return new WaitForSeconds(interClipDelay);
+            }
+        }
     }
 }
