@@ -2450,7 +2450,6 @@ GameObject:
   - 114: {fileID: 1555060715}
   - 50: {fileID: 1555060719}
   - 61: {fileID: 1555060714}
-  - 114: {fileID: 1555060720}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Player
@@ -2560,20 +2559,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1555060720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1555060713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891ecdae761a34e4c85689367e897fa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 72894884}
-  duration: 3
-  PLAY_ON_START: 0
 --- !u!1 &1661047901
 GameObject:
   m_ObjectHideFlags: 0

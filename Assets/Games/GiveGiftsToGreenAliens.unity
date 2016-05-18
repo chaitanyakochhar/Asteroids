@@ -754,8 +754,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToCheck:
   - {fileID: 1555060713}
+  - {fileID: 1587331113}
   objectsToEnable:
   - {fileID: 1555060713}
+  - {fileID: 1587331113}
+  - {fileID: 0}
   disableObjectsToEnable: 0
   PlayEffects: 1
 --- !u!4 &715664614
@@ -2574,6 +2577,47 @@ MonoBehaviour:
   destination: {fileID: 72894884}
   duration: 3
   PLAY_ON_START: 0
+--- !u!1 &1587331113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1587331115}
+  - 114: {fileID: 1587331114}
+  m_Layer: 0
+  m_Name: DelayTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1587331114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1587331113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c115e8e3f2316a94ea0e5cfc535f4165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delaySeconds: 5
+  sceneToLoad: GreenAlienGoodbye
+--- !u!4 &1587331115
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1587331113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 673.8252, y: 355.3047, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
 --- !u!1 &1661047901
 GameObject:
   m_ObjectHideFlags: 0
