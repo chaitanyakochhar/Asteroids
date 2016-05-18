@@ -4748,7 +4748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
-  sceneToLoad: CalmPurpleAlien
+  sceneToLoad: CollectFlowersForPurpleAlien
 --- !u!114 &573615770
 MonoBehaviour:
   m_ObjectHideFlags: 0
