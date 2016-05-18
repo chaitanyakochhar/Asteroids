@@ -789,6 +789,7 @@ GameObject:
   - 114: {fileID: 82206489}
   - 114: {fileID: 82206488}
   - 114: {fileID: 82206491}
+  - 114: {fileID: 82206492}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -911,6 +912,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
   sceneToLoad: SplashScreen
+--- !u!114 &82206492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82206486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca8d0a0684730d48850672c7156b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  START_EFFECT_ON_PLAY: 1
+  waitTime: 2
+  bounceDuration: 0.3
+  bounceCount: 5
+  bounceAmount: {x: 1.2, y: 1.2, z: 1}
 --- !u!1 &89464443
 GameObject:
   m_ObjectHideFlags: 0
@@ -9317,6 +9334,7 @@ GameObject:
   - 114: {fileID: 1170650807}
   - 114: {fileID: 1170650806}
   - 114: {fileID: 1170650809}
+  - 114: {fileID: 1170650810}
   m_Layer: 5
   m_Name: Earth
   m_TagString: Untagged
@@ -9439,6 +9457,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
   sceneToLoad: RocketLaunch
+--- !u!114 &1170650810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170650804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca8d0a0684730d48850672c7156b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  START_EFFECT_ON_PLAY: 1
+  waitTime: 2
+  bounceDuration: 0.3
+  bounceCount: 5
+  bounceAmount: {x: 1.2, y: 1.2, z: 1}
 --- !u!1 &1192196227
 GameObject:
   m_ObjectHideFlags: 0
@@ -10431,7 +10465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 29b5a66fd98734ad083410ad029c17c1, type: 3}
-  waitTime: 0
+  waitTime: 6
 --- !u!82 &1332972230
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13562,6 +13596,7 @@ GameObject:
   - 114: {fileID: 1738505675}
   - 114: {fileID: 1738505674}
   - 114: {fileID: 1738505677}
+  - 114: {fileID: 1738505678}
   m_Layer: 5
   m_Name: LevelSelect
   m_TagString: Untagged
@@ -13684,6 +13719,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
   sceneToLoad: LevelSelect
+--- !u!114 &1738505678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738505672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca8d0a0684730d48850672c7156b376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  START_EFFECT_ON_PLAY: 1
+  waitTime: 2
+  bounceDuration: 0.3
+  bounceCount: 5
+  bounceAmount: {x: 1.2, y: 1.2, z: 1}
 --- !u!1 &1744678812
 GameObject:
   m_ObjectHideFlags: 0

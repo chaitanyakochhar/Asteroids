@@ -758,7 +758,6 @@ MonoBehaviour:
   objectsToEnable:
   - {fileID: 1555060713}
   - {fileID: 1587331113}
-  - {fileID: 0}
   disableObjectsToEnable: 0
   PlayEffects: 1
 --- !u!4 &715664614
