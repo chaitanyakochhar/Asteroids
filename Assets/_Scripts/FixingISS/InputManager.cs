@@ -123,7 +123,8 @@ namespace FixingISSGame
                     if (hit_mouse.transform.tag == "Instrument")
                     {
                         Touch t = new Touch();
-                        hit_mouse.transform.GetComponent<Item>().Activate(c_mouse, t);
+                        if (hit_mouse.transform.GetComponent<Item>() != null)
+                            hit_mouse.transform.GetComponent<Item>().Activate(c_mouse, t);
                     }
                 }
             }
@@ -134,7 +135,8 @@ namespace FixingISSGame
                     if (hit_mouse.transform.tag == "Instrument")
                     {
                         Touch t = new Touch();
-                        hit_mouse.transform.GetComponent<Item>().Move(Command.createCommandWithoutRaycast(Input.mousePosition), t);
+                        if (hit_mouse.transform.GetComponent<Item>() != null)
+                            hit_mouse.transform.GetComponent<Item>().Move(Command.createCommandWithoutRaycast(Input.mousePosition), t);
                     }
                 }
             }
@@ -144,7 +146,8 @@ namespace FixingISSGame
                 if (c_mouse != null)
                 {
                     Touch t = new Touch();
-                    hit_mouse.transform.GetComponent<Item>().Deactivate(c_mouse, t);
+                    if (hit_mouse.transform.GetComponent<Item>() != null)
+                        hit_mouse.transform.GetComponent<Item>().Deactivate(c_mouse, t);
                 }
             }
 

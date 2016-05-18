@@ -12,6 +12,7 @@ public class Phase
         bool final = true;
         foreach(GameObject obj in EvaluationObjects)
         {
+            if(obj!=null)
             switch(obj.tag)
             {
                 case "Paintable":

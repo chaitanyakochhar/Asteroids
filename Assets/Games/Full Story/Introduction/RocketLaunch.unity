@@ -326,6 +326,7 @@ GameObject:
   - 114: {fileID: 206849256}
   - 82: {fileID: 206849258}
   - 114: {fileID: 206849257}
+  - 114: {fileID: 206849259}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -477,6 +478,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &206849259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 206849253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533c5a417f1f8054cb8577b373d936bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  clip: {fileID: 8300000, guid: 856530711db404e94813dcd77d7a27f8, type: 3}
 --- !u!1 &267658425
 GameObject:
   m_ObjectHideFlags: 0
