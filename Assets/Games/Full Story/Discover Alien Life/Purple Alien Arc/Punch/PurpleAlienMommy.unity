@@ -936,9 +936,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Looks like anger got the best of you\u2026 or were you just trying to see
-    what would happen? Either way, we\u2019re heading back with just a drawing. I
-    wonder if there was something we could\u2019ve done better\u2026"
+  m_Text: 
 --- !u!222 &173797779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -956,7 +954,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: 
+  textToTypeOut: "Looks like anger got the best of you\u2026 or were you just trying
+    to see what would happen? Either way, we\u2019re heading back with just a drawing.
+    I wonder if there was something we could\u2019ve done better\u2026"
   DataManagerKey: 
   textDelay: 0.21
 --- !u!114 &173797781
