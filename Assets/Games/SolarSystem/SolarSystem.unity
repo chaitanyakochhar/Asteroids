@@ -278,6 +278,7 @@ GameObject:
   - 212: {fileID: 59819276}
   - 65: {fileID: 59819278}
   - 82: {fileID: 59819280}
+  - 95: {fileID: 59819281}
   - 114: {fileID: 59819279}
   m_Layer: 0
   m_Name: Earth
@@ -338,7 +339,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5, y: 2.52, z: 0.2}
+  m_Size: {x: 7.4, y: 7.08, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &59819279
 MonoBehaviour:
@@ -348,11 +349,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 59819275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533c5a417f1f8054cb8577b373d936bb, type: 3}
+  m_Script: {fileID: 11500000, guid: e6f1a103c57c62b4784f34089b9e3268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0
-  clip: {fileID: 8300000, guid: b96b32f55f25c4df795affdc6cab2658, type: 3}
+  START_ON_PLAY: 0
+  animationCount: 1
+  animationMultiplier: 1
+  soundToPlay: {fileID: 8300000, guid: b96b32f55f25c4df795affdc6cab2658, type: 3}
+  planetDescription: {fileID: 0}
+  delayBetween: 0
 --- !u!82 &59819280
 AudioSource:
   m_ObjectHideFlags: 0
@@ -427,6 +432,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &59819281
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59819275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &80634599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1048,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   START_EFFECT_ON_START: 1
   initialDelay: 1
-  duration: 10
+  duration: 16
   viewPortStart: 2
   viewPortEnd: 35
   lerpDestination: {fileID: 1956279887}
@@ -1054,6 +1076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IgnoreUI: 1
+  requiresAuthentication: 1
 --- !u!114 &415602272
 MonoBehaviour:
   m_ObjectHideFlags: 0
