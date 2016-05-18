@@ -10,10 +10,14 @@ public class CatchAndStore : MonoBehaviour
     public GameObject spawnPoint;
 
     public int numberOfPlayers = 2;
-    public int itemsToGive = 3;
-    public int itemsCollected = 0;
-
+    private int itemsLeft;
     // Update is called once per frame
+    public void Start()
+    {
+        itemsLeft = GameObject.FindGameObjectsWithTag("Obstacle").Length;
+        StartCoroutine(Authenticate());
+    }
+
     void Update()
     {
         MouseListener();
@@ -62,11 +66,6 @@ public class CatchAndStore : MonoBehaviour
         Carrier carrier = collision.transform.GetComponent<Carrier>();
         if (carrier != null && !carrier.Going)
         {
-            if(carrier.Done)
-            {
-                itemsCollected++;
-                Authenticate();
-            }
             Destroy(collision.gameObject);
             numberOfPlayers++;
         }
@@ -77,21 +76,22 @@ public class CatchAndStore : MonoBehaviour
         Carrier carrier = collision.transform.GetComponent<Carrier>();
         if (carrier != null && !carrier.Going)
         {
-            if (carrier.Done)
-            {
-                itemsCollected++;
-                Authenticate();
-            }
             Destroy(collision.gameObject);
             numberOfPlayers++;
         }
     }
 
-    private void Authenticate()
+    private IEnumerator Authenticate()
     {
-        if (itemsToGive == itemsCollected)
+        while (true)
         {
-            GetComponent<Authenticator>().isAuthenticated = true;
+            itemsLeft = GameObject.FindGameObjectsWithTag("Obstacle").Length;
+
+            if (itemsLeft == 0)
+            {
+                GetComponent<Authenticator>().isAuthenticated = true;
+            }
+            yield return null;
         }
     }
 }

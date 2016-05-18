@@ -18,6 +18,14 @@ public class Carrier : MonoBehaviour
     private void GiveObject(GameObject receiver)
     {
         instancedObject.transform.SetParent(receiver.transform);
+        if(receiver.GetComponent<Collider>()!=null)
+        {
+            receiver.GetComponent<Collider>().enabled = false;
+        }
+        if(receiver.GetComponent<Collider2D>()!=null)
+        {
+            receiver.GetComponent<Collider2D>().enabled = false;
+        }
 
     }
 
