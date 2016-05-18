@@ -5,11 +5,22 @@ public class CrossPlatformInput : MonoBehaviour
 {
 
     public bool IgnoreUI = true;
-
+    public bool requiresAuthentication = true;
     void Update()
     {
-        MouseListener();
-        TouchListener();
+        if (requiresAuthentication)
+        {
+            if (GetComponent<Authenticator>().isAuthenticated)
+            {
+                MouseListener();
+                TouchListener();
+            }
+        }
+        else
+        {
+            MouseListener();
+            TouchListener();
+        }
     }
     
     private void MouseListener()
