@@ -1003,9 +1003,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Oh no! We took too many hits! Quick! Let\u2019s make an emergency landing
-    on that nearby planet! The repairs to the ship will take some time\u2026 Why don\u2019t
-    we go out and explore to pass the time?"
+  m_Text: 
 --- !u!222 &173797779
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1023,7 +1021,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6958cbf11225af54c8d559773791a0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textToTypeOut: 
+  textToTypeOut: "Oh no! We took too many hits! Quick! Let\u2019s make an emergency
+    landing on that nearby planet! The repairs to the ship will take some time\u2026
+    Why don\u2019t we go out and explore to pass the time?"
   DataManagerKey: 
   textDelay: 0.25
 --- !u!114 &173797781

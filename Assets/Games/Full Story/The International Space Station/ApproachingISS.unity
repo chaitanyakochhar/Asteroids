@@ -965,9 +965,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6b422968357119f48a3c3cab629d46c3, type: 3}
   - {fileID: 21300000, guid: ffdc45b0fafff27438ead71081b54573, type: 3}
   delays:
-  - 1
-  - 0
-  - 0
+  - 3
+  - 2
   textDelay: 0.3
 --- !u!114 &173797781
 MonoBehaviour:
@@ -10132,7 +10131,6 @@ MonoBehaviour:
   - {fileID: 173797776}
   objectsToEnable:
   - {fileID: 1446381998}
-  - {fileID: 0}
   disableObjectsToEnable: 1
   PlayEffects: 1
 --- !u!4 &1286002337

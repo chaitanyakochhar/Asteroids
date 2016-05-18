@@ -1633,7 +1633,7 @@ Prefab:
     - target: {fileID: 11449114, guid: f4df1bcf80be5d74b81deeaf9b7796f2, type: 2}
       propertyPath: alertClip
       value: 
-      objectReference: {fileID: 8300000, guid: ec8549abb73873d43b107d2fd1db3774, type: 3}
+      objectReference: {fileID: 8300000, guid: ab405c75308a44db785ce408f8de0aa3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4df1bcf80be5d74b81deeaf9b7796f2, type: 2}
   m_IsPrefabParent: 0
