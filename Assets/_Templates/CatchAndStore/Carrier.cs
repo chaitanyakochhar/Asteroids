@@ -32,6 +32,14 @@ public class Carrier : MonoBehaviour
     private void CollectObject(GameObject takingThis)
     {
         takingThis.transform.SetParent(transform);
+        if (takingThis.GetComponent<Collider>() != null)
+        {
+            takingThis.GetComponent<Collider>().enabled = false;
+        }
+        if (takingThis.GetComponent<Collider2D>() != null)
+        {
+            takingThis.GetComponent<Collider2D>().enabled = false;
+        }
     }
 
     public void OnTriggerEnter(Collider other)
