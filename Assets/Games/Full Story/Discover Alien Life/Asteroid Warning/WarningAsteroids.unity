@@ -1876,6 +1876,7 @@ MonoBehaviour:
   - "Yikes! Sounds dangerous! We\u2019ve come this far, it would be a shame to turn
     back now\u2026 We can try carefully dodging through the asteroids, or we could
     use our lasers to break them up. What do you think team?"
+  - '....'
   images:
   - {fileID: 21300000, guid: ffdc45b0fafff27438ead71081b54573, type: 3}
   - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
@@ -1885,10 +1886,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6bc6dea4efd8f4c438c5c9ab140d775c, type: 3}
   delays:
   - 2
-  - 1
   - 2
   - 2
-  - 2
+  - 3
+  - 4
   - 1
   textDelay: 0.25
 --- !u!114 &173797781
