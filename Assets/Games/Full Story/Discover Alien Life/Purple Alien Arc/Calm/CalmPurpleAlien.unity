@@ -984,11 +984,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f8eac4a041abfdd4f86a6849a864c157, type: 3}
   - {fileID: 21300000, guid: 5f0750528606e034b96d3985cd4db596, type: 3}
   delays:
-  - 2
-  - 2
+  - 2.5
+  - 2.5
   - 3.5
-  - 2
-  - 1
+  - 2.5
+  - 1.5
   textDelay: 0.25
 --- !u!1 &183097554
 GameObject:
@@ -1340,8 +1340,8 @@ RectTransform:
   - {fileID: 573615765}
   - {fileID: 1644798230}
   - {fileID: 853472596}
-  - {fileID: 444177904}
   - {fileID: 417176743}
+  - {fileID: 444177904}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
@@ -2869,7 +2869,7 @@ RectTransform:
   m_LocalScale: {x: 1.7000002, y: 1.7000002, z: 1}
   m_Children: []
   m_Father: {fileID: 222845378}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.264, y: 0.44788086}
   m_AnchorMax: {x: 0.41200003, y: 0.71114594}
   m_AnchoredPosition: {x: -8.5, y: -5.5}
@@ -3206,7 +3206,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22471586, guid: 3f59e483222cbf043a97cd17958e03df, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 22471586, guid: 3f59e483222cbf043a97cd17958e03df, type: 2}
       propertyPath: m_AnchoredPosition.x

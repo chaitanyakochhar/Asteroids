@@ -966,10 +966,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1151281548}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.026367188, y: 0}
-  m_AnchorMax: {x: 0.9795547, y: 1}
-  m_AnchoredPosition: {x: 48, y: 0}
-  m_SizeDelta: {x: -145, y: 0}
+  m_AnchorMin: {x: 0.14442188, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -23, y: 2}
+  m_SizeDelta: {x: -45, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173797778
 MonoBehaviour:
@@ -9371,7 +9371,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.26900002}
-  m_AnchoredPosition: {x: 5, y: 6}
+  m_AnchoredPosition: {x: 5, y: -3}
   m_SizeDelta: {x: 0, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1151281549
@@ -9703,7 +9703,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -67, y: -72}
-  m_SizeDelta: {x: 252.62799, y: 87}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225465967
 MonoBehaviour:
@@ -9818,7 +9818,7 @@ MonoBehaviour:
   waitTime: 2
   bounceDuration: 0.3
   bounceCount: 5
-  bounceAmount: {x: 1.7, y: 1.7, z: 1}
+  bounceAmount: {x: 1.2, y: 1.2, z: 1}
 --- !u!1 &1234166951
 GameObject:
   m_ObjectHideFlags: 0
