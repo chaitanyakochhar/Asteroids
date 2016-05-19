@@ -2810,7 +2810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c115e8e3f2316a94ea0e5cfc535f4165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delaySeconds: 5
+  delaySeconds: 7
   sceneToLoad: GreenAlienGoodbye
 --- !u!4 &1587331115
 Transform:
