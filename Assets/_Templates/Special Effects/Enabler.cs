@@ -28,14 +28,15 @@ public class Enabler : MonoBehaviour
         {
             foreach (GameObject GO in objectsToEnable)
             {
-                if (GO.GetComponent<Button>() != null)
-                {
-                    GO.GetComponent<Button>().interactable = false;
-                }
-                else
-                {
-                    GO.SetActive(false);
-                }
+                if (GO != null)
+                    if (GO.GetComponent<Button>() != null)
+                    {
+                        GO.GetComponent<Button>().interactable = false;
+                    }
+                    else
+                    {
+                        GO.SetActive(false);
+                    }
             }
         }
 
@@ -69,7 +70,7 @@ public class Enabler : MonoBehaviour
                     Effect[] effects = GO.GetComponents<Effect>();
                     if (PlayEffects)
                     {
-                        foreach(Effect e in effects)
+                        foreach (Effect e in effects)
                         {
                             e.StartEffect();
                         }
