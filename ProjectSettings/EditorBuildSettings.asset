@@ -79,3 +79,5 @@ EditorBuildSettings:
     path: Assets/Games/Full Story/Discover Alien Life/WhereIsBleepBlop.unity
   - enabled: 1
     path: Assets/Games/GiveGiftsToGreenAliens.unity
+  - enabled: 1
+    path: Assets/Games/CollectFlowersForPurpleAlien.unity
