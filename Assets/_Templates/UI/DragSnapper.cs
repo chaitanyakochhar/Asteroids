@@ -9,7 +9,7 @@ using UnityEngine.UI;
 /// </summary>
 public class DragSnapper : UIBehaviour, IEndDragHandler, IBeginDragHandler
 {
-    public ScrollRect scrollRect; // the scroll rect to scroll
+    private ScrollRect scrollRect; // the scroll rect to scroll
     public SnapDirection direction; // the direction we are scrolling
     public int itemCount; // how many items we have in our scroll rect
 
@@ -52,6 +52,11 @@ public class DragSnapper : UIBehaviour, IEndDragHandler, IBeginDragHandler
 
             yield return new WaitForEndOfFrame(); // wait until next frame
         }
+    }
+
+    public void Start()
+    {
+        scrollRect = GetComponent<ScrollRect>();
     }
 }
 
