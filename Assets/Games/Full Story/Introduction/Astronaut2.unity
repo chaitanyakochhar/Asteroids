@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7950e81ed7334464daad50cfbe315eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayBeforeLoad: 0
+  delayBeforeLoad: 10
   sceneToLoad: RocketLaunch
 --- !u!114 &384465193
 MonoBehaviour:

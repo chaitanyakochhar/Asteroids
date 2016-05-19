@@ -1567,8 +1567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b53d93c434e914640a907e2cde4ae519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSound: {fileID: 8300000, guid: bf3174f0d7944487b913bcc17299c333, type: 3}
-  offSound: {fileID: 8300000, guid: 2d72d6e0b1c99409f89000be71c3a94a, type: 3}
+  onSound: {fileID: 8300000, guid: 2d72d6e0b1c99409f89000be71c3a94a, type: 3}
+  offSound: {fileID: 8300000, guid: bf3174f0d7944487b913bcc17299c333, type: 3}
 --- !u!82 &1097002338
 AudioSource:
   m_ObjectHideFlags: 0
