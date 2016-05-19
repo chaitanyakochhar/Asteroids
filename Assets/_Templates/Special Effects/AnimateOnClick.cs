@@ -3,7 +3,6 @@ using System.Collections;
 using System;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(AudioSource))]
 public class AnimateOnClick : Effect
 {
     public bool START_ON_PLAY = false;
@@ -72,8 +71,17 @@ public class AnimateOnClick : Effect
         {
             if (clip != null)
             {
-                GetComponent<AudioSource>().PlayOneShot(clip);
-                yield return new WaitForSeconds(interClipDelay);
+                if(Camera.main.GetComponent<AudioSource>()==null)
+                {
+                    Camera.main.transform.gameObject.AddComponent<AudioSource>();
+                }
+                if (Camera.main.GetComponent<AudioSource>().isPlaying)
+                {
+                    Camera.main.GetComponent<AudioSource>().Stop();
+                }
+                Camera.main.GetComponent<AudioSource>().PlayOneShot(clip);
+                yield return new WaitForSeconds(clip.length + interClipDelay);
+                
             }
         }
     }
