@@ -738,7 +738,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1428741431}
   - 114: {fileID: 1428741430}
-  - 114: {fileID: 1428741432}
   m_Layer: 0
   m_Name: Enabler
   m_TagString: Untagged
@@ -775,20 +774,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!114 &1428741432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1428741429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Decision: Purple Alien Picture
-  PushOnStart: 1
-  PushToMixpanel: 1
 --- !u!1001 &1632500237
 Prefab:
   m_ObjectHideFlags: 0
