@@ -28,6 +28,6 @@ public class StartPlayWithDelay : Effect
 
     public override void StopEffect()
     {
-        StopAllCoroutines();
+        GetComponent<AudioSource>().Stop();
     }
 }
