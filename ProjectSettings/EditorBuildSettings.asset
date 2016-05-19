@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/LandingPage.unity
   - enabled: 0
     path: Assets/ExitPage.unity
-  - enabled: 0
-    path: Assets/Games/Full Story/Introduction/ChooseTeams.unity
+  - enabled: 1
+    path: Assets/SplashScreen.unity
   - enabled: 1
     path: Assets/Games/Full Story/Introduction/StartPage.unity
   - enabled: 1
@@ -19,8 +19,6 @@ EditorBuildSettings:
     path: Assets/Games/Full Story/Introduction/Astronaut2.unity
   - enabled: 1
     path: Assets/Games/SolarSystem/SolarSystem.unity
-  - enabled: 1
-    path: Assets/Games/Full Story/Introduction/BlastOff.unity
   - enabled: 1
     path: Assets/Games/Full Story/The International Space Station/ISSIntro.unity
   - enabled: 1
@@ -38,11 +36,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/Full Story/Discover Alien Life/Asteroid Warning/WhyDodging.unity
   - enabled: 1
-    path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Tutorial.unity
-  - enabled: 1
     path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Game.unity
-  - enabled: 1
-    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Tutorial.unity
   - enabled: 1
     path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Game.unity
   - enabled: 1
