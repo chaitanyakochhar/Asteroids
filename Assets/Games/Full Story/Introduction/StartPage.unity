@@ -140,7 +140,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e673138e87f0d42778d32ab5ad335c2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d6dc5b9eda1f41c6917a06676840e91, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -339,7 +339,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 8d6dc5b9eda1f41c6917a06676840e91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e673138e87f0d42778d32ab5ad335c2c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1567,6 +1567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5816ac29dd2ee754dbfadcd52e4b1f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onSound: {fileID: 8300000, guid: bf3174f0d7944487b913bcc17299c333, type: 3}
+  offSound: {fileID: 8300000, guid: 2d72d6e0b1c99409f89000be71c3a94a, type: 3}
 --- !u!82 &1097002338
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2350,6 +2352,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5816ac29dd2ee754dbfadcd52e4b1f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onSound: {fileID: 0}
+  offSound: {fileID: 0}
 --- !u!82 &1481436550
 AudioSource:
   m_ObjectHideFlags: 0

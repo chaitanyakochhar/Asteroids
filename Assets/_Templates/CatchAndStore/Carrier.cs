@@ -11,7 +11,6 @@ public class Carrier : MonoBehaviour
 
     public GameObject givingThis { get; set; }
     public Vector3 startPoint { get; set; }
-    private Vector3 destination;
     private GameObject instancedObject;
     private float oneWayDuration;
 

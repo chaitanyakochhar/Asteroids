@@ -32,6 +32,10 @@ public class Listener : MonoBehaviour
                 bool result = Evaluate(currentPhase);
                 if (result)
                 {
+                    if (GetComponent<AudioSource>().isPlaying)
+                    {
+                        GetComponent<AudioSource>().Stop();
+                    }
                     GetComponent<AudioSource>().PlayOneShot(passSound);
                     currentPhase++;
                 }

@@ -8,10 +8,7 @@ namespace FixingISSGame
     {
         private GameObject[] ItemGOs;
         private List<Item> items;
-
-        private RaycastHit hit_touch;
-        private Command c_touch;
-
+        
         private RaycastHit hit_mouse;
         private Command c_mouse;
 
