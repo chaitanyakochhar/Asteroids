@@ -72,10 +72,11 @@ public class AudioCapture : MonoBehaviour
 
     public void PlayRecording(string key)
     {
-        if (playerDataManager.audioCaptured.TryGetValue(key, out clip))
-        {
-            source.PlayOneShot(clip);
-        }
+        if (playerDataManager != null)
+            if (playerDataManager.audioCaptured.TryGetValue(key, out clip))
+            {
+                source.PlayOneShot(clip);
+            }
     }
 
     private IEnumerator getPermission()
