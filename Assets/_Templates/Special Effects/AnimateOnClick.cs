@@ -67,22 +67,35 @@ public class AnimateOnClick : Effect
 
     private IEnumerator PlaySoundsInSequenceWithDelay(AudioClip[] clips, float interClipDelay)
     {
-        foreach (AudioClip clip in clips)
+        AudioSource[] sources = Camera.main.GetComponents<AudioSource>();
+        if (sources[0].isPlaying)
         {
-            if (clip != null)
-            {
-                if(Camera.main.GetComponent<AudioSource>()==null)
-                {
-                    Camera.main.transform.gameObject.AddComponent<AudioSource>();
-                }
-                if (Camera.main.GetComponent<AudioSource>().isPlaying)
-                {
-                    Camera.main.GetComponent<AudioSource>().Stop();
-                }
-                Camera.main.GetComponent<AudioSource>().PlayOneShot(clip);
-                yield return new WaitForSeconds(clip.length + interClipDelay);
-                
-            }
+            sources[0].Stop();
         }
+        if (sources[1].isPlaying)
+        {
+            sources[1].Stop();
+        }
+        if (soundToPlay != null)
+        {
+            sources[0].PlayOneShot(soundToPlay);
+        }
+        if (planetDescription != null)
+        {
+            sources[1].PlayOneShot(planetDescription);
+        }
+        //if(Camera.main.GetComponent<AudioSource>()==null)
+        //{
+        //    Camera.main.transform.gameObject.AddComponent<AudioSource>();
+        //}
+        //if (Camera.main.GetComponent<AudioSource>().isPlaying)
+        //{
+        //    Camera.main.GetComponent<AudioSource>().Stop();
+        //}
+        //Camera.main.GetComponent<AudioSource>().PlayOneShot(clip);
+        yield return null;
+
+
     }
 }
+
