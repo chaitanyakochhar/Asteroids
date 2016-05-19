@@ -32,7 +32,8 @@ namespace FixingISSGame
                         i.result = true;
                     }
                     //i.CallbackSmartyPalNativeApp(i.gameName, i.result);
-                    SceneManager.LoadScene(nextScene);
+                    if (nextScene.Length > 0)
+                        SceneManager.LoadScene(nextScene);
                 }
                 else
                 {
@@ -62,7 +63,7 @@ namespace FixingISSGame
 
             startTime = Time.time;
             diff = Time.time - startTime;
-            while(diff <= duration)
+            while (diff <= duration)
             {
                 obj.transform.position = Vector3.Lerp(via, endPos, diff / duration);
                 diff = Time.time - startTime;

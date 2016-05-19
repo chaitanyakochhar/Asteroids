@@ -1543,7 +1543,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1097002337}
-        m_MethodName: ToggleListener
+        m_MethodName: set_enabled
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1097002334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5816ac29dd2ee754dbfadcd52e4b1f03, type: 3}
+  m_Script: {fileID: 11500000, guid: b53d93c434e914640a907e2cde4ae519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onSound: {fileID: 8300000, guid: bf3174f0d7944487b913bcc17299c333, type: 3}
@@ -2327,7 +2327,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1481436549}
+      - m_Target: {fileID: 0}
         m_MethodName: ToggleListener
         m_Mode: 0
         m_Arguments:
@@ -2349,11 +2349,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1481436546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5816ac29dd2ee754dbfadcd52e4b1f03, type: 3}
+  m_Script: {fileID: 11500000, guid: b53d93c434e914640a907e2cde4ae519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onSound: {fileID: 0}
-  offSound: {fileID: 0}
+  onSound: {fileID: 8300000, guid: bf2b1ef44fd624f47969eb42a26e8e4d, type: 3}
+  offSound: {fileID: 8300000, guid: 5b7168bff06c243d1ad380b0406771a5, type: 3}
 --- !u!82 &1481436550
 AudioSource:
   m_ObjectHideFlags: 0
