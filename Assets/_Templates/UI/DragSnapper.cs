@@ -16,14 +16,6 @@ public class DragSnapper : UIBehaviour, IEndDragHandler, IBeginDragHandler
     public AnimationCurve curve = AnimationCurve.Linear(0f, 0f, 1f, 1f); // a curve for transitioning in order to give it a little bit of extra polish
     public float speed; // the speed in which we snap ( normalized position per second? )
 
-    protected override void Reset()
-    {
-        base.Reset();
-
-        if (scrollRect == null) // if we are resetting or attaching our script, try and find a scroll rect for convenience 
-            scrollRect = GetComponent<ScrollRect>();
-    }
-
     public void OnBeginDrag(PointerEventData eventData)
     {
         StopCoroutine(SnapRect()); // if we are snapping, stop for the next input
