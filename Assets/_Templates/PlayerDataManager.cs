@@ -93,6 +93,11 @@ public class PlayerDataManager : MonoBehaviour
     {
         Mixpanel.SendEvent(eventName);
     }
+
+    public void PushToMixPanel(string eventName, Dictionary<string,object> properties)
+    {
+        Mixpanel.SendEvent(eventName, properties);
+    }
     #endregion
 
 }

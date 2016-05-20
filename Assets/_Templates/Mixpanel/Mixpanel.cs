@@ -32,7 +32,7 @@ public static class Mixpanel
 	// Call this to send an event to Mixpanel.
 	// eventName: The name of the event. (Can be anything you'd like.)
 	// properties: A dictionary containing any properties in addition to those in the Mixpanel.SuperProperties dictionary.
-	public static void SendEvent(string eventName, IDictionary<string, object> properties)
+	public static void SendEvent(string eventName, Dictionary<string, object> properties)
 	{
 		if(string.IsNullOrEmpty(Token))
 		{
@@ -50,7 +50,9 @@ public static class Mixpanel
 		Dictionary<string, object> propsDict = new Dictionary<string, object>();
 		propsDict.Add("distinct_id", DistinctID);
 		propsDict.Add("token", Token);
-		foreach(var kvp in SuperProperties)
+
+        #region Add super-properties to Properties Dictionary
+        foreach(var kvp in SuperProperties)
 		{
 			if(kvp.Value is float) // LitJSON doesn't support floats.
 			{
@@ -63,7 +65,10 @@ public static class Mixpanel
 				propsDict.Add(kvp.Key, kvp.Value);
 			}
 		}
-		if(properties != null)
+        #endregion
+
+        #region Add passed-in properties to Properties Dictionary
+        if(properties != null)
 		{
 			foreach(var kvp in properties)
 			{
@@ -79,7 +84,10 @@ public static class Mixpanel
 				}
 			}
 		}
-		Dictionary<string, object> jsonDict = new Dictionary<string, object>();
+        #endregion
+
+        #region convert all the params to string, create a URL and push
+        Dictionary<string, object> jsonDict = new Dictionary<string, object>();
 		jsonDict.Add("event", eventName);
 		jsonDict.Add("properties", propsDict);
 		string jsonStr = JsonMapper.ToJson(jsonDict);
@@ -87,7 +95,9 @@ public static class Mixpanel
 			Debug.Log("Sending mixpanel event: " + jsonStr);
 		string jsonStr64 = EncodeTo64(jsonStr);
 		string url = string.Format(API_URL_FORMAT, jsonStr64);
-		StartCoroutine(SendEventCoroutine(url));
+        #endregion
+        
+        StartCoroutine(SendEventCoroutine(url));
 	}
 
 	private static string EncodeTo64(string toEncode)
