@@ -2281,7 +2281,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11459160, guid: a43526b8133b8744eb2edc5148965287, type: 2}
       propertyPath: key
-      value: Pilot Picture
+      value: Scientist Picture
       objectReference: {fileID: 0}
     - target: {fileID: 22441918, guid: a43526b8133b8744eb2edc5148965287, type: 2}
       propertyPath: m_LocalScale.x
