@@ -2295,6 +2295,10 @@ Prefab:
       propertyPath: m_Name
       value: Pic Holder (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11403764, guid: a43526b8133b8744eb2edc5148965287, type: 2}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a43526b8133b8744eb2edc5148965287, type: 2}
   m_IsPrefabParent: 0
