@@ -45,7 +45,7 @@ public class UIUpdater : MonoBehaviour
             Arrow1.GetComponent<SpriteRenderer>().enabled = false;
             Arrow1.GetComponent<BoxCollider>().enabled = false;
         }
-        if(Arrow2 != null)
+        if (Arrow2 != null)
         {
             Arrow2.GetComponent<SpriteRenderer>().enabled = false;
             Arrow2.GetComponent<BoxCollider>().enabled = false;
@@ -76,14 +76,21 @@ public class UIUpdater : MonoBehaviour
         lifeStart++;
         if (lifeStart >= lifeCount)
         {
-            print("BOOM! from death");
+            if (FindObjectOfType<DecisionTracker>() != null)
+            {
+                FindObjectOfType<DecisionTracker>().MixPanelParameters.Add("Success", false.ToString());
+                FindObjectOfType<DecisionTracker>().StartEffect();
+            }
+                print("BOOM! from death");
             if (GameObject.Find("Manager") != null)
             {
                 GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = false;
                 //InterAppCommunicationManager.result = true;
 
             }
-            SceneManager.LoadScene(gameOverLevel);
+            
+            StartCoroutine(loadNextLevel());
+
         }
     }
 
@@ -132,4 +139,9 @@ public class UIUpdater : MonoBehaviour
         return images.ToArray();
     }
 
+    private IEnumerator loadNextLevel()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(gameOverLevel);
+    }
 }

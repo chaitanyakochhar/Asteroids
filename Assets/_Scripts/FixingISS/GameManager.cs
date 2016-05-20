@@ -33,7 +33,15 @@ namespace FixingISSGame
                     }
                     //i.CallbackSmartyPalNativeApp(i.gameName, i.result);
                     if (nextScene.Length > 0)
-                        SceneManager.LoadScene(nextScene);
+                    {
+                        DecisionTracker d = FindObjectOfType<DecisionTracker>();
+                        if (d != null)
+                        {
+                            d.MixPanelParameters.Add("Success", true.ToString());
+                            d.StartEffect();
+                        }
+                        StartCoroutine(loadNextLevel(nextScene));
+                    }
                 }
                 else
                 {
@@ -74,5 +82,13 @@ namespace FixingISSGame
             yield return null;
         }
 
+        private IEnumerator loadNextLevel(string nextScene)
+        {
+            yield return new WaitForSeconds(1);
+            SceneManager.LoadScene(nextScene);
+        }
+
     }
+
+
 }

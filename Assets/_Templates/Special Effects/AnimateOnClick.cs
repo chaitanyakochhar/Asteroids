@@ -49,6 +49,11 @@ public class AnimateOnClick : Effect
     // Use this for initialization
     void Start()
     {
+        DecisionTracker d = FindObjectOfType<DecisionTracker>();
+        if (d != null)
+        {
+            d.MixPanelParameters.Add(name, false.ToString());
+        }
         if (START_ON_PLAY)
         {
             StartEffect();
@@ -67,6 +72,12 @@ public class AnimateOnClick : Effect
 
     private IEnumerator PlaySoundsInSequenceWithDelay(AudioClip[] clips, float interClipDelay)
     {
+        DecisionTracker d = FindObjectOfType<DecisionTracker>();
+        if(d!=null)
+        {
+            d.MixPanelParameters.Add(name, true.ToString());
+        }
+
         AudioSource[] sources = Camera.main.GetComponents<AudioSource>();
         if (sources[0].isPlaying)
         {

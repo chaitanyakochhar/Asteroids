@@ -841,6 +841,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &616809247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 616809249}
+  - 114: {fileID: 616809248}
+  m_Layer: 0
+  m_Name: Mixpanel Tracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &616809248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616809247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: Collect Flowers For Aliens
+  MixPanelParameters:
+    items: []
+  PushOnStart: 0
+  stateOfObjects:
+  - Key: Success
+    Object: {fileID: 1555060713}
+--- !u!4 &616809249
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616809247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.99994, y: 214.49997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
 --- !u!1 &715664612
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +922,7 @@ MonoBehaviour:
   - {fileID: 1555060713}
   - {fileID: 1107486746}
   - {fileID: 17646101}
+  - {fileID: 616809247}
   disableObjectsToEnable: 0
   PlayEffects: 1
 --- !u!4 &715664614
@@ -2807,6 +2854,50 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1624560053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1624560055}
+  - 114: {fileID: 1624560054}
+  m_Layer: 0
+  m_Name: Mixpanel Tracker 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1624560054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1624560053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: Calm Purple Alien
+  MixPanelParameters:
+    items: []
+  PushOnStart: 1
+  stateOfObjects: []
+--- !u!4 &1624560055
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1624560053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.99994, y: 214.49997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
 --- !u!1 &1661047901
 GameObject:
   m_ObjectHideFlags: 0

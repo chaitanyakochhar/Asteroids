@@ -9,12 +9,16 @@ public class Goal : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        
         if (other.tag == "Player" && GameObject.Find("UI").GetComponent<UIUpdater>().alienStart == 3)
         {
-            if (GameObject.Find("Manager") != null)
-                GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = true;
-            //InterAppCommunicationManager.result = true;
-            SceneManager.LoadScene(nextLevel);
+            DecisionTracker d = FindObjectOfType<DecisionTracker>();
+            if (d != null)
+            {
+                d.MixPanelParameters.Add("Success", true.ToString());
+                d.StartEffect();
+            }        
+            StartCoroutine(loadNextLevel());
         }
         else
         {
@@ -31,7 +35,19 @@ public class Goal : MonoBehaviour
             if (GameObject.Find("Manager") != null)
                 GameObject.Find("Manager").GetComponent<InterAppCommunicationManager>().result = true;
             //InterAppCommunicationManager.result = true;
-            SceneManager.LoadScene(nextLevel);
+            DecisionTracker d = FindObjectOfType<DecisionTracker>();
+            if (d != null)
+            {
+                d.MixPanelParameters.Add("Success", true.ToString());
+                d.StartEffect();
+            }
+            StartCoroutine(loadNextLevel());
         }
+    }
+
+    private IEnumerator loadNextLevel()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(nextLevel);
     }
 }

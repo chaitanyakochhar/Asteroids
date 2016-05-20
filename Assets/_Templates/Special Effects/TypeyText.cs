@@ -11,17 +11,9 @@ public class TypeyText : MonoBehaviour
     public float textDelay = 0.1f;
 
     private Text body;
-    private GameObject playerDataManager;
-    private PlayerDataManager p;
 
     public void Start()
     {
-        playerDataManager = GameObject.Find("Data Manager");
-        if(playerDataManager!=null)
-        {
-            p = playerDataManager.GetComponent<PlayerDataManager>();
-        }
-
         body = GetComponent<Text>();
         if(textToTypeOut.Length>0)
         {

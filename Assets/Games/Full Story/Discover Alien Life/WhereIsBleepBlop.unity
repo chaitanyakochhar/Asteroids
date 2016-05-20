@@ -1368,6 +1368,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1312898874}
+--- !u!1 &1324146224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1324146226}
+  - 114: {fileID: 1324146225}
+  m_Layer: 0
+  m_Name: Mixpanel Tracker 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1324146225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324146224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: Find Bleep Blop
+  MixPanelParameters:
+    items: []
+  PushOnStart: 0
+  stateOfObjects:
+  - Key: Success
+    Object: {fileID: 2004263364}
+--- !u!4 &1324146226
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1324146224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.99994, y: 214.49997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &1352413125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,6 +1445,7 @@ MonoBehaviour:
   - {fileID: 2004263364}
   objectsToEnable:
   - {fileID: 378870094}
+  - {fileID: 1324146224}
   disableObjectsToEnable: 1
   PlayEffects: 1
 --- !u!4 &1352413127
@@ -2234,6 +2281,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   center: {fileID: 1914132228}
+--- !u!1 &1980636388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1980636390}
+  - 114: {fileID: 1980636389}
+  m_Layer: 0
+  m_Name: Mixpanel Tracker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1980636389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980636388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName: Discover Alien Life
+  MixPanelParameters:
+    items: []
+  PushOnStart: 1
+  stateOfObjects: []
+--- !u!4 &1980636390
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1980636388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 285.99994, y: 214.49997, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1 &2004263364
 GameObject:
   m_ObjectHideFlags: 0

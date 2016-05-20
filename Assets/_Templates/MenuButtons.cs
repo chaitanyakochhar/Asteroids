@@ -27,7 +27,7 @@ public class MenuButtons : MonoBehaviour
                     foreach (AudioSource source in sources)
                     {
                         source.mute = true;
-                        DialogueButtonReference.GetComponent<Image>().sprite = DialogueOffButton.GetComponent<SpriteRenderer>().sprite;
+                        DialogueButtonReference.GetComponent<Image>().sprite = DialogueOnButton.GetComponent<SpriteRenderer>().sprite;
                     }
                 }
             }

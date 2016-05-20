@@ -1,22 +1,28 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using UnityEngine.SceneManagement;
 
 public class PlayerDataManager : MonoBehaviour
 {
     //Used as distinct ID
+    public string StoryID = "Space Story";
     public string MixpanelDistinctID;
     private string Token = "729533d8e11764068581e40573913081";
+    private Stopwatch s;
+
 
     public Dictionary<string, string> textCaptured { get; private set; }
     public Dictionary<string, AudioClip> audioCaptured { get; private set; }
     public Dictionary<string, Texture2D> imagesCaptured { get; private set; }
     public List<string> decisions;
     public bool readByYourself = false;
+    public LocationInfo locationInfo { get; set; }
 
     // Use this for initialization
     void Start()
     {
-
         GUIDInit();
 
         textCaptured = new Dictionary<string, string>();
@@ -36,7 +42,7 @@ public class PlayerDataManager : MonoBehaviour
         readByYourself = !readByYourself;
     }
     #endregion
-    
+
     #region Capturing PlayerData Information
     public void AddData<T>(Dictionary<string, T> dictionary, string key, T value)
     {
@@ -53,10 +59,10 @@ public class PlayerDataManager : MonoBehaviour
         }
     }
 
-    public bool GetData<T>(Dictionary<string,T> dictionary, string key, out T value)
+    public bool GetData<T>(Dictionary<string, T> dictionary, string key, out T value)
     {
         bool isDataPresent = dictionary.TryGetValue(key, out value);
-        if(isDataPresent)
+        if (isDataPresent)
         {
             return true;
         }
@@ -94,10 +100,47 @@ public class PlayerDataManager : MonoBehaviour
         Mixpanel.SendEvent(eventName);
     }
 
-    public void PushToMixPanel(string eventName, Dictionary<string,object> properties)
+    public void PushToMixPanel(string eventName, Dictionary<string, object> properties)
     {
         Mixpanel.SendEvent(eventName, properties);
     }
+
+
     #endregion
 
+    #region Session Tracking
+
+    #endregion
+
+    public void OnApplicationFocus(bool focus)
+    {
+        Dictionary<string, object> d = new Dictionary<string, object>();
+        if (focus)
+        {
+            if (s == null)
+            {
+                s = new Stopwatch();
+                GUIDInit();
+            }
+            
+            s.Start();
+            d.Add("Platform", Application.platform.ToString());
+            d.Add("Is Mobile Platform", Application.isMobilePlatform.ToString());
+            d.Add("Resolution", Screen.width + "x" + Screen.height);
+            Mixpanel.SendEvent("Session Start", d);
+
+
+        }
+        else
+        {
+            s.Stop();
+            d.Clear();
+            d.Add("Platform", Application.platform.ToString());
+            d.Add("Is Mobile Platform", Application.isMobilePlatform.ToString());
+            d.Add("Resolution", Screen.width + "x" + Screen.height);
+            d.Add("Exit Scene", SceneManager.GetActiveScene().name);
+            d.Add("Duration", (s.ElapsedMilliseconds / 1000));
+            Mixpanel.SendEvent("Session End", d);
+        }
+    }
 }

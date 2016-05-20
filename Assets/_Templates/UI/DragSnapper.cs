@@ -13,7 +13,7 @@ public class DragSnapper : UIBehaviour, IEndDragHandler, IBeginDragHandler
     public SnapDirection direction; // the direction we are scrolling
     public int itemCount; // how many items we have in our scroll rect
 
-    public AnimationCurve curve = AnimationCurve.Linear(0f, 0f, 1f, 1f); // a curve for transitioning in order to give it a little bit of extra polish
+    public AnimationCurve curve = AnimationCurve.Linear(0f, 0f, 2f, 2f); // a curve for transitioning in order to give it a little bit of extra polish
     public float speed; // the speed in which we snap ( normalized position per second? )
 
     public void OnBeginDrag(PointerEventData eventData)
