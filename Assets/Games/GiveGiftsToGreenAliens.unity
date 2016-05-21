@@ -1669,9 +1669,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventName: Give Gifts to Aliens
+  EventName: Game Started
   MixPanelParameters:
-    items: []
+    items:
+    - Key: Name
+      Value: Give Gifts to Aliens
   PushOnStart: 0
   stateOfObjects:
   - Key: Success

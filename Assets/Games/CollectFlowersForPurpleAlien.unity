@@ -868,9 +868,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventName: Collect Flowers For Aliens
+  EventName: Game Started
   MixPanelParameters:
-    items: []
+    items:
+    - Key: Name
+      Value: Collect Flowers for Alien
   PushOnStart: 0
   stateOfObjects:
   - Key: Success
@@ -2881,9 +2883,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventName: Calm Purple Alien
+  EventName: Choice Made
   MixPanelParameters:
-    items: []
+    items:
+    - Key: Name
+      Value: Calm Purple Alien
   PushOnStart: 1
   stateOfObjects: []
 --- !u!4 &1624560055

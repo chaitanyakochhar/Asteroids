@@ -1395,9 +1395,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventName: Find Bleep Blop
+  EventName: Game Started
   MixPanelParameters:
-    items: []
+    items:
+    - Key: Name
+      Value: Where is Bleep Blop
   PushOnStart: 0
   stateOfObjects:
   - Key: Success
@@ -2308,9 +2310,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef9fd6ab11995a4cb8845b0d3d54e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventName: Discover Alien Life
+  EventName: Choice Made
   MixPanelParameters:
-    items: []
+    items:
+    - Key: Name
+      Value: Discover Alien Life
   PushOnStart: 1
   stateOfObjects: []
 --- !u!4 &1980636390
