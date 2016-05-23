@@ -108,7 +108,7 @@ public class TypeyText2 : MonoBehaviour
         {
             DownButton.interactable = false;
         }
-        if(currentText == 0)
+        if(currentText == minText)
         {
             UpButton.interactable = false;
         }

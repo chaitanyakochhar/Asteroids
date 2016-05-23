@@ -38,9 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/DodgeAsteroids/Scenes/Levels/DodgingAsteroid_Game.unity
   - enabled: 1
-    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Game.unity
-  - enabled: 1
     path: Assets/Games/Full Story/Discover Alien Life/Shooting/ShootFail.unity
+  - enabled: 1
+    path: Assets/Games/2DSpaceShooter/Scenes/ShootingAsteroid_Game.unity
   - enabled: 1
     path: Assets/Games/Full Story/Discover Alien Life/Green Alien Arc/GreenAlienGoodbye.unity
   - enabled: 1
