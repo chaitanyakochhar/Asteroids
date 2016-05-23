@@ -78,6 +78,26 @@ public class PlayerDataManager : MonoBehaviour
     }
     #endregion
 
+    public void ClearDictionaries(bool images = false, bool text = true, bool audio = true, bool decisionsMade = true)
+    {
+        if(images)
+        {
+            imagesCaptured.Clear();
+        }
+        if(text)
+        {
+            textCaptured.Clear();
+        }
+        if(audio)
+        {
+            audioCaptured.Clear();
+        }
+        if(decisionsMade)
+        {
+            decisions.Clear();
+        }
+    }
+
     #region MixPanel Calls
     private void GUIDInit()
     {

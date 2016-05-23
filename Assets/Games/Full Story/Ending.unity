@@ -911,6 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
+  clearPlayerDataManager: 1
   sceneToLoad: SplashScreen
 --- !u!114 &82206492
 MonoBehaviour:
@@ -9502,6 +9503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
+  clearPlayerDataManager: 1
   sceneToLoad: RocketLaunch
 --- !u!114 &1170650810
 MonoBehaviour:
@@ -13764,6 +13766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
+  clearPlayerDataManager: 1
   sceneToLoad: LevelSelect
 --- !u!114 &1738505678
 MonoBehaviour:
