@@ -173,6 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: b4a40705f8eb84115ab4afd4f972015d, type: 3}
+  stopTheseAudioSources:
+  - {fileID: 391815440}
 --- !u!82 &47565270
 AudioSource:
   m_ObjectHideFlags: 0
@@ -464,6 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 10
+  clearPlayerDataManager: 0
   sceneToLoad: RocketLaunch
 --- !u!114 &384465193
 MonoBehaviour:
@@ -524,6 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 3d8c979cca07c4ad2a514246f66e9477, type: 3}
   waitTime: 1
+  stopTheseSounds: []
 --- !u!82 &391815442
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1019,6 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 0
+  clearPlayerDataManager: 0
   sceneToLoad: Astronaut2
 --- !u!114 &990731470
 MonoBehaviour:

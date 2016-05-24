@@ -182,6 +182,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: 5137b19e03c45488b95b0fba577e9cbc, type: 3}
+  stopTheseAudioSources:
+  - {fileID: 1631175553}
+  - {fileID: 799324943}
+  - {fileID: 667524464}
+  - {fileID: 1762292238}
 --- !u!82 &59133102
 AudioSource:
   m_ObjectHideFlags: 0
@@ -774,6 +779,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: d694cbb5a65354c9984fe9c49948225b, type: 3}
+  stopTheseAudioSources:
+  - {fileID: 799324943}
+  - {fileID: 1631175553}
+  - {fileID: 59133100}
+  - {fileID: 1762292238}
 --- !u!82 &667524466
 AudioSource:
   m_ObjectHideFlags: 0
@@ -957,6 +967,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 69a38b8a926184cf18693a3f221d11f1, type: 3}
   waitTime: 0
+  stopTheseSounds:
+  - {fileID: 667524464}
+  - {fileID: 59133100}
+  - {fileID: 1762292238}
+  - {fileID: 1631175553}
 --- !u!82 &799324945
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1737,6 +1752,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: 2ae0f3a3b22be48f591615228aba1d96, type: 3}
+  stopTheseAudioSources:
+  - {fileID: 799324943}
+  - {fileID: 59133100}
+  - {fileID: 1762292238}
+  - {fileID: 667524464}
 --- !u!82 &1631175555
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1853,6 +1873,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: 74c87a09486294983adbf79645914269, type: 3}
+  stopTheseAudioSources:
+  - {fileID: 799324943}
+  - {fileID: 1631175553}
+  - {fileID: 59133100}
+  - {fileID: 667524464}
 --- !u!82 &1762292240
 AudioSource:
   m_ObjectHideFlags: 0
