@@ -23,11 +23,12 @@ public class OnTriggerEnterPlay : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(clip);
         }
-        yield return new WaitForSeconds(clip.length);
+        
         if(!playEveryTime)
         {
             this.enabled = false;
         }
+        yield return new WaitForSeconds(clip.length);
         yield return null;
     }
 }

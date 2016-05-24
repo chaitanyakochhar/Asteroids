@@ -8,6 +8,7 @@ public class StartPlayWithDelay : Effect
 
     public AudioClip clip;
     public float waitTime = 1f;
+    public GameObject[] stopTheseSounds;
 
     public void Start()
     {
@@ -18,6 +19,13 @@ public class StartPlayWithDelay : Effect
     {
         yield return new WaitForSeconds(waitTime);
         GetComponent<AudioSource>().PlayOneShot(clip);
+        foreach(GameObject GO in stopTheseSounds)
+        {
+            if(GO!=null && GO.GetComponent<AudioSource>() != null)
+            {
+                GO.GetComponent<AudioSource>().Stop();
+            }
+        }
         yield return null;
     }
 

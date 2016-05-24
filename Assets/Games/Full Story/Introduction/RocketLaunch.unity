@@ -404,6 +404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: 2efde2fdc6e27483d9eebdc62f924a9f, type: 3}
+  stopTheseAudioSources:
+  - {fileID: 954515345}
 --- !u!82 &206849258
 AudioSource:
   m_ObjectHideFlags: 0
@@ -491,6 +493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: 856530711db404e94813dcd77d7a27f8, type: 3}
+  stopTheseAudioSources: []
 --- !u!1 &267658425
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +978,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 20eb3e3ec7c2b4d5a92f664fc377aef2, type: 3}
-  waitTime: 1
+  waitTime: 0
+  stopTheseSounds: []
 --- !u!82 &954515347
 AudioSource:
   m_ObjectHideFlags: 0
