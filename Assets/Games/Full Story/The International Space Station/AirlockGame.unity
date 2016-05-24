@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EvaluateInSequence: 0
-  passSound: {fileID: 8300000, guid: 9084b367512b4c0429c75565de1ad280, type: 3}
+  passSound: {fileID: 8300000, guid: c9494882ad9d84860b9d3eff13682d6c, type: 3}
   failSound: {fileID: 8300000, guid: 00c75978c1d084cfe8acd484e70fea68, type: 3}
   phases:
   - correctObjects:
@@ -1111,6 +1111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 923312a46150c4c32b296e761d3bec84, type: 3}
   waitTime: 1
+  stopTheseSounds: []
 --- !u!82 &979111831
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1227,6 +1228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 0
   clip: {fileID: 8300000, guid: 589f1ff04f8b44f679718df6f9d1a9f4, type: 3}
+  stopTheseAudioSources: []
 --- !u!82 &1005911252
 AudioSource:
   m_ObjectHideFlags: 0

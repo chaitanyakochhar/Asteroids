@@ -19,13 +19,14 @@ public class StartPlayWithDelay : Effect
     {
         yield return new WaitForSeconds(waitTime);
         GetComponent<AudioSource>().PlayOneShot(clip);
-        foreach(GameObject GO in stopTheseSounds)
-        {
-            if(GO!=null && GO.GetComponent<AudioSource>() != null)
+        if (stopTheseSounds.Length > 0)
+            foreach (GameObject GO in stopTheseSounds)
             {
-                GO.GetComponent<AudioSource>().Stop();
+                if (GO != null && GO.GetComponent<AudioSource>() != null)
+                {
+                    GO.GetComponent<AudioSource>().Stop();
+                }
             }
-        }
         yield return null;
     }
 
