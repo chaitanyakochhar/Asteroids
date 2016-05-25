@@ -9447,6 +9447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayBeforeLoad: 1
+  clearPlayerDataManager: 0
   sceneToLoad: ApproachingISS
 --- !u!114 &1225465971
 MonoBehaviour:
@@ -13587,6 +13588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 2fc54645489c941079847b1e85c7a1c0, type: 3}
   waitTime: 0
+  stopTheseSounds: []
 --- !u!82 &1804764632
 AudioSource:
   m_ObjectHideFlags: 0
