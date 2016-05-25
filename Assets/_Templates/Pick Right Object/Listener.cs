@@ -11,6 +11,7 @@ public class Listener : MonoBehaviour
     public AudioClip passSound;
     public AudioClip failSound;
     public PickObjectPhase[] phases;
+    public GameObject[] stopTheseAudioSources;
 
     private List<PickableObject> objectsPicked;
     private int currentPhase = 0;
@@ -32,6 +33,7 @@ public class Listener : MonoBehaviour
                 bool result = Evaluate(currentPhase);
                 if (result)
                 {
+                    StopTheseSounds();
                     if (GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().Stop();
@@ -41,6 +43,7 @@ public class Listener : MonoBehaviour
                 }
                 else
                 {
+                    StopTheseSounds();
                     if (!GetComponent<AudioSource>().isPlaying)
                     {
                         GetComponent<AudioSource>().PlayOneShot(failSound);
@@ -118,5 +121,16 @@ public class Listener : MonoBehaviour
             pickedObj.Reset();
         }
         objectsPicked.Clear();
+    }
+
+    private void StopTheseSounds()
+    {
+        foreach (GameObject GO in stopTheseAudioSources)
+        {
+            if (GO != null && GO.GetComponent<AudioSource>() != null)
+            {
+                GO.GetComponent<AudioSource>().Stop();
+            }
+        }
     }
 }

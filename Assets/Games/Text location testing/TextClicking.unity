@@ -299,8 +299,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is a public service announcement. I am about to declare war on the
-    South of Mordor.
+  m_Text: This is a public service announcement I am about to declare war on the South
+    of Mordor.
 --- !u!222 &490176246
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -315,10 +315,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 490176243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beba5fa244a5adb4a92cc3e92702394a, type: 3}
+  m_Script: {fileID: 11500000, guid: 34384bb7bb683ed45a4101cb4749ab16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnSprite: {fileID: 113146, guid: 07e04ba1d7dc0274cb9cc73028d4b829, type: 2}
+  words:
+  - image: {fileID: 0}
+    Text: about
+    clip: {fileID: 0}
+  - image: {fileID: 0}
+    Text: south
+    clip: {fileID: 0}
+  - image: {fileID: 0}
+    Text: announcement
+    clip: {fileID: 0}
+  - image: {fileID: 0}
+    Text: public
+    clip: {fileID: 0}
+  buttonToSpawn: {fileID: 113146, guid: 07e04ba1d7dc0274cb9cc73028d4b829, type: 2}
 --- !u!1 &670253179
 GameObject:
   m_ObjectHideFlags: 0

@@ -2390,6 +2390,11 @@ MonoBehaviour:
   phases:
   - correctObjects:
     - {fileID: 1031667613}
+  stopTheseAudioSources:
+  - {fileID: 799324943}
+  - {fileID: 59133100}
+  - {fileID: 1762292238}
+  - {fileID: 667524464}
 --- !u!82 &2004263366
 AudioSource:
   m_ObjectHideFlags: 0
