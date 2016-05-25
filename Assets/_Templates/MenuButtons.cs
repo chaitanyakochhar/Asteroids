@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System;
 
-public class MenuButtons : MonoBehaviour
+public class MenuButtons : MonoBehaviour, IPointerDownHandler
 {
     public GameObject PauseButton;
     public GameObject PlayButton;
@@ -16,7 +18,7 @@ public class MenuButtons : MonoBehaviour
     public void Start()
     {
         ToggleCollapse();
-        sources = Object.FindObjectsOfType<AudioSource>();
+        sources = FindObjectsOfType<AudioSource>();
         if(DialogueButtonReference!=null)
         {
             if(GameObject.Find("Data Manager")!=null)
@@ -51,6 +53,7 @@ public class MenuButtons : MonoBehaviour
             Time.timeScale = 1f;
             caller.GetComponent<Image>().sprite = PauseButton.GetComponent<SpriteRenderer>().sprite;
             AudioUnpause();
+        
         }
     }
 
@@ -109,5 +112,10 @@ public class MenuButtons : MonoBehaviour
                 caller.GetComponent<Image>().sprite = DialogueOnButton.GetComponent<SpriteRenderer>().sprite;
             }
         }
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        ;
     }
 }

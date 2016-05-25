@@ -1349,9 +1349,9 @@ RectTransform:
   m_Father: {fileID: 478132038}
   m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.14442188, y: 1}
-  m_AnchoredPosition: {x: 3.1389847, y: -279.1394}
-  m_SizeDelta: {x: 1.3000183, y: -557.5088}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 77.138985, y: 104.860596}
+  m_SizeDelta: {x: 149.30002, y: 210.49121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891825096
 MonoBehaviour:

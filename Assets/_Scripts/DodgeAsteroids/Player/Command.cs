@@ -63,7 +63,7 @@ public class Command
         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(destination);
         if (!ignoreUI)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (!PointIsOverUI(destination))
             {
                 return new Command(destination, worldPoint);
             }
