@@ -113,6 +113,7 @@ public class PlayerDataManager : MonoBehaviour
         }
         Mixpanel.DistinctID = MixpanelDistinctID;
         Mixpanel.Token = Token;
+        Mixpanel.SuperProperties.Add("Is Editor", Application.isEditor.ToString());
     }
 
     public void PushToMixPanel(string eventName)
