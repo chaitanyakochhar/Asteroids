@@ -1902,7 +1902,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1594387819}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
@@ -2469,9 +2469,9 @@ RectTransform:
   - {fileID: 127615583}
   m_Father: {fileID: 478132038}
   m_RootOrder: 5
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -138, y: -65}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 466, y: -65}
   m_SizeDelta: {x: 76, y: 157}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1960686303

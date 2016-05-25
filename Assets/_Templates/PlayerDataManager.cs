@@ -137,6 +137,7 @@ public class PlayerDataManager : MonoBehaviour
         Dictionary<string, object> d = new Dictionary<string, object>();
         if (focus)
         {
+            print("FOCUS");
             if (s == null)
             {
                 s = new Stopwatch();
