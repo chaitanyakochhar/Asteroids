@@ -15,16 +15,17 @@ public class StartPlayOnClick : Effect
         if(clip!=null)
         {
             GetComponent<AudioSource>().PlayOneShot(clip);
-            foreach(GameObject GO in stopTheseAudioSources)
-            {
-                if(GO!=null && GO.GetComponent<AudioSource>()!=null)
-                {
-                    GO.GetComponent<AudioSource>().Stop();
-                }
-            }
             if(GetComponent<UIBounce>()!=null)
             {
                 GetComponent<UIBounce>().StopEffect();
+            }
+        }
+
+        foreach (GameObject GO in stopTheseAudioSources)
+        {
+            if (GO != null && GO.GetComponent<AudioSource>() != null)
+            {
+                GO.GetComponent<AudioSource>().Stop();
             }
         }
     }
